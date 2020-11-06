@@ -164,7 +164,7 @@ body {
   width: 100%;
   height: 300px;
   background-color: rgba(68, 189, 50, 1);
-  position: relative;
+  /* position: relative; */
   display: flex;
 }
 .sousHeader__text {
@@ -175,7 +175,6 @@ body {
   justify-content: space-around;
   padding-left: 10%;
   color: white;
-  border: black 2px solid;
 }
 .sousHeader__text > h4,
 h3 {
@@ -183,32 +182,44 @@ h3 {
 }
 .sousHeader__text > h3 {
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
 }
 .sousHeader__text > h4 {
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 .sousHeader__button {
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  width: 15%;
-  height: 15%;
+  width: 25%;
+  height: 20%;
   border-radius: 5%;
+  background-color: #036ad9;
 }
 .sousHeader__button > p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: white;
+  outline: none;
 }
 .sousHeader__carouselprice {
-  border: red 2px solid;
-  width: 50%;
-  height: 60%;
+  border: blue 2px solid;
+  width: 550px;
+  /* height: 60%; */
 }
-
+.sousHeader__carouselprice img {
+  height: 200px;
+}
+/* .slide {
+  height: 10vh;
+} */
+/* .slide > img {
+  width: 200px;
+  height: 40px;
+} */
 /*pack*/
 .pack__contain {
   display: flex;
@@ -247,4 +258,28 @@ h3 {
   font-weight: 300;
   font-size: 1rem;
   text-align: center;
+}
+
+/*Carousel*/
+.containerSlide {
+  border: orangered 2px solid;
+  width: 550px;
+  height: 62%;
+}
+.slide {
+  border: blue 2px solid;
+  width: 39vw;
+  height: 20vh;
+}
+/* .containerSlide img {
+  height: 20vh;
+} */
+.containerSlide img {
+  object-fit: contain;
+  height: 100px;
+  width: 200px;
+}
+.slide__picture {
+  height: 100px;
+  width: 200px;
 }

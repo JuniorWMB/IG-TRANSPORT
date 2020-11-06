@@ -1,6 +1,8 @@
 import React from "react";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+
 import "../App.css";
+
+import Carousel from "./Carousel";
 
 function SousHeader() {
   return (
@@ -12,11 +14,11 @@ function SousHeader() {
           <h4>Carton, House matelas,Carton vaiselle...</h4>
           <button className="sousHeader__button">
             <p>Acheter </p>
-            <ArrowForwardIosIcon />
+            {/* <ArrowForwardIosIcon size="medium" /> */}
           </button>
         </div>
-        <div className="sousHeader__carouselprice">
-          <h1>ok</h1>
+        <div className="sousHeader__carouselpric">
+          <Carousel />
         </div>
       </div>
     </div>

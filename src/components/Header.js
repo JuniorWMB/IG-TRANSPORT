@@ -26,10 +26,10 @@ function Header() {
         <img className="header__logo" src={logo} alt="company logo" />
         <div className="header__icon">
           <div className="header__iconAccount">
-            <AccountCircleIcon fontSize="large" color="secondary" />
+            <AccountCircleIcon fontSize="large" color="primary" />
           </div>
           <div className="header__iconCart">
-            <ShoppingCartIcon fontSize="large" color="secondary" />
+            <ShoppingCartIcon fontSize="large" color="primary" />
           </div>
         </div>
       </div>

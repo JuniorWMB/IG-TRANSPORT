@@ -25,8 +25,8 @@ function Pack() {
         </div>
         <div className="pack__textprof">
           <p>
-            Services de logistique avec possibilité de livraison préparation des
-            commandes stockage de palettes nous étudions toutes propositions
+            une gamme de solutions complètes pour le déménagement et le stockage
+            de meubles pour particulier
           </p>
         </div>
       </div>
@@ -37,8 +37,11 @@ function Pack() {
         </div>
         <div className="pack__textprof">
           <p>
-            Services de logistique avec possibilité de livraison préparation des
-            commandes stockage de palettes nous étudions toutes propositions
+            Si vous avez des questions à propos de nos produits ou de nos
+            services, veuillez nous contacter en remplissant le formulaire
+            ci-dessous, nous vous répondrons dans les plus brefs délais. Vous
+            avez aussi la possibilité de nous appeler ou encore de nous rendre
+            visite sur place
           </p>
         </div>
       </div>
