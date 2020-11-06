@@ -160,7 +160,8 @@ body {
 
 /*sousHeader*/
 
-.header__sousHeader {
+.header__sousHeader,
+.form {
   width: 100%;
   height: 300px;
   background-color: rgba(68, 189, 50, 1);
@@ -208,24 +209,15 @@ h3 {
 .sousHeader__carouselprice {
   border: blue 2px solid;
   width: 550px;
-  /* height: 60%; */
 }
 .sousHeader__carouselprice img {
   height: 200px;
 }
-/* .slide {
-  height: 10vh;
-} */
-/* .slide > img {
-  width: 200px;
-  height: 40px;
-} */
-/*pack*/
+
 .pack__contain {
   display: flex;
   justify-content: center;
   position: absolute;
-  /* border: tomato 2px solid; */
   width: 100vw;
   height: 60vh;
   top: 270px;
@@ -282,4 +274,64 @@ h3 {
 .slide__picture {
   height: 100px;
   width: 200px;
+}
+
+/*Sign up*/
+.form__signdesign {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 50vh;
+  width: 50vw;
+  position: absolute;
+  top: 250px;
+  left: 150px;
+  background-color: white;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.form__signdesign input {
+  width: 50%;
+  height: 5%;
+}
+.form__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form__designleft,
+.form__designright {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 400px;
+  margin-left: 20px;
+  justify-content: center;
+}
+.form__block input {
+  /* margin: 20px 20px; */
+  width: 90%;
+  height: 10%;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: blue 1px solid;
+  outline: none;
+}
+.form__block button {
+  width: 50%;
+}
+.form__contact {
+  height: 50vh;
+  width: 30vw;
+  background-color: blue;
+  position: absolute;
+  top: 250px;
+  right: 132px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
