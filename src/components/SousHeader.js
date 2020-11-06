@@ -1,5 +1,6 @@
 import React from "react";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import "../App.css";
 
 function SousHeader() {
   return (
@@ -10,7 +11,6 @@ function SousHeader() {
           <h3>Tout pour faciliter votre demenagement</h3>
           <h4>Carton, House matelas,Carton vaiselle...</h4>
           <button className="sousHeader__button">
-            {" "}
             <p>Acheter </p>
             <ArrowForwardIosIcon />
           </button>
