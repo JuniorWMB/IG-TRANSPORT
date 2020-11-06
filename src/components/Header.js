@@ -33,9 +33,6 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="header__sousHeader">
-        <h2>Test</h2>
-      </div>
     </div>
   );
 }
