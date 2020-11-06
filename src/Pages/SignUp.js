@@ -27,7 +27,7 @@ function SignUp() {
               <label htmlFor="">Mot de passe</label>
               <input type="password" />
               <label htmlFor="">Confirmation de votre mot de passe</label>
-              <input type="password" />
+              <input style={{ marginBottom: "60px" }} type="password" />
               <button type="submit">VALIDER</button>
             </div>
           </div>
