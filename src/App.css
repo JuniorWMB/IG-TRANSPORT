@@ -317,19 +317,24 @@ h3 {
   height: 10%;
   margin-bottom: 20px;
   border: none;
-  border-bottom: blue 1px solid;
+  border-bottom: #036ad9 1px solid;
   outline: none;
 }
 .form__block button {
   width: 50%;
+  height: 15%;
+  background-color: #036ad9;
+  border-radius: 5%;
+  border: none;
+  color: white;
 }
 .form__contact {
   height: 50vh;
   width: 30vw;
-  background-color: blue;
+  background-color: #036ad9;
   position: absolute;
   top: 250px;
-  right: 132px;
+  left: 850px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
@@ -351,4 +356,27 @@ h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 1rem;
+}
+.form__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form__info {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form__infoabove {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.form__infoabove > p {
+  margin-left: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;
 }
