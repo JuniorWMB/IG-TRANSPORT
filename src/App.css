@@ -124,7 +124,7 @@ table {
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -170,24 +170,25 @@ body {
 }
 .sousHeader__text {
   height: 60%;
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding-left: 10%;
   color: white;
 }
-.sousHeader__text > h4,
-h3 {
+.sousHeader__text > h3 {
   font-family: "Roboto", sans-serif;
 }
 .sousHeader__text > h3 {
-  font-weight: 700;
-  font-size: 1.9rem;
+  font-weight: 300;
+  font-size: 1.3rem;
 }
 .sousHeader__text > h4 {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 3.4rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
 }
 .sousHeader__button {
   display: flex;
@@ -238,23 +239,27 @@ h3 {
     0 100px 80px rgba(0, 0, 0, 0.12);
 }
 .pack > p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 .pack__textprof {
   height: 30%;
+  width: 85%;
 }
 .pack__textprof > p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
-  text-align: center;
+  font-size: 1.12rem;
+  text-align: justify;
+}
+.pack__logo {
+  margin: 10px 0 40px 0;
 }
 
 /*Carousel*/
 .containerSlide {
-  border: orangered 2px solid;
+  /* border: orangered 2px solid; */
   width: 550px;
   height: 62%;
 }
@@ -266,16 +271,35 @@ h3 {
 /* .containerSlide img {
   height: 20vh;
 } */
-.containerSlide img {
-  object-fit: contain;
+/* .containerSlide img {
+  object-fit: cover;
   height: 100px;
-  width: 200px;
-}
+  width: 20px;
+  border: black 1px solid;
+} */
 .slide__picture {
   height: 100px;
   width: 200px;
 }
-
+.slide__cardoffer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5px;
+  height: 65%;
+  margin-top: 10px;
+}
+.slide__cardoffer img {
+  height: 50%;
+  width: 150px;
+}
+.slide__cardprice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 /*Sign up*/
 .form__signdesign {
   display: flex;

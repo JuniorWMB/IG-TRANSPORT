@@ -9,17 +9,17 @@ function SousHeader() {
     <div>
       <div className="header__sousHeader">
         <div className="sousHeader__text">
-          <h4>Vente de produit</h4>
-          <h3>Tout pour faciliter votre demenagement</h3>
-          <h4>Carton, House matelas,Carton vaiselle...</h4>
+          <h4>Votre spécialiste du déménagement</h4>
+          <h3>
+            Déménagement pour particuliers, solutions logistiques pour les
+            professionelles et vente de produits.
+          </h3>
           <button className="sousHeader__button">
-            <p>Acheter </p>
+            <p>Contactez-nous </p>
             {/* <ArrowForwardIosIcon size="medium" /> */}
           </button>
         </div>
-        <div className="sousHeader__carouselpric">
-          <Carousel />
-        </div>
+        <div className="sousHeader__carouselpric">{/* <Carousel /> */}</div>
       </div>
     </div>
   );

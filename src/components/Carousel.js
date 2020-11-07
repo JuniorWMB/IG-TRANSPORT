@@ -1,6 +1,9 @@
 import React from "react";
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
+// import { Slide } from "react-slideshow-image";
+// import "react-slideshow-image/dist/styles.css";
+
+import CarouselMulti from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import adhesif from "../assets/adhesif.jpg";
 import assiette from "../assets/assiette.jpg";
@@ -75,48 +78,55 @@ const dataImg = [
   },
 ];
 
-const proprietes = {
-  duration: 5000,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: true,
-  arrow: true,
+// const proprietes = {
+//   duration: 5000,
+//   transitionDuration: 500,
+//   infinite: true,
+//   indicators: true,
+//   arrow: true,
+// };
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
 };
 
 function Carousel() {
   return (
     <div className="containerSlide">
-      <Slide {...proprietes} className="test">
-        {/* <img src={adhesif} alt="img" />
-        <img src={assiette} alt="img" />
-        <img src={bouteille} alt="img" /> */}
-        {dataImg.map((picture) => (
-          <div className="each_slide">
-            <img
-              className="slide__picture"
-              src={picture.adhesif}
-              alt={picture.description}
-            />
-            <button>{picture.price}</button>
-          </div>
-        ))}
+      <CarouselMulti responsive={responsive}>
+        {dataImg.map((dat, index) => {
+          return (
+            <div className="slide__cardoffer">
+              <img src={dat.img} alt={dat.description} />
+              <div className="slide__cardprice">
+                <p>{dat.description}</p>
+                <button>{dat.price}</button>
+              </div>
+            </div>
+          );
+        })}
 
-        {/* <div className="each-slide">
-          <div>
-            <img src={adhesif} alt="img" />
-          </div>
-        </div>
-        <div className="each-slide">
-          <div>
-            <img src={assiette} alt="img" />
-          </div>
-        </div>
-        <div className="each-slide">
-          <div>
-            <img src={bouteille} alt="img" />
-          </div>
-        </div> */}
-      </Slide>
+        {/* <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div> */}
+      </CarouselMulti>
     </div>
   );
 }
