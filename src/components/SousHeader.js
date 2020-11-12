@@ -2,8 +2,6 @@ import React from "react";
 
 import "../App.css";
 
-import Carousel from "./Carousel";
-
 function SousHeader() {
   return (
     <div>
@@ -15,8 +13,7 @@ function SousHeader() {
             professionels et vente de carton et fourniture de déménagement.
           </h3>
           <button className="sousHeader__button">
-            <p>Vente de carton </p>
-            {/* <ArrowForwardIosIcon size="medium" /> */}
+            <p>Vente de cartons </p>
           </button>
         </div>
         <div className="sousHeader__carouselpric">{/* <Carousel /> */}</div>

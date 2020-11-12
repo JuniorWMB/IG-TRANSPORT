@@ -1,13 +1,11 @@
 import React from "react";
-import LocalShippingIcon from "@material-ui/icons/LocalShipping";
-import PeopleIcon from "@material-ui/icons/People";
-import DevicesIcon from "@material-ui/icons/Devices";
+import { Link } from "react-router-dom";
 import { Truck, Briefcase, Archive, Package } from "react-feather";
 
 function Pack() {
   return (
     <div className="pack__contain">
-      <div className="pack">
+      <Link to="/demenagement" className="pack">
         <p> Déménagement</p>
         <div className="pack__logo">
           <Package size={40} color="#94c935" />
@@ -19,7 +17,7 @@ function Pack() {
             demandes.
           </p>
         </div>
-      </div>
+      </Link>
       <div className="pack">
         <p> Transport</p>
         <div className="pack__logo">
