@@ -9,13 +9,13 @@ function SousHeader() {
     <div>
       <div className="header__sousHeader">
         <div className="sousHeader__text">
-          <h4>Votre spécialiste du déménagement</h4>
+          <h4>Votre spécialiste du transport</h4>
           <h3>
             Déménagement pour particuliers, solutions logistiques pour les
-            professionelles et vente de produits.
+            professionels et vente de carton et fourniture de déménagement.
           </h3>
           <button className="sousHeader__button">
-            <p>Contactez-nous </p>
+            <p>Vente de carton </p>
             {/* <ArrowForwardIosIcon size="medium" /> */}
           </button>
         </div>

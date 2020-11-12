@@ -2,14 +2,15 @@ import React from "react";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import PeopleIcon from "@material-ui/icons/People";
 import DevicesIcon from "@material-ui/icons/Devices";
+import { Truck, Briefcase, Archive, Package } from "react-feather";
 
 function Pack() {
   return (
     <div className="pack__contain">
       <div className="pack">
-        <p> Professionels</p>
+        <p> Déménagement</p>
         <div className="pack__logo">
-          <LocalShippingIcon fontSize="large" />
+          <Package size={40} color="#94c935" />
         </div>
         <div className="pack__textprof">
           <p>
@@ -20,13 +21,13 @@ function Pack() {
         </div>
       </div>
       <div className="pack">
-        <p> Particuliers</p>
+        <p> Transport</p>
         <div className="pack__logo">
-          <PeopleIcon fontSize="large" />
+          <Truck size={40} color="#94c935" />
         </div>
         <div className="pack__textprof">
           <p>
-            Une ofrre complète pour vous accompagnez dans votre projet de
+            Une offre complète pour vous accompagnez dans votre projet de
             déménagement.
             <br /> Nous proposons 3 formules pour répondre à vos besoins ainsi
             que le stockage de meubles.
@@ -34,9 +35,21 @@ function Pack() {
         </div>
       </div>
       <div className="pack">
-        <p> Vente de Produits</p>
+        <p> Stockage</p>
         <div className="pack__logo">
-          <DevicesIcon fontSize="large" />
+          <Archive size={40} color="#94c935" />
+        </div>
+        <div className="pack__textprof">
+          <p>
+            Nous proposons une large sélection de produits indispensable pour
+            votre déménagement (cartons, adhesifs, housses etc...).
+          </p>
+        </div>
+      </div>
+      <div className="pack">
+        <p> Garde meuble</p>
+        <div className="pack__logo">
+          <Briefcase size={40} color="#94c935" />
         </div>
         <div className="pack__textprof">
           <p>

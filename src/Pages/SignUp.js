@@ -59,13 +59,14 @@ function SignUp() {
             style={{
               marginLeft: "20px",
               display: "flex",
-              justifyContent: "space-between",
-              width: "40%",
+              justifyContent: "space-around",
+              width: "60%",
+              border: "1px solid green",
             }}
           >
-            <FacebookIcon />
-            <LinkedInIcon />
-            <InstagramIcon />
+            <FacebookIcon fontSize="large" />
+            <LinkedInIcon fontSize="large" />
+            <InstagramIcon fontSize="large" />
           </div>
         </div>
       </div>
