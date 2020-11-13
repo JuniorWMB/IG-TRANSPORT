@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SignUp from "./Pages/SignUp";
 import { Demenagement } from "./Pages/Demenagement";
 import Stockage from "./Pages/Stockage";
+import Products from "./Pages/Products";
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/signup" component={SignUp} />
           <Route path="/demenagement" component={Demenagement} />
           <Route path="/stockage" component={Stockage} />
+          <Route path="/all-products" component={Products} />
         </Switch>
       </Router>
     </div>

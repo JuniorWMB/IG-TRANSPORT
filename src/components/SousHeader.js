@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../App.css";
 
@@ -12,9 +13,10 @@ function SousHeader() {
             Déménagement pour particuliers, solutions logistiques pour les
             professionels et vente de carton et fourniture de déménagement.
           </h3>
-          <button className="sousHeader__button">
+
+          <Link to="/all-products" className="sousHeader__button">
             <p>Vente de cartons </p>
-          </button>
+          </Link>
         </div>
         <div className="sousHeader__carouselpric">{/* <Carousel /> */}</div>
       </div>
