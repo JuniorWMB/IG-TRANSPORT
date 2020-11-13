@@ -20,8 +20,7 @@ function Header() {
             style={{
               background: "#94c935",
               // background: "#2C436D",
-              fontSize: "30px",
-              border: "1px solid black",
+              fontSize: "20px",
               color: "white",
               border: "none",
             }}
@@ -34,8 +33,7 @@ function Header() {
             style={{
               background: "#94c935",
               // background: "#2C436D",
-              fontSize: "30px",
-              border: "1px solid black",
+              fontSize: "20px",
               color: "white",
               border: "none",
             }}
