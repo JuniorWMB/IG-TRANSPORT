@@ -316,6 +316,11 @@ a {
   align-items: center;
 }
 /*Sign up*/
+
+.form2__container {
+  border: 2px solid red;
+}
+
 .form__signdesign {
   display: flex;
   flex-direction: column;
@@ -460,8 +465,7 @@ a {
   color: #2c436d;
   margin-bottom: 20px;
 }
-.pack__title > h2 {
-}
+
 .pack__price {
   /* font-family: "Oswald", sans-serif;
   font-weight: 700; */
@@ -517,40 +521,6 @@ a {
   color: white;
 } */
 
-/*media queries */
-@media screen and (max-width: 768px) {
-  .sousHeader__text {
-    height: 60%;
-    width: 80%;
-  }
-
-  .sousHeader__text > h3 {
-    font-size: 0.8rem;
-  }
-  .sousHeader__text > h4 {
-    font-size: 2.5rem;
-  }
-
-  .sousHeader__button > p {
-    font-size: 1rem;
-  }
-
-  .pack {
-    width: 40vw;
-    height: 90%;
-  }
-}
-
-@media screen and (max-width: 520) {
-  .sousHeader__text > h4 {
-    font-weight: 700;
-    font-size: 3.4rem;
-    font-family: "Oswald", sans-serif;
-    text-transform: capitalize;
-    border: green 2px solid;
-    width: 80vw;
-  }
-}
 /*products*/
 
 .product {
@@ -615,4 +585,46 @@ a {
   text-transform: capitalize;
   text-align: center;
   /* border: green 2px solid; */
+}
+
+/*media queries*/
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .sousHeader__text > h4 {
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Oswald", sans-serif;
+    text-transform: capitalize;
+    width: 80vw;
+  }
+  .header__contain {
+    border: red 2px solid;
+    display: flex;
+    /* width: 250px; */
+
+    /* width: 100vw; */
+  }
+}
+
+/*media queries */
+@media screen and (max-width: 768px) {
+  .sousHeader__text {
+    height: 60%;
+    width: 80%;
+  }
+
+  .sousHeader__text > h3 {
+    font-size: 0.8rem;
+  }
+  .sousHeader__text > h4 {
+    font-size: 2.5rem;
+  }
+
+  .sousHeader__button > p {
+    font-size: 1rem;
+  }
+
+  .pack {
+    width: 40vw;
+    height: 90%;
+  }
 }

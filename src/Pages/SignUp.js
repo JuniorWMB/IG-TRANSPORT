@@ -16,7 +16,34 @@ function SignUp() {
     <div style={{ position: "relative" }}>
       <Header />
       <div className="form"></div>
-      <div className="form__signup">
+      <div className="form2__container">
+        <form className="form">
+          <div className="block__input">
+            <label htmlFor="Nom"></label>
+            <input type="text" placeholder="Nom" />
+          </div>
+          <div className="block__input">
+            <label htmlFor="Prénom"></label>
+            <input type="text" placeholder="Prénom" />
+          </div>
+          <div className="block__input">
+            <label htmlFor="Email"></label>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div className="block__input">
+            <label htmlFor="Password"></label>
+            <input type="password" placeholder="Password" />
+          </div>
+          <div className="block__input">
+            <label htmlFor="Confirm password"></label>
+            <input type="password" placeholder="Confirm Password" />
+          </div>
+          <div className="button">
+            <button type="submit">Envoi</button>
+          </div>
+        </form>
+      </div>
+      {/* <div className="form__signup">
         <form className="form__signdesign" action="">
           <div className="form__title">
             <h1>Créer votre compte</h1>
@@ -37,6 +64,7 @@ function SignUp() {
               <label htmlFor="">Confirmation de votre mot de passe</label>
               <input style={{ marginBottom: "48px" }} type="password" />
               <button type="submit">VALIDER</button>
+              
             </div>
           </div>
         </form>
@@ -69,7 +97,7 @@ function SignUp() {
             <InstagramIcon fontSize="large" />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
