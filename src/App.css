@@ -333,6 +333,7 @@ a {
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
 }
+
 .block__input {
   width: 600px;
   height: 35px;
@@ -341,12 +342,27 @@ a {
   align-items: center;
   margin: 20px 10px;
 }
-.block__input > input {
+.form__blockerror {
+  width: 50%;
+  height: 100%;
+  border: none;
+  border-bottom: red 1px solid;
+  outline-style: none;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
+}
+.form__bottominput {
   width: 50%;
   height: 100%;
   border: none;
   border-bottom: #2670bd 1px solid;
   outline-style: none;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
 }
 .button {
   display: flex;
@@ -364,6 +380,15 @@ a {
   border-radius: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
+}
+.button > button:hover {
+  background-color: #94c935;
+  color: white;
 }
 .block__input > h1 {
   font-weight: 700;
@@ -371,6 +396,7 @@ a {
   font-family: "Oswald", sans-serif;
   text-transform: capitalize;
 }
+
 /*Déménagement pack*/
 .text__pack {
   font-family: "Roboto", sans-serif;

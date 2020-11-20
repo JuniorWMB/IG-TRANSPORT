@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import { Formik } from "formik";
 import Header from "../components/Header";
 import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
@@ -12,35 +12,100 @@ import "../App.css";
 import logo from "../assets/logo.webp";
 
 function SignUp() {
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [textError, setTextError] = useState("");
+  const [errorStyle, setErrorStyle] = useState(true);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name && username && email && password && confirmPassword) {
+      if (password === confirmPassword) {
+      } else {
+        setTextError("Les mots de passes ne sont pas identique");
+        setErrorStyle(false);
+      }
+    } else {
+      setTextError("Veuillez tous renseigné svp");
+      setErrorStyle(false);
+    }
+  };
+
   return (
     <div style={{ position: "relative" }}>
       <Header />
       <div className="form"></div>
       <div className="form2__container">
-        <form className="form__block">
+        <form onSubmit={handleSubmit} className="form__block">
           <div className="block__input">
             <h1>Sign Up</h1>
           </div>
 
           <div className="block__input">
             <label htmlFor="Nom"></label>
-            <input className="test" type="text" placeholder="Nom" />
+            <input
+              className={errorStyle ? "form__bottominput" : "form__blockerror"}
+              type="text"
+              placeholder="Nom"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            />
           </div>
           <div className="block__input">
             <label htmlFor="Prénom"></label>
-            <input type="text" placeholder="Prénom" />
+            <input
+              className={errorStyle ? "form__bottominput" : "form__blockerror"}
+              type="text"
+              placeholder="Prénom"
+              value={username}
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
+            />
           </div>
           <div className="block__input">
             <label htmlFor="Email"></label>
-            <input type="email" placeholder="Email" />
+            <input
+              className={errorStyle ? "form__bottominput" : "form__blockerror"}
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
           </div>
           <div className="block__input">
             <label htmlFor="Password"></label>
-            <input type="password" placeholder="Password" />
+            <input
+              className={errorStyle ? "form__bottominput" : "form__blockerror"}
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
           </div>
           <div className="block__input">
             <label htmlFor="Confirm password"></label>
-            <input type="password" placeholder="Confirm Password" />
+            <input
+              className={errorStyle ? "form__bottominput" : "form__blockerror"}
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => {
+                setConfirmPassword(e.target.value);
+              }}
+            />
+          </div>
+          <div>
+            <p>{textError}</p>
           </div>
           <div className="button">
             <button type="submit">Envoi</button>
