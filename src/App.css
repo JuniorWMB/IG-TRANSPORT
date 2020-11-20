@@ -316,115 +316,61 @@ a {
   align-items: center;
 }
 /*Sign up*/
-
 .form2__container {
-  border: 2px solid red;
-}
-
-.form__signdesign {
+  height: 500px;
   display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-  height: 50vh;
-  width: 50vw;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 250px;
-  left: 150px;
-  background-color: white;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
-}
-.form__signdesign input {
-  width: 50%;
-  height: 5%;
+  left: 400px;
+  top: 160px;
 }
 .form__block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.form__designleft,
-.form__designright {
-  display: flex;
-  flex-direction: column;
-  height: 250px;
-  width: 400px;
-  margin-left: 20px;
-  justify-content: center;
-}
-.form__block input {
-  /* margin: 20px 20px; */
-  width: 90%;
-  height: 10%;
-  margin-bottom: 20px;
-  border: none;
-  border-bottom: #036ad9 1px solid;
-  outline: none;
-}
-.form__block button {
-  width: 50%;
-  height: 15%;
-  background-color: #036ad9;
-  border-radius: 5%;
-  border: none;
-  color: white;
-}
-.form__contact {
-  height: 50vh;
-  width: 30vw;
-  background-color: #036ad9;
-  position: absolute;
-  top: 250px;
-  left: 850px;
+  background: white;
+  /* box-shadow: 2px 2px 1px rgb(78, 78, 78); */
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
 }
-.form__title {
+.block__input {
+  width: 600px;
+  height: 35px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  margin: 0 20px;
-  height: 20%;
+  margin: 20px 10px;
 }
-.form__title > h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
+.block__input > input {
+  width: 50%;
+  height: 100%;
+  border: none;
+  border-bottom: #2670bd 1px solid;
+  outline-style: none;
 }
-.form__block label {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-}
-.form__contact {
+.button {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 10px;
 }
-.form__info {
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.form__infoabove {
-  display: flex;
-  margin-left: 20px;
+.button > button {
+  width: 50%;
+  height: 80%;
+  background: none;
+  border: 1px solid #94c935;
+  outline: none;
+  border-radius: 15px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
-.form__infoabove > p {
-  margin-left: 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  color: white;
+.block__input > h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
 }
-
 /*Déménagement pack*/
 .text__pack {
   font-family: "Roboto", sans-serif;

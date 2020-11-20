@@ -17,10 +17,14 @@ function SignUp() {
       <Header />
       <div className="form"></div>
       <div className="form2__container">
-        <form className="form">
+        <form className="form__block">
+          <div className="block__input">
+            <h1>Sign Up</h1>
+          </div>
+
           <div className="block__input">
             <label htmlFor="Nom"></label>
-            <input type="text" placeholder="Nom" />
+            <input className="test" type="text" placeholder="Nom" />
           </div>
           <div className="block__input">
             <label htmlFor="Prénom"></label>
