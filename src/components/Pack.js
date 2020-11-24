@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Truck, Briefcase, Archive, Package } from "react-feather";
-import ReactGA from "react-ga";
+import gsap from "gsap";
 
 function Pack() {
-  const handleClick = () => {
-    ReactGA.event({
-      category: "Button",
-      action: "Click to go déménagemtn",
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.from(".pack", {
+      duration: 1.7,
+      y: 100,
+      ease: "power4.Out",
+      delay: 3,
+      opacity: 0,
+      stagger: {
+        amount: 2,
+      },
     });
-    alert("Click send");
-  };
+  }, []);
 
   return (
     <div className="pack__contain">
-      <Link onClick={handleClick} to="/demenagement" className="pack">
+      <Link to="/demenagement" className="pack">
         <p> Déménagement</p>
         <div className="pack__logo">
           <Package size={40} color="#94c935" />

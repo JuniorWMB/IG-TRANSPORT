@@ -10,7 +10,7 @@ function Home() {
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
   return (
-    <div style={{ position: "relative" }}>
+    <div>
       <Header />
       <SousHeader />
       <Pack />

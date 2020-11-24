@@ -129,6 +129,7 @@ body {
   margin: 0;
   padding: 0;
   background: #ffffff;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
@@ -179,12 +180,12 @@ a {
   padding-left: 5%;
   color: white;
 }
-.sousHeader__text > h3 {
-  font-family: "Roboto", sans-serif;
-}
+
 .sousHeader__text > h3 {
   font-weight: 300;
   font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  z-index: 8;
 }
 .sousHeader__text > h4 {
   font-weight: 700;
@@ -193,6 +194,7 @@ a {
   text-transform: capitalize;
   /* border: green 2px solid; */
   width: 80vw;
+  z-index: 8;
 }
 .sousHeader__button {
   display: flex;
@@ -600,3 +602,54 @@ a {
     height: 90%;
   }
 }
+/* Trasnsition */
+
+.transition__top {
+  height: 50vh;
+  position: absolute;
+  width: 100%;
+  z-index: 6;
+}
+.top {
+  position: absolute;
+  height: 76%;
+  width: 50vw;
+  background: black;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.top:nth-child(2) {
+  left: 50%;
+  background: black;
+}
+.transition__bottom {
+  height: 62vh;
+  position: absolute;
+  width: 100%;
+  z-index: 6;
+  bottom: 0;
+}
+.bottom {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  background: black;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+/* .bottom:nth-child(2) {
+  left: 25%;
+  background: black;
+}
+.bottom:nth-child(3) {
+  left: 50%;
+  background: black;
+}
+.bottom:nth-child(4) {
+  left: 75%;
+  background: black;
+} */
