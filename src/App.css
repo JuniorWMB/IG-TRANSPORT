@@ -335,6 +335,13 @@ a {
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
 }
+.text__confirm {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.7em;
+  text-align: justify;
+  margin-top: 10px;
+}
 
 .block__input {
   width: 600px;
