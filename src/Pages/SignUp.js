@@ -18,6 +18,7 @@ function SignUp() {
   const [textError, setTextError] = useState("");
   const [validationMp, setValidationMp] = useState(true);
   const [errorStyle, setErrorStyle] = useState(true);
+  const [colorValid, setColorValid] = useState(true);
 
   const handleSubmit = (e) => {
     const tl = gsap.timeline();
@@ -28,6 +29,8 @@ function SignUp() {
         duration: 1,
         boxShadow: "1px 1px 20px green",
       });
+      setTextError("Compte créer");
+      setColorValid(true);
 
       if (password === confirmPassword) {
         tl.to(".form__block", {
@@ -35,8 +38,10 @@ function SignUp() {
           boxShadow: "1px 1px 20px green",
         });
       } else {
-        setTextError("Les mots de passes ne sont pas identique");
+        setTextError("Les mots de passe ne sont pas identique");
         setErrorStyle(false);
+        setColorValid(false);
+
         tl.to(".form__block", { duration: 1, boxShadow: "1px 1px 20px red" });
       }
     } else {
@@ -48,10 +53,6 @@ function SignUp() {
         repeat: 9,
       });
     }
-  };
-
-  const funcDisabled = () => {
-    setName < 1;
   };
 
   return (
@@ -152,10 +153,15 @@ function SignUp() {
               height: "30px",
             }}
           >
-            <p style={{ fontSize: "1.2em", color: "red" }}>{textError}</p>
+            {colorValid === true ? (
+              <p style={{ fontSize: "1.2em", color: "green" }}>{textError}</p>
+            ) : (
+              <p style={{ fontSize: "1.2em", color: "red" }}>{textError}</p>
+            )}
           </div>
           <div className="button">
             <button
+              className="button__submit"
               disabled={
                 name.length < 1 ||
                 username.length < 1 ||
@@ -166,6 +172,8 @@ function SignUp() {
             >
               Envoi
             </button>
+            <input className="login__link" type="button" value="Go Login" />
+            {/* <button className="login__link">Login</button> */}
           </div>
         </form>
       </div>
