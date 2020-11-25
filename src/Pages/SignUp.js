@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import { Formik } from "formik";
 import Header from "../components/Header";
-import zxcvbn from "zxcvbn";
+import ProgressBar from "../components/ProgressBar";
 
 import "../App.css";
 import gsap from "gsap";
@@ -34,11 +34,6 @@ function SignUp() {
           duration: 1,
           boxShadow: "1px 1px 20px green",
         });
-        if (
-          password.charAt(e.target.value) &&
-          confirmPassword.charAt(e.target.value) === ""
-        ) {
-        }
       } else {
         setTextError("Les mots de passes ne sont pas identique");
         setErrorStyle(false);
@@ -55,52 +50,9 @@ function SignUp() {
     }
   };
 
-  const testResult = zxcvbn(password);
-  const num = (testResult.score * 100) / 4;
-  const textProgressColor = () => {
-    switch (testResult.score) {
-      case 0:
-        return "Tres faible";
-      case 1:
-        return "Faible";
-      case 2:
-        return "Moyen";
-
-      case 3:
-        return "Fort";
-
-      case 4:
-        return "#Très fort";
-      default:
-        return "";
-    }
+  const funcDisabled = () => {
+    setName < 1;
   };
-
-  const funcProgressColor = () => {
-    switch (testResult.score) {
-      case 0:
-        return "#828282";
-      case 1:
-        return "#EA1111";
-      case 2:
-        return "#FFAd00";
-
-      case 3:
-        return "#9bc158";
-
-      case 4:
-        return "#00b500";
-      default:
-        return "none";
-    }
-  };
-
-  const changePasswordColor = () => ({
-    width: `${num}%`,
-    background: funcProgressColor(),
-    height: "100%",
-    // borderRadius: "15px",
-  });
 
   return (
     <div style={{ position: "relative" }}>
@@ -109,7 +61,7 @@ function SignUp() {
       <div className="form2__container">
         <form onSubmit={handleSubmit} className="form__block">
           <div className="block__input">
-            <h1>Sign Up</h1>
+            <h1>Créer un compte</h1>
           </div>
 
           <div className="block__input">
@@ -164,7 +116,14 @@ function SignUp() {
             />
           </div>
 
-          <div className="block__input">
+          <div
+            className="block__input"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
             <label htmlFor="Confirm password"></label>
             <input
               className={errorStyle ? "form__bottominput" : "form__blockerror"}
@@ -175,66 +134,16 @@ function SignUp() {
                 setConfirmPassword(e.target.value);
               }}
             />
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              position: "absolute",
-              top: "313px",
-              left: "25.5%",
-            }}
-          >
-            <div
-              style={{
-                width: "305px",
-                height: "10px",
-                border: "0px solid grey",
-                marginTop: "1px",
-                borderRadius: "15px",
-                background: "grey",
-                overflow: "hidden",
-              }}
-            >
-              <div className="progress_bar" style={changePasswordColor()}></div>
-            </div>
             <div
               style={{
                 width: "300px",
-                display: "flex",
-                justifyContent: "flex-end",
-                marginTop: "5px",
+                height: "100px",
               }}
             >
-              <h3>weak</h3>
+              <ProgressBar password={password} />
             </div>
           </div>
-          {/* <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "100px",
-              flexDirection: "column",
-              color: "grey",
-            }}
-          >
-            <div style={{ width: "300px" }}>
-              <p className="text__confirm">
-                Votre mots de passe doit contenir une majuscule.
-              </p>
-              <p className="text__confirm">
-                Votre mots de passe doit contenir une minuscule.
-              </p>
-              <p className="text__confirm">
-                Votre mots de passe doit contenir un caracterer special.
-              </p>
-              <p className="text__confirm">
-                Votre mots de passe doit contenir au moins un chiffre.
-              </p>
-            </div>
-          </div> */}
+
           <div
             style={{
               display: "flex",
@@ -246,7 +155,17 @@ function SignUp() {
             <p style={{ fontSize: "1.2em", color: "red" }}>{textError}</p>
           </div>
           <div className="button">
-            <button type="submit">Envoi</button>
+            <button
+              disabled={
+                name.length < 1 ||
+                username.length < 1 ||
+                email.length < 1 ||
+                confirmPassword.length < 1
+              }
+              type="submit"
+            >
+              Envoi
+            </button>
           </div>
         </form>
       </div>
