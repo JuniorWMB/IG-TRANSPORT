@@ -13,9 +13,9 @@ function Garde() {
   useEffect(() => {
     timerDevis();
     if (devis === true) {
-      tl.to(".devis__hidden", { duration: 1, x: 280 });
+      tl.to(".devis__hidden", { duration: 1, x: 280, ease: "power3.inOut" });
     }
-  }, [devis]);
+  }, [devis, tl]);
 
   const timerDevis = () => {
     let interval = setTimeout(() => {
@@ -108,7 +108,7 @@ function Garde() {
           )}
 
           <div className="meuble__containbox">
-            <GrCheckbox size={190} color="#2c436d" />
+            <GrCheckbox size={190} />
           </div>
         </div>
       </div>

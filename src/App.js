@@ -8,6 +8,7 @@ import { Demenagement } from "./Pages/Demenagement";
 import Stockage from "./Pages/Stockage";
 import Products from "./Pages/Products";
 import GardeMeuble from "./Pages/GardeMeuble";
+import Devis from "./Pages/Devis";
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/stockage" component={Stockage} />
           <Route path="/all-products" component={Products} />
           <Route path="/garde-meuble" component={GardeMeuble} />
+          <Route path="/devis" component={Devis} />
         </Switch>
       </Router>
     </div>

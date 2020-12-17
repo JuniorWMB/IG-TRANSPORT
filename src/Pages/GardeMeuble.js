@@ -1,12 +1,15 @@
 import React from "react";
 import Garde from "../components/Garde";
+import GardeText from "../components/GardeText";
 import Header from "../components/Header";
 
 function GardeMeuble() {
   return (
     <div>
       <Header />
-      <div className="header__sousHeader"></div>
+      <div className="header__sousHeader">
+        <GardeText />
+      </div>
       <Garde />
     </div>
   );
