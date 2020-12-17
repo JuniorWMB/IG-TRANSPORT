@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { Formik } from "formik";
 import Header from "../components/Header";
 import ProgressBar from "../components/ProgressBar";
+import Swal from "sweetalert2";
 
 import "../App.css";
 import gsap from "gsap";
@@ -19,41 +20,58 @@ function SignUp() {
   const [validationMp, setValidationMp] = useState(true);
   const [errorStyle, setErrorStyle] = useState(true);
   const [colorValid, setColorValid] = useState(true);
+  const [toggleBlock, setToggleBlock] = useState(false);
+
+  const toggleClick = () => {
+    setToggleBlock(!toggleBlock);
+  };
 
   const handleSubmit = (e) => {
     const tl = gsap.timeline();
 
     e.preventDefault();
     if (name && username && email && password && confirmPassword) {
-      tl.to(".form__block", {
-        duration: 1,
-        boxShadow: "1px 1px 20px green",
-      });
-      setTextError("Compte créer");
+      setTextError("Compte créé");
       setColorValid(true);
 
       if (password === confirmPassword) {
+        Swal.fire({
+          title: "Compte créé",
+          text:
+            "Merci pour votre inscription. Vous avez reçu un email de confirmation. Consultez cet email et cliquez sur le lien d'activation.",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
         tl.to(".form__block", {
           duration: 1,
-          boxShadow: "1px 1px 20px green",
         });
       } else {
         setTextError("Les mots de passe ne sont pas identique");
         setErrorStyle(false);
         setColorValid(false);
-
-        tl.to(".form__block", { duration: 1, boxShadow: "1px 1px 20px red" });
+        tl.to(".form__block", {
+          duration: 0.1,
+          x: "+=20",
+          yoyo: true,
+          repeat: 9,
+        });
       }
     } else {
       setTextError("Veuillez tous renseigné svp");
       setErrorStyle(false);
-      tl.to(".form__block", 0.1, {
-        x: "+=20",
-        yoyo: true,
-        repeat: 9,
-      });
     }
   };
+  useEffect(() => {
+    const tl2 = gsap.timeline();
+
+    tl2.from(".login__left", {
+      duration: 1.7,
+      x: 100,
+      ease: "power4.Out",
+      delay: 3,
+      opacity: 0,
+    });
+  }, []);
 
   return (
     <div style={{ position: "relative" }}>
@@ -172,10 +190,25 @@ function SignUp() {
             >
               Envoi
             </button>
-            <input className="login__link" type="button" value="Go Login" />
+            <input
+              className="login__link"
+              onClick={toggleClick}
+              type="button"
+              value="Go Login"
+            />
             {/* <button className="login__link">Login</button> */}
           </div>
         </form>
+        {toggleBlock ? (
+          <div className="login__left">
+            <h3>Log in</h3>
+            <input type="text" />
+            <input type="text" />
+            <div>
+              <input type="button" value="login" />
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );

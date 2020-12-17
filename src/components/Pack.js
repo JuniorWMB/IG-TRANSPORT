@@ -1,30 +1,33 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Truck, Briefcase, Archive, Package } from "react-feather";
-import gsap from "gsap";
+import { GrLinkedin } from "react-icons/gr";
+import { SiInstagram } from "react-icons/si";
+import { GrFacebook } from "react-icons/gr";
+import { ImFacebook2 } from "react-icons/im";
 
 function Pack() {
-  useEffect(() => {
-    const tl = gsap.timeline();
+  // useEffect(() => {
+  //   const tl = gsap.timeline();
 
-    tl.from(".pack", {
-      duration: 1.7,
-      y: 100,
-      ease: "power4.Out",
-      delay: 3,
-      opacity: 0,
-      stagger: {
-        amount: 2,
-      },
-    });
-  }, []);
+  //   tl.from(".pack", {
+  //     duration: 1.7,
+  //     y: 100,
+  //     ease: "power4.Out",
+  //     delay: 3,
+  //     opacity: 0,
+  //     stagger: {
+  //       amount: 2,
+  //     },
+  //   });
+  // }, []);
 
   return (
     <div className="pack__contain">
       <Link to="/demenagement" className="pack">
-        <p> Déménagement</p>
         <div className="pack__logo">
           <Package size={40} color="#94c935" />
+          <p> Déménagement</p>
         </div>
         <div className="pack__textprof">
           <p>
@@ -35,9 +38,9 @@ function Pack() {
         </div>
       </Link>
       <div className="pack">
-        <p> Transport</p>
         <div className="pack__logo">
           <Truck size={40} color="#94c935" />
+          <p> Transport</p>
         </div>
         <div className="pack__textprof">
           <p>
@@ -49,9 +52,21 @@ function Pack() {
         </div>
       </div>
       <Link to="/stockage" className="pack">
-        <p> Stockage</p>
         <div className="pack__logo">
           <Archive size={40} color="#94c935" />
+          <p> Stockage</p>
+        </div>
+        <div className="pack__textprof">
+          <p>
+            Nous proposons une large sélection de produits indispensable pour
+            votre déménagement (cartons, adhesifs, housses etc...).
+          </p>
+        </div>
+      </Link>
+      <Link to="/garde-meuble" className="pack">
+        <div className="pack__logo">
+          <Briefcase size={40} color="#94c935" />
+          <p> Garde meuble</p>
         </div>
         <div className="pack__textprof">
           <p>
@@ -61,9 +76,21 @@ function Pack() {
         </div>
       </Link>
       <div className="pack">
-        <p> Garde meuble</p>
         <div className="pack__logo">
           <Briefcase size={40} color="#94c935" />
+          <p> Vente de Produit</p>
+        </div>
+        <div className="pack__textprof">
+          <p>
+            Nous proposons une large sélection de produits indispensable pour
+            votre déménagement (cartons, adhesifs, housses etc...).
+          </p>
+        </div>
+      </div>
+      <div className="pack">
+        <div className="pack__logo">
+          <Briefcase size={40} color="#94c935" />
+          <p> Box Mobile</p>
         </div>
         <div className="pack__textprof">
           <p>

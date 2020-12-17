@@ -7,6 +7,7 @@ import SignUp from "./Pages/SignUp";
 import { Demenagement } from "./Pages/Demenagement";
 import Stockage from "./Pages/Stockage";
 import Products from "./Pages/Products";
+import GardeMeuble from "./Pages/GardeMeuble";
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/demenagement" component={Demenagement} />
           <Route path="/stockage" component={Stockage} />
           <Route path="/all-products" component={Products} />
+          <Route path="/garde-meuble" component={GardeMeuble} />
         </Switch>
       </Router>
     </div>

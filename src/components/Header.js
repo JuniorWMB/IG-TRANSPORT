@@ -10,6 +10,9 @@ function Header() {
   return (
     <div className="header__contain">
       <div className="header">
+        <div>
+          <p style={{ color: "#2C436D", fontSize: "2em" }}>Home</p>
+        </div>
         <Link to="/">
           <img className="header__logo" src={logo} alt="company logo" />
         </Link>
@@ -19,13 +22,11 @@ function Header() {
             className="header__iconAccount"
             style={{
               background: "#94c935",
-              // background: "#2C436D",
               fontSize: "20px",
               color: "white",
               border: "none",
             }}
           >
-            {/* <AccountCircleIcon fontSize="large" color="primary" /> */}
             <FontAwesomeIcon icon={faUser} />
           </Link>
           <div
@@ -38,7 +39,6 @@ function Header() {
               border: "none",
             }}
           >
-            {/* <ShoppingCartIcon fontSize="large" color="primary" /> */}
             <FontAwesomeIcon icon={faShoppingCart} />
           </div>
         </div>
