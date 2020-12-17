@@ -760,6 +760,102 @@ a {
   /* border: green 2px solid; */
 }
 
+/******************** garde meuble ***********************/
+.meuble__contain {
+  position: absolute;
+  top: -70px;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.meuble__box {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  height: 95%;
+  background: #ffffff;
+  margin: 0 30px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+/* .meuble__box:hover {
+  width: 30%;
+  transition-timing-function: ease-out;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+} */
+.meuble__size {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 20px; */
+  background: #94c935;
+  border-radius: 0 0px 20px 20px;
+}
+
+.meuble__size p {
+  font-size: 5em;
+}
+.meuble__containbox {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2c436d;
+}
+
+.meuble__hovercontain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.meuble__hoversize,
+.meuble__hovertext {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.meuble__hoversize p {
+  color: #ffffff;
+  margin-left: 20px;
+}
+.meuble__hovertext p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.devis {
+  position: relative;
+  bottom: 230px;
+  height: 20vh;
+  width: 40%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.devis__hidden {
+  cursor: pointer;
+  position: absolute;
+  left: -280px;
+  background: #94c935;
+  border-radius: 0 20px 20px 0;
+  height: 40%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*media queries*/
 @media only screen and (min-width: 0px) and (max-width: 480px) {
   .sousHeader__text > h4 {
