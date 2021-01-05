@@ -9,6 +9,9 @@ import Stockage from "./Pages/Stockage";
 import Products from "./Pages/Products";
 import GardeMeuble from "./Pages/GardeMeuble";
 import Devis from "./Pages/Devis";
+import Footer from "./components/Footer";
+import DevisChoice from "./Pages/DevisChoice";
+import Header from "./components/Header";
 
 function App() {
   useEffect(() => {
@@ -18,6 +21,7 @@ function App() {
   return (
     <div>
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/signup" component={SignUp} />
@@ -26,8 +30,10 @@ function App() {
           <Route path="/all-products" component={Products} />
           <Route path="/garde-meuble" component={GardeMeuble} />
           <Route path="/devis" component={Devis} />
+          <Route path="/vos-devis" component={DevisChoice} />
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }

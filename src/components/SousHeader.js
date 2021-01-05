@@ -7,28 +7,6 @@ import gsap from "gsap";
 import "../App.css";
 
 function SousHeader() {
-  // useEffect(() => {
-  //   const tl = gsap.timeline();
-  //   gsap.to("body", 0, { css: { visibility: "visible" } });
-
-  //   tl.from(".anim1, h3", {
-  //     duration: 1.8,
-  //     y: 100,
-  //     ease: "power4.out",
-  //     delay: 2,
-  //     opacity: 0,
-  //     skewY: 2,
-  //     stagger: {
-  //       amount: 0.3,
-  //     },
-  //   }).from(".sousHeader__button", {
-  //     x: 300,
-  //     ease: "power4.Out",
-  //     delay: 1,
-  //     opacity: 0,
-  //     skewY: 2,
-  //   });
-  // }, []);
   return (
     <div>
       <div className="header__sousHeader">
@@ -41,8 +19,8 @@ function SousHeader() {
             </h3>
           </div>
 
-          <Link to="/all-products" className="sousHeader__button">
-            <p>Vente de cartons </p>
+          <Link to="/vos-devis" className="sousHeader__button">
+            <p>Votre devis</p>
           </Link>
         </div>
       </div>

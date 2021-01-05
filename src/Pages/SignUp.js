@@ -75,7 +75,6 @@ function SignUp() {
 
   return (
     <div style={{ position: "relative" }}>
-      <Header />
       <div className="form"></div>
       <div className="form2__container">
         <form onSubmit={handleSubmit} className="form__block">

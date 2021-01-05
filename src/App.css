@@ -646,7 +646,7 @@ a {
 .profesionelle h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
-  font-size: 1em;
+  font-size: 0.7em;
   color: #94c935;
   text-align: center;
 }
@@ -993,50 +993,30 @@ a {
 .footer {
   width: 100%;
   height: 60vh;
-  background: pink;
+  background: #686867;
+  margin-top: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
-/*media queries*/
-@media only screen and (min-width: 0px) and (max-width: 480px) {
-  .sousHeader__text > h4 {
-    font-weight: 700;
-    font-size: 18px;
-    font-family: "Oswald", sans-serif;
-    text-transform: capitalize;
-    width: 80vw;
-  }
-  .header__contain {
-    border: red 2px solid;
-    display: flex;
-    /* width: 250px; */
-
-    /* width: 100vw; */
-  }
+.link,
+.info__address,
+.footer__icon {
+  border: #94c935 1px solid;
+  height: 80%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 1.2em;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-around;
 }
 
 /*media queries */
-@media screen and (max-width: 768px) {
-  .sousHeader__text {
-    height: 60%;
-    width: 80%;
-  }
 
-  .sousHeader__text > h3 {
-    font-size: 0.8rem;
-  }
-  .sousHeader__text > h4 {
-    font-size: 2.5rem;
-  }
-
-  .sousHeader__button > p {
-    font-size: 1rem;
-  }
-
-  .pack {
-    width: 40vw;
-    height: 90%;
-  }
-}
 /* Trasnsition */
 
 .transition__top {
@@ -1112,8 +1092,7 @@ a {
   border: red 1px solid;
   flex: 1;
 }
-.panier__produit {
-}
+
 .total {
   border: rebeccapurple 1px solid;
   height: 50px;
@@ -1124,4 +1103,40 @@ a {
 }
 .total p {
   font-size: 1.5em;
+}
+
+/*********************************************** multi devis **********************************************************/
+.contain__herobanner {
+  position: relative;
+}
+.container__banner {
+  background: #94c935;
+  width: 95vw;
+  height: 60vh;
+  margin: auto;
+  border-radius: 45px;
+  overflow: hidden;
+  z-index: 1;
+}
+.container__ssheader {
+  background: #c4f16f;
+  width: 80vw;
+  height: 70vh;
+  border-radius: 45px;
+  overflow: hidden;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 9;
+}
+.container__multiblock {
+  width: 80vw;
+  height: 50vh;
+  border: black 1px solid;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
 }

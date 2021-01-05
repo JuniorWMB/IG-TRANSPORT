@@ -6,7 +6,6 @@ import Header from "../components/Header";
 function GardeMeuble() {
   return (
     <div>
-      <Header />
       <div className="header__sousHeader">
         <GardeText />
       </div>

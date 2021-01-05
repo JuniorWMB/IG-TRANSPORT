@@ -23,17 +23,17 @@ export const StockProPart = () => {
                 <p> jusqu'a 10 palettes</p>
               </div>
               <div className="palette">
-                <p>35€</p>
-                <p>de 10 à 100 palettes</p>
+                <p>0.35€</p>
+                <p>de 11 à 100 palettes</p>
               </div>
               <div className="palette">
-                <p>45€</p>
+                <p>0.25€</p>
                 <p> à partir de 100 palettes</p>
               </div>
             </div>
           ) : (
             <div className="profesionelle">
-              <h2> 0,70€ la palette/jour </h2>
+              <h2>A partir de 0,25€ la palette europe/jour </h2>
               <p>Coup de fourche entré/sortie 3€</p>
               <h5>*Prix variable selon la quantité du stock</h5>
             </div>
@@ -47,7 +47,11 @@ export const StockProPart = () => {
         </h3>
 
         <div className="pack__price testprice">
-          <h2> 15€ m3/mois </h2>
+          <h2>
+            {" "}
+            A partir de <br />
+            15€ le m<sup>2</sup> /mois{" "}
+          </h2>
         </div>
       </div>
     </div>

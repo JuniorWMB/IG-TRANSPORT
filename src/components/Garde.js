@@ -40,7 +40,7 @@ function Garde() {
           {view ? (
             <div className="meuble__size meuble__hovercontain">
               <div className="meuble__hoversize">
-                <p>32€</p>
+                <p>40€</p>
               </div>
               <div className="meuble__hovertext">
                 <p>
@@ -67,7 +67,7 @@ function Garde() {
           {viewM ? (
             <div className="meuble__size meuble__hovercontain">
               <div className="meuble__hoversize">
-                <p>60€</p>
+                <p>80€</p>
               </div>
               <div className="meuble__hovertext">
                 <p>
@@ -93,7 +93,7 @@ function Garde() {
           {viewL ? (
             <div className="meuble__size meuble__hovercontain">
               <div className="meuble__hoversize">
-                <p>90€</p>
+                <p>120€</p>
               </div>
               <div className="meuble__hovertext">
                 <p>

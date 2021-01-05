@@ -112,7 +112,6 @@ function Products() {
       );
   return (
     <div>
-      <Header />
       <div
         className="header__sousHeader"
         style={{

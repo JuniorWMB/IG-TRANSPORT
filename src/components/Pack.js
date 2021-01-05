@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Truck, Briefcase, Archive, Package } from "react-feather";
-import { GrLinkedin } from "react-icons/gr";
-import { SiInstagram } from "react-icons/si";
-import { GrFacebook } from "react-icons/gr";
-import { ImFacebook2 } from "react-icons/im";
+
+import Footer from "./Footer";
 
 function Pack() {
   // useEffect(() => {
@@ -75,7 +73,7 @@ function Pack() {
           </p>
         </div>
       </Link>
-      <div className="pack">
+      <Link to="/all-products" className="pack">
         <div className="pack__logo">
           <Briefcase size={40} color="#94c935" />
           <p> Vente de Produit</p>
@@ -86,7 +84,7 @@ function Pack() {
             votre déménagement (cartons, adhesifs, housses etc...).
           </p>
         </div>
-      </div>
+      </Link>
       <div className="pack">
         <div className="pack__logo">
           <Briefcase size={40} color="#94c935" />

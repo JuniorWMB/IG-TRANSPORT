@@ -54,13 +54,12 @@ function DevisForm() {
             </div>
             <div className="contain__insideboxdevis2">
               <p> Voici mon volume</p>
+              {/* <p>En ajoutant mes meubles</p> */}
             </div>
-            <div className="contain__insideboxdevis3 insideboxtext">
-              <p>En ajoutant mes meubles</p>
-            </div>
+            <div className="contain__insideboxdevis3 insideboxtext"></div>
           </div>
         </div>
-        <ToastVolume />
+        {/* <ToastVolume /> */}
       </div>
     </>
   );

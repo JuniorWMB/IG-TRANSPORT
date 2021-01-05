@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Header from "../components/Header";
 import Pack from "../components/Pack";
 import SousHeader from "../components/SousHeader";
 import ReactGa from "react-ga";
@@ -11,7 +10,6 @@ function Home() {
   }, []);
   return (
     <div>
-      <Header />
       <SousHeader />
       <Pack />
     </div>
