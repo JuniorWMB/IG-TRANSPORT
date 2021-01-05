@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FiAlignJustify } from "react-icons/fi";
 
 import logo from "../assets/logo.webp";
 import { Link } from "react-router-dom";
@@ -11,11 +12,21 @@ function Header() {
     <div className="header__contain">
       <div className="header">
         <div>
-          <p style={{ color: "#2C436D", fontSize: "2em" }}>Home</p>
+          <>
+            <img className="header__logo" src={logo} alt="company logo" />
+          </>
         </div>
-        <Link to="/">
-          <img className="header__logo" src={logo} alt="company logo" />
-        </Link>
+        <div className="header__textnav">
+          <Link to="/">
+            <p>Home</p>
+          </Link>
+          <Link to="/all-products">
+            <p>Shop</p>
+          </Link>
+          <Link>
+            <p>Contact</p>
+          </Link>
+        </div>
         <div className="header__icon">
           <Link
             to="/signup"

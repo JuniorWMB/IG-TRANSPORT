@@ -164,6 +164,21 @@ a {
   margin-left: 30px;
 }
 
+.header__textnav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+.header__textnav p {
+  color: #2670bd;
+  font-weight: 700;
+  font-size: 0.9em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
 /*sousHeader*/
 
 .header__sousHeader,
@@ -993,11 +1008,16 @@ a {
 .footer {
   width: 100%;
   height: 60vh;
-  background: #686867;
   margin-top: 600px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: rgb(44, 67, 109);
+  background: linear-gradient(
+    20deg,
+    rgba(44, 67, 109, 1) 22%,
+    rgba(38, 112, 189, 1) 67%
+  );
 }
 .link,
 .info__address,
@@ -1014,8 +1034,6 @@ a {
   display: flex;
   justify-content: space-around;
 }
-
-/*media queries */
 
 /* Trasnsition */
 
@@ -1056,18 +1074,6 @@ a {
   right: 0;
   top: 0;
 }
-/* .bottom:nth-child(2) {
-  left: 25%;
-  background: black;
-}
-.bottom:nth-child(3) {
-  left: 50%;
-  background: black;
-}
-.bottom:nth-child(4) {
-  left: 75%;
-  background: black;
-} */
 
 /************************panier**************************/
 .panier {
@@ -1129,14 +1135,54 @@ a {
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 9;
+  box-shadow: 0px 37px 12px -23px rgba(0, 0, 0, 0.14);
 }
 .container__multiblock {
   width: 80vw;
   height: 50vh;
-  border: black 1px solid;
   position: absolute;
   top: 250px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.multiblock {
+  background: white;
+  /* box-shadow: 1px 6px 2px 1px #2c436d; */
+  border-radius: 25px;
+  height: 90%;
+  width: 30%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.multiblock p {
+  color: #2670bd;
+  font-weight: 700;
+  font-size: 2.2em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.textmulti__devis {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+  width: 85%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textmulti__devis h1 {
+  font-weight: 700;
+  font-size: 3em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin: 0 400px;
 }
