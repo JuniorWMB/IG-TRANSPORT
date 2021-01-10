@@ -1,5 +1,3 @@
-// export a array with many objet
-
 export let buanderie = [
   { name: "Aspirateur", volume: 0.06 },
   { name: "Banc de rangement", volume: 0.18 },

@@ -879,7 +879,7 @@ a {
   position: relative;
   bottom: 200px;
   width: 90vw;
-  height: 70vh;
+  height: 70%;
   background: #ffffff;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -937,7 +937,39 @@ a {
   flex-direction: column;
   justify-content: space-around;
   color: #ffffff;
+  /* position: relative; */
 }
+/* 
+.choice__box:before,
+.choice__box:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.choice__box:after {
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+} */
+
 .contain__insideboxdevis1,
 .contain__insideboxdevis2,
 .contain__insideboxdevis3 {
@@ -1185,4 +1217,139 @@ a {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   margin: 0 400px;
+}
+
+/************************************** Calculator *************************************/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* width: 95%; */
+  width: 95%;
+  height: 800px;
+  background: #f1f1f1;
+  margin: 100px auto 0;
+  word-break: break-all;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  /* overflow: hidden; */
+}
+
+.bloc__onglets {
+  display: flex;
+}
+.tabs {
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+}
+.tabs:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.active-tabs {
+  background: white;
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+  /* background: rgb(88, 147, 241); */
+  background: #94c935;
+}
+
+button {
+  border: none;
+}
+.contenu-onglets {
+  flex-grow: 1;
+}
+.contenu {
+  background: white;
+  padding: 20px;
+  width: 97%;
+  height: 100%;
+  display: none;
+}
+.contenu h2 {
+  padding: 0px 0 5px 0px;
+}
+.contenu hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.contenu p {
+  width: 100%;
+  height: 100%;
+}
+.active-contenu {
+  display: block;
+}
+
+/***************************************** adress started ******************************/
+.contain__startadress {
+  border: 1px solid red;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+}
+.contain__formadressstart {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px 20px;
+  background: rgb(189, 189, 189);
+}
+.start {
+  display: flex;
+  justify-content: space-between;
+}
+.start p {
+  font-weight: 700;
+  font-size: 3em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin-right: 40px;
+}
+.start input {
+  width: 50%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.start select {
+  width: 20%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.btn {
+  border: orange 1px solid;
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+  align-items: center;
+}
+.btn button {
+  width: 20%;
+  height: 75%;
+  border-radius: 5px;
 }

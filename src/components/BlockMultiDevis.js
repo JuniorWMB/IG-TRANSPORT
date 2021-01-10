@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function BlockMultiDevis() {
   return (
     <div className="container__multiblock">
-      <Link to="/demenagement" className="multiblock">
+      <Link to="/devis" className="multiblock">
         <p>Déménagement</p>
       </Link>
       <div className="multiblock">
