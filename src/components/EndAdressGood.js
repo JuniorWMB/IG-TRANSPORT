@@ -1,12 +1,10 @@
 import React from "react";
 
-function startAddress({ setCount, count }) {
+function EndAdressGood({ setCount, count }) {
   return (
     <div className="contain__startadress">
-      <div>{/* <h2>Votre adresse de départ</h2> */}</div>
       <form action="" className="contain__formadressstart">
-        <h1>Adresse de départ</h1>
-
+        <h1>Adresse d'arrivée</h1>
         <div className="city start">
           <p>Ville :</p>
           <input type="text" />
@@ -56,4 +54,4 @@ function startAddress({ setCount, count }) {
   );
 }
 
-export default startAddress;
+export default EndAdressGood;

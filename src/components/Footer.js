@@ -18,19 +18,21 @@ function Footer() {
       </nav>
       <div className="info__address">
         <p>Nous sommes ouvert </p>
+
         <p>du lundi au vendredi</p>
         <p>de 8h30 à 12h</p>
         <p> et de 14h à 18H</p>
         <p> au 16 rue Cantal, 91090 LISSES </p>
         <p>Tel: 06 42 42 42 42</p>
       </div>
-      <div className="footer__icon">
+      <div className="footer__icon ">
         <p>Suivez-nous</p>
-
-        <GrLinkedin size={40} />
-        <SiInstagram size={40} />
-        <ImFacebook2 size={40} />
-        <GrYoutube size={40} />
+        <div className="foot">
+          <GrLinkedin size={40} />
+          <SiInstagram size={40} />
+          <ImFacebook2 size={40} />
+          <GrYoutube size={40} />
+        </div>
       </div>
     </footer>
   );

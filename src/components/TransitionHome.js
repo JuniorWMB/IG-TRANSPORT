@@ -28,9 +28,6 @@ function TransitionHome() {
       </div>
       <div className="transition__bottom">
         <div className="bottom"></div>
-        {/* <div className="bottom"></div>
-        <div className="bottom"></div>
-        <div className="bottom"></div> */}
       </div>
     </div>
   );

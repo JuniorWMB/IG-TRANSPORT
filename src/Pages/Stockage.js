@@ -6,7 +6,6 @@ import { StockProPart } from "../components/StockProPart";
 function Stockage() {
   return (
     <div>
-      <Header />
       <div className="header__sousHeader">
         <StockageText />
       </div>

@@ -930,7 +930,7 @@ a {
 }
 .choice__box {
   background: #94c935;
-  height: 95%;
+  height: 400px;
   width: 30%;
   margin: 20px 20px;
   display: flex;
@@ -1052,9 +1052,7 @@ a {
   );
 }
 .link,
-.info__address,
-.footer__icon {
-  border: #94c935 1px solid;
+.info__address {
   height: 80%;
   width: 25%;
   display: flex;
@@ -1065,8 +1063,29 @@ a {
   text-transform: capitalize;
   display: flex;
   justify-content: space-around;
+  color: #dfe2e9;
+}
+.info__address p {
+  color: white;
 }
 
+.footer__icon {
+  height: 80%;
+  width: 25%;
+  flex-direction: column;
+}
+.footer__icon p {
+  font-weight: 700;
+  font-size: 1.2em;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
+  margin: 15px 0 0 20px;
+}
+.foot {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
 /* Trasnsition */
 
 .transition__top {
@@ -1227,7 +1246,7 @@ a {
   position: relative;
   /* width: 95%; */
   width: 95%;
-  height: 800px;
+  height: 90%;
   background: #f1f1f1;
   margin: 100px auto 0;
   word-break: break-all;
@@ -1318,6 +1337,9 @@ button {
   padding: 20px 20px;
   background: rgb(189, 189, 189);
 }
+.contain__startadress h1 {
+  font-size: larger;
+}
 .start {
   display: flex;
   justify-content: space-between;
@@ -1342,7 +1364,6 @@ button {
   border: none;
 }
 .btn {
-  border: orange 1px solid;
   display: flex;
   justify-content: space-between;
   height: 15%;
@@ -1353,3 +1374,161 @@ button {
   height: 75%;
   border-radius: 5px;
 }
+
+.btn2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+.btn2 button {
+  height: 80%;
+  width: 40%;
+  border-radius: 5px;
+}
+
+/************************************** calendar *************************/
+
+.calend__contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calendar__textanddate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.calendar__textanddate h3 {
+  font-weight: 700;
+  font-size: 3em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.date__button {
+  height: 30px;
+  margin-top: 30px;
+  width: 100px;
+  background: #94c935;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.trait {
+  border: #94c935 1px solid;
+  width: 80vw;
+  margin: 50px 0;
+}
+.date__contain {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.calendar__text {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+.calendar__text p {
+  font-weight: 700;
+  font-size: 1.5em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #2c436d;
+}
+.date__span {
+  font-weight: 700;
+  font-size: 1.2em;
+  font-family: "Oswald", sans-serif;
+}
+.date__spantext {
+  font-weight: 700;
+  font-size: 2em;
+  font-family: "Oswald", sans-serif;
+  color: #2670bd;
+}
+.calendar__blockdate {
+  margin: 80px 0 0 50px;
+}
+.calendar__blockdatemargin {
+  margin: 30px 0 0 50px;
+}
+
+/************************************** form *************************/
+.form__container {
+  margin: 20px 0;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__container h3 {
+  font-weight: 700;
+  font-size: 3em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.form__blk {
+  display: flex;
+  flex-direction: column;
+}
+.form__inputcontainone,
+.form__inputcontaintwo,
+.form__inputcontainthree {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+}
+.form__blk {
+  width: 900px;
+  height: 350px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.form__blk input {
+  height: 40px;
+  width: 300px;
+  margin-left: 10px;
+}
+.form__blk label {
+  /* font-weight: 700; */
+  font-size: 1.6em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.label {
+  display: flex;
+  align-items: center;
+}
+
+/* .form__firstcontain {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.form__firstcontain input {
+  height: 5vh;
+  width: 25vw;
+  border: gray 1px solid;
+}
+.form__firstcontain label {
+  font-weight: 200;
+  font-size: 1.5em;
+  font-family: "Oswald", sans-serif;
+  margin-right: 20px;
+}
+.form__text {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+} */

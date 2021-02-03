@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import ChoiceMeuble from "../components/ChoiceMeuble";
+import Tarif from "./TarifGood";
+import StartAddress from "./startAddress";
+import EndAdressGood from "./EndAdressGood";
+
 // import ToastVolume from "./ToastVolume";
 // import choiceMeuble from "../components/ChoiceMeuble";
-import startForm from "../components/startAddress";
 let timeline = [
   { choice: "1", text: "calculateur" },
   { choice: "2", text: "Volume total éstimé" },
@@ -13,7 +16,6 @@ let timeline = [
 ];
 
 function DevisForm() {
-  // const [viewChoice, setViewChoice] = useState(false);
   const [count, setCount] = useState(1);
   return (
     <>
@@ -70,107 +72,12 @@ function DevisForm() {
           <ChoiceMeuble count={count} setCount={setCount} />
         ) : null}
         {count === 3 ? (
-          <div className="contain__startadress">
-            <div>{/* <h2>Votre adresse de départ</h2> */}</div>
-            <form action="" className="contain__formadressstart">
-              <div className="city start">
-                <p>Ville :</p>
-                <input type="text" />
-              </div>
-              <div className="stage start">
-                <p>etage :</p>
-                <select name="" id="">
-                  <option value="">1</option>
-                  <option value="">2</option>
-                  <option value="">3</option>
-                  <option value="">4</option>
-                  <option value="">5</option>
-                </select>
-              </div>
-              <div className="lift start">
-                <p>Ascenseur :</p>
-                <select name="" id="">
-                  <option value="">Oui</option>
-                  <option value="">Non</option>
-                </select>
-              </div>
-              <div className="distance__portage start">
-                <p>Distance de portage :</p>
-                <select name="" id="">
-                  <option value="">Moins de 15m</option>
-                  <option value="">De 15m à 29m</option>
-                  <option value="">De 30m à 39m</option>
-                  <option value="">De 40m à 49m</option>
-                  <option value="">De 50m à 59m</option>
-                  <option value="">De 60m à 79m</option>
-                  <option value="">De 80m à 100m</option>
-                </select>
-              </div>
-              <div className="start">
-                <p>Accessibilité camion 19T</p>
-                <select name="" id="">
-                  <option value="">Possible</option>
-                  <option value="">Difficile</option>
-                </select>
-              </div>
-              <div className="btn">
-                <button onClick={() => setCount(count - 1)}>back</button>
-                <button onClick={() => setCount(count + 1)}>previous</button>
-              </div>
-            </form>
-          </div>
+          <StartAddress count={count} setCount={setCount} />
         ) : null}
         {count === 4 ? (
-          <div className="contain__startadress">
-            <div>{/* <h2>Votre adresse de départ</h2> */}</div>
-            <form action="" className="contain__formadressstart">
-              <div className="city start">
-                <p>Villes :</p>
-                <input type="text" />
-              </div>
-              <div className="stage start">
-                <p>etage :</p>
-                <select name="" id="">
-                  <option value="">1</option>
-                  <option value="">2</option>
-                  <option value="">3</option>
-                  <option value="">4</option>
-                  <option value="">5</option>
-                </select>
-              </div>
-              <div className="lift start">
-                <p>Ascenseur :</p>
-                <select name="" id="">
-                  <option value="">Oui</option>
-                  <option value="">Non</option>
-                </select>
-              </div>
-              <div className="distance__portage start">
-                <p>Distance de portage :</p>
-                <select name="" id="">
-                  <option value="">Moins de 15m</option>
-                  <option value="">De 15m à 29m</option>
-                  <option value="">De 30m à 39m</option>
-                  <option value="">De 40m à 49m</option>
-                  <option value="">De 50m à 59m</option>
-                  <option value="">De 60m à 79m</option>
-                  <option value="">De 80m à 100m</option>
-                </select>
-              </div>
-              <div className="start">
-                <p>Accessibilité camion 19T</p>
-                <select name="" id="">
-                  <option value="">Possible</option>
-                  <option value="">Difficile</option>
-                </select>
-              </div>
-              <div className="btn">
-                <button onClick={() => setCount(count - 1)}>back</button>
-                <button onClick={() => setCount(count + 1)}>previous</button>
-              </div>
-            </form>
-          </div>
+          <EndAdressGood count={count} setCount={setCount} />
         ) : null}
+        <div>{count === 5 ? <Tarif /> : null}</div>
       </div>
     </>
   );
