@@ -1388,7 +1388,16 @@ button {
 }
 
 /************************************** calendar *************************/
-
+.date {
+  /* border: 1px solid red; */
+}
+.calendar__title p {
+  font-weight: 700;
+  font-size: 1em;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 20px;
+  color: #2670bd;
+}
 .calend__contain {
   display: flex;
   flex-direction: column;
@@ -1415,6 +1424,9 @@ button {
   background: #94c935;
   color: #ffffff;
   border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .trait {
@@ -1429,14 +1441,15 @@ button {
 }
 .calendar__text {
   width: 400px;
-  height: 100%;
+  height: 70%;
   display: flex;
   flex-direction: column;
+  margin-top: 37px;
   /* justify-content: space-around; */
 }
 .calendar__text p {
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   color: #2c436d;
@@ -1453,10 +1466,16 @@ button {
   color: #2670bd;
 }
 .calendar__blockdate {
-  margin: 80px 0 0 50px;
+  margin: 30px 0 0 0px;
 }
 .calendar__blockdatemargin {
-  margin: 30px 0 0 50px;
+  margin: 30px 0 0 0px;
+}
+.resa {
+  font-weight: 700;
+  font-size: 1.3em;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 60px;
 }
 
 /************************************** form *************************/
@@ -1510,25 +1529,164 @@ button {
   align-items: center;
 }
 
-/* .form__firstcontain {
-  height: 100%;
+/********************************** little product **********************************/
+.little {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
-.form__firstcontain input {
-  height: 5vh;
-  width: 25vw;
-  border: gray 1px solid;
-}
-.form__firstcontain label {
-  font-weight: 200;
-  font-size: 1.5em;
+.little h3 {
+  font-weight: 700;
+  font-size: 3em;
   font-family: "Oswald", sans-serif;
-  margin-right: 20px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
-.form__text {
+.little__master {
+  width: 90%;
+  height: 500px;
+  overflow: scroll;
   display: flex;
-  justify-content: space-between;
-  align-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.little__productcontain {
+  border: 1px solid #94c935;
+  width: 400px;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 10px;
+  padding: 10px;
+  /* border: 1px solid blueviolet; */
+
+  /* overflow: scroll; */
+  /* overflow: hidden; */
+}
+.little__productpicturecontain {
+  width: 100px;
+  height: 100px;
+  background: #2670bd;
+}
+.little__productpicture {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+.little__productpricetext {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.little__price {
+  font-weight: 700;
+  font-size: 2.5em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.little__button {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.little__button button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #2670bd;
+  background: #ffffff;
+  font-size: 1.7em;
+  color: #000000;
+}
+.little__button button:hover {
+  /* color: #94c935; */
+  background: #94c935;
+  cursor: pointer;
+  border: none;
+  transition: 0.3ms ease-in-out;
+}
+.little__button p {
+  font-weight: 700;
+  font-size: 2.4em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin: 0 5px;
+}
+.little__productparagraphe {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #000000;
+  margin-top: 5px;
+}
+
+.little__master h3 {
+  font-weight: 700;
+  font-size: 2.4em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+/************************** payment and contact ****************/
+.payment__contact__contain {
+  width: 90%;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 60px;
+}
+.payment__contact__contain button {
+  width: 30%;
+  height: 40%;
+  font-weight: 700;
+  font-size: 1.2em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  background: #2670bd;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/**************************** box mobile *************************/
+.boxmobile__master {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.boxmobile__master h3 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 3.4rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
+}
+.boxmobile__master p {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+}
+/* .box__contain {
+  width: 90%;
+  height: 500px;
+  border: 1px solid red;
+} */
+/* .box__blck {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+  margin-left: 70px;
 } */

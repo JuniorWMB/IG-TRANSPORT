@@ -85,7 +85,7 @@ function Pack() {
           </p>
         </div>
       </Link>
-      <div className="pack">
+      <Link to="/box-mobile" className="pack">
         <div className="pack__logo">
           <Briefcase size={40} color="#94c935" />
           <p> Box Mobile</p>
@@ -96,7 +96,7 @@ function Pack() {
             votre déménagement (cartons, adhesifs, housses etc...).
           </p>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

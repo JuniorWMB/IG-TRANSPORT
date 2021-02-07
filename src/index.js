@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import ProductContextbis from "./context/ProductContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ProductContextbis>
+      <App />
+    </ProductContextbis>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,47 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Calendar from "react-calendar";
 import "../Calendar.css";
 
 import Form from "./Form";
 
 import Trait from "./Trait";
+import { ProductContextbis } from "../context/ProductContext";
+import PackEmballageTarif from "./PackEmballageTarif";
+import Payment from "./Payment";
 
 function TarifGood() {
   const [date, setDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   const [showDate, setShowDate] = useState(false);
 
   const onChange = (date) => {
     setDate(date);
+  };
+  const onChangeTwo = (date) => {
+    setEndDate(date);
   };
 
   const validation = () => {
     setShowDate(true);
   };
 
-  // const reset = () => {
-  //   setShowDate(false);
-  // };
-
+  const { product, setProduct } = useContext(ProductContextbis);
+  console.log("product", product);
   return (
     <div className="calend__contain">
       <div className="calendar__textanddate">
         <h3>Réservation</h3>
         <div className="date__contain">
           <div className="date ">
-            <div>
+            <div className="calendar__title">
+              <p>Date de Chargement</p>
               <Calendar
                 onChange={onChange}
-                selectRange={true}
+                // selectRange={true}
                 value={date}
                 className="calendar"
               />
-              <button className="date__button" onClick={validation}>
-                Valider
-              </button>
+            </div>
+            <button className="date__button" onClick={validation}>
+              Valider
+            </button>
+          </div>
+
+          <div className="date ">
+            <div className="calendar__title">
+              <p>Date de Livraison</p>
+              <Calendar
+                onChange={onChangeTwo}
+                // selectRange={true}
+                value={endDate}
+                className="calendar"
+              />
             </div>
           </div>
           <div>
-            <h>Veuillez selectioner un date de réservation</h>
+            {/* <h4 className="resa">
+              Veuillez selectioner une date de réservation
+            </h4> */}
 
             {showDate === true ? (
               <div className="calendar__text">
@@ -49,13 +69,13 @@ function TarifGood() {
                 <div className="calendar__blockdate">
                   <span className="date__span">du :</span>
                   <span className="date__spantext">
-                    {date[0].toLocaleDateString()}
+                    {date.toLocaleDateString()}
                   </span>
                 </div>
                 <div className="calendar__blockdatemargin">
                   <span className="date__span">au : </span>
                   <span className="date__spantext">
-                    {date[1].toLocaleDateString()}
+                    {endDate.toLocaleDateString()}
                   </span>
                 </div>
               </div>
@@ -64,7 +84,15 @@ function TarifGood() {
         </div>
         <Trait />
       </div>
-      <Form />
+      {showDate ? (
+        <div>
+          {/* <Form />
+          <Trait /> */}
+          <PackEmballageTarif product={product} />
+          <Trait />
+          <Payment />
+        </div>
+      ) : null}
 
       {/* <Button /> */}
     </div>
