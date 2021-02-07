@@ -909,6 +909,18 @@ a {
   color: #2c436d;
   text-transform: uppercase;
 }
+.timeline__number__green {
+  background: #94c935;
+  color: #2c436d;
+  margin-top: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
 .timeline__number {
   color: #2c436d;
   margin-top: 10px;
@@ -1040,7 +1052,9 @@ a {
 .footer {
   width: 100%;
   height: 60vh;
+  position: relative;
   margin-top: 600px;
+  /* bottom: -1200px; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1690,3 +1704,86 @@ button {
   height: 80%;
   margin-left: 70px;
 } */
+
+/**************************** Little formule  *************************/
+.littleformule__contain {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  height: 300px;
+}
+
+.littleformule__contain__block {
+  box-shadow: 5px 5px 6px -2px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 2px 1px 17px 0px rgba(0, 0, 0, 0.75); */
+  width: 200px;
+  padding: 10px;
+  cursor: pointer;
+}
+.little__formule__title {
+  font-size: 2.9em;
+}
+.littleformule__box {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.little__border {
+  box-shadow: none;
+  background: #2670bd;
+  width: 200px;
+  padding: 10px;
+}
+
+/****************************** Total devis ********************************/
+.totaldevis__contain {
+  /* border: #2670bd 1px solid; */
+  background: #2670bd;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+.totaldevis__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.totaldevis__text div {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 15%;
+  height: 80%;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+.totaldevis__text p {
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.totaldevis__text button {
+  width: 30%;
+  height: 80%;
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  background: #94c935;
+}
+
+/************************* Picture Mobile ***********************/
+.picture__boxmobile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.picture__boxmobile img {
+  width: 20%;
+  height: 20%;
+}

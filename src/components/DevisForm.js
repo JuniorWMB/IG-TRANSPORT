@@ -3,6 +3,7 @@ import ChoiceMeuble from "../components/ChoiceMeuble";
 import Tarif from "./TarifGood";
 import StartAddress from "./startAddress";
 import EndAdressGood from "./EndAdressGood";
+import TotalDevis from "./TotalDevis";
 
 // import ToastVolume from "./ToastVolume";
 // import choiceMeuble from "../components/ChoiceMeuble";
@@ -17,19 +18,34 @@ let timeline = [
 
 function DevisForm() {
   const [count, setCount] = useState(1);
+  const countBack = () => {
+    if (count === 1) {
+      return null;
+    } else {
+      setCount(count - 1);
+    }
+  };
   return (
     <>
       <div className="devis__contain">
         <div className="devis__timeline">
           {timeline.map((choix, index) => {
             return (
-              <div className="timeline__choice">
+              <div key={index} className="timeline__choice">
                 <div className="timeline__text">
                   <p> {choix.text}</p>
                 </div>
-                <div className="timeline__number">
+                <div
+                  className={
+                    index < count
+                      ? "timeline__number__green"
+                      : "timeline__number"
+                  }
+                  onClick={countBack}
+                >
                   <p>{choix.choice}</p>
                 </div>
+                {console.log("index", index)}
               </div>
             );
           })}
@@ -78,6 +94,7 @@ function DevisForm() {
           <EndAdressGood count={count} setCount={setCount} />
         ) : null}
         <div>{count === 5 ? <Tarif /> : null}</div>
+        <TotalDevis count={count} setCount={setCount} />
       </div>
     </>
   );

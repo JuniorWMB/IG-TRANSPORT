@@ -8,6 +8,7 @@ import Trait from "./Trait";
 import { ProductContextbis } from "../context/ProductContext";
 import PackEmballageTarif from "./PackEmballageTarif";
 import Payment from "./Payment";
+import LittleFormule from "./LittleFormule";
 
 function TarifGood() {
   const [date, setDate] = useState(new Date());
@@ -88,6 +89,8 @@ function TarifGood() {
         <div>
           {/* <Form />
           <Trait /> */}
+          <LittleFormule />
+          <Trait />
           <PackEmballageTarif product={product} />
           <Trait />
           <Payment />

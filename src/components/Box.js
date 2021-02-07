@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BoxMobileExplain from "./BoxMobileExplain";
 
 const Box = () => {
   return (
     <div className="pack__contain">
-      <div>
+      <BoxMobileExplain />
+      {/* <div>
         <Link to="/demenagement" className="pack">
           <div className="pack__logo">
             <p> Volume 4m3</p>
@@ -60,7 +62,7 @@ const Box = () => {
           <p>Prix 40 à 80m de portage: 20€</p>
           <p> + 80m de portage: 80€</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
