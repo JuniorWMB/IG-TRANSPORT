@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import DevisChoice from "./Pages/DevisChoice";
 import Header from "./components/Header";
 import BoxMobile from "./Pages/BoxMobile";
+import Transport from "./Pages/Transport";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/garde-meuble" component={GardeMeuble} />
           <Route path="/devis" component={Devis} />
           <Route path="/vos-devis" component={DevisChoice} />
+          <Route path="/transport" component={Transport} />
         </Switch>
       </Router>
       <Footer />

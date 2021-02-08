@@ -35,7 +35,7 @@ function Pack() {
           </p>
         </div>
       </Link>
-      <div className="pack">
+      <Link to="/transport" className="pack">
         <div className="pack__logo">
           <Truck size={40} color="#94c935" />
           <p> Transport</p>
@@ -48,7 +48,7 @@ function Pack() {
             que le stockage de meubles.
           </p>
         </div>
-      </div>
+      </Link>
       <Link to="/stockage" className="pack">
         <div className="pack__logo">
           <Archive size={40} color="#94c935" />

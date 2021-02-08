@@ -14,7 +14,16 @@ const LittleFormule = () => {
   };
 
   return (
-    <div className="littleformule__contain">
+    <div className="littleformule__contain snipcart-add-item">
+      <button
+        data-item-price="10.50"
+        data-item-name="junior"
+        data-item-description="moi"
+        data-item-max-quantity="0"
+      >
+        Buy me
+      </button>
+
       <div
         className={
           toggleBlocks === 1
