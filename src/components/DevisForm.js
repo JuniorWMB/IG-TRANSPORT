@@ -16,6 +16,8 @@ let timeline = [
 
 function DevisForm() {
   const [count, setCount] = useState(1);
+  const [volumeCalcul, setVolumeCalcul] = useState("");
+  const [show, setShow] = useState(false);
   const countBack = () => {
     if (count === 1) {
       return null;
@@ -23,6 +25,11 @@ function DevisForm() {
       setCount(count - 1);
     }
   };
+
+  if (volumeCalcul.charAt("1") === 1) {
+    setShow(true);
+    console.log("volume ok");
+  }
   return (
     <>
       <div className="devis__contain">
@@ -43,7 +50,6 @@ function DevisForm() {
                 >
                   <p>{choix.choice}</p>
                 </div>
-                {console.log("index", index)}
               </div>
             );
           })}
@@ -62,10 +68,23 @@ function DevisForm() {
                   Entrez ci-dessous la valeur de votre volume
                 </p>
                 <div className="contain__devisinput">
-                  <input type="text" />
+                  <input
+                    type="text"
+                    onChange={(e) => {
+                      setVolumeCalcul(e.target.value);
+                    }}
+                  />
                   <p>
                     m <sup>3</sup>
                   </p>
+                  <button
+                    className={
+                      show ? "choice__buttonleft" : "choice__buttonnone"
+                    }
+                    onClick={() => setCount(count + 2)}
+                  >
+                    Valider
+                  </button>
                 </div>
               </div>
             </div>
