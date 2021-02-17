@@ -29,9 +29,8 @@ function Pack() {
         </div>
         <div className="pack__textprof">
           <p>
-            Services de logistique avec possibilité de livraison, préparation
-            des commandes et stockage de palettes. Nous répondons toutes vos
-            demandes.
+            Déménagement de particuliers ou professionnels,débarras,monte
+            meuble.
           </p>
         </div>
       </Link>
@@ -42,10 +41,8 @@ function Pack() {
         </div>
         <div className="pack__textprof">
           <p>
-            Une offre complète pour vous accompagnez dans votre projet de
-            déménagement.
-            <br /> Nous proposons 3 formules pour répondre à vos besoins ainsi
-            que le stockage de meubles.
+            Courses urgentes, organisateur de transports ,tournées
+            régulières,affrètement.
           </p>
         </div>
       </Link>
@@ -56,8 +53,8 @@ function Pack() {
         </div>
         <div className="pack__textprof">
           <p>
-            Nous proposons une large sélection de produits indispensable pour
-            votre déménagement (cartons, adhesifs, housses etc...).
+            En rack ou au sol dans un entrepôt chauffer et sécuriser. <br />{" "}
+            Reception ,Préparation et expédition de vos marchandises.
           </p>
         </div>
       </Link>
@@ -92,8 +89,9 @@ function Pack() {
         </div>
         <div className="pack__textprof">
           <p>
-            Nous proposons une large sélection de produits indispensable pour
-            votre déménagement (cartons, adhesifs, housses etc...).
+            Livraison de votre gardes meubles ,de 4m3 ou 8 m3 ,en bas de chez
+            vous avec l'option de chargement par notre équipe de demenageur
+            professionnels.
           </p>
         </div>
       </Link>

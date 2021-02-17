@@ -16,8 +16,6 @@ const PackEmballageTarif = ({ product }) => {
                   src={prod.image}
                   alt={prod.description}
                 />
-
-                {/* <p className="little__productparagraphe">{prod.description}</p> */}
               </div>
               <div className="little__productpricetext">
                 <div className="little__price"> {prod.price}€</div>

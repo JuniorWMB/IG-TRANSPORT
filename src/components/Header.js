@@ -1,8 +1,8 @@
 import React from "react";
 import "../App.css";
-import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+// import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FiAlignJustify } from "react-icons/fi";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import logo from "../assets/logo.webp";
 import { Link } from "react-router-dom";
@@ -28,7 +28,7 @@ function Header() {
           </Link>
         </div>
         <div className="header__icon">
-          <Link
+          {/* <Link
             to="/signup"
             className="header__iconAccount"
             style={{
@@ -39,18 +39,41 @@ function Header() {
             }}
           >
             <FontAwesomeIcon icon={faUser} />
-          </Link>
-          <div
-            className="header__iconCart"
-            style={{
-              background: "#94c935",
-              // background: "#2C436D",
-              fontSize: "20px",
-              color: "white",
-              border: "none",
-            }}
-          >
-            <FontAwesomeIcon icon={faShoppingCart} />
+          </Link> */}
+          <div className="header__iconCart">
+            <button
+              class="snipcart-checkout"
+              style={{
+                background: "none",
+                backgroundColor: "none",
+                height: "100%",
+                width: "40%",
+              }}
+            >
+              <AiOutlineShoppingCart size="35" color="#2670bd" />
+              <span
+                class="snipcart-items-count"
+                style={{
+                  color: "#94c935",
+                  fontSize: "1.4em",
+                }}
+              ></span>
+            </button>
+            <button
+              class="snipcart-checkout"
+              style={{
+                background: "none",
+                backgroundColor: "none",
+              }}
+            >
+              <span
+                class="snipcart-total-price"
+                style={{
+                  color: "#2670bd",
+                  fontSize: "1.4em",
+                }}
+              ></span>
+            </button>
           </div>
         </div>
       </div>

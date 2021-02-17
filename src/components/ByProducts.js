@@ -51,16 +51,25 @@ function ByProducts({ results }) {
                 }}
                 className="product__price"
               >
-                <button>{product.price} €</button>
+                <button
+                  class="snipcart-add-item"
+                  data-item-id={product.id}
+                  data-item-price={product.price}
+                  data-item-description={product.description}
+                  data-item-image={product.image}
+                  data-item-name={product.description}
+                  data-item-shippable="true"
+                  data-item-url="/all-products"
+                  data-currency="eur"
+                >
+                  {product.price} €
+                </button>
               </div>
             </div>
           </div>
         </div>
       ))}
-      <div
-        className="panier"
-        // style={{ width: "500px", height: "200px", border: "1px solid red" }}
-      >
+      {/* <div className="panier">
         <div className="panier__container">
           {produit.map((prod, index) => (
             <div className="panier__produit">
@@ -96,7 +105,7 @@ function ByProducts({ results }) {
         <div className="total">
           <p>Total: {total} €</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

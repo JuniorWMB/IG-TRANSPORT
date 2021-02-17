@@ -60,10 +60,6 @@ function TarifGood() {
             </div>
           </div>
           <div>
-            {/* <h4 className="resa">
-              Veuillez selectioner une date de réservation
-            </h4> */}
-
             {showDate === true ? (
               <div className="calendar__text">
                 <p> Vous avez réservé la date </p>
@@ -87,8 +83,6 @@ function TarifGood() {
       </div>
       {showDate ? (
         <div>
-          {/* <Form />
-          <Trait /> */}
           <LittleFormule />
           <Trait />
           <PackEmballageTarif product={product} />
@@ -96,8 +90,6 @@ function TarifGood() {
           <Payment />
         </div>
       ) : null}
-
-      {/* <Button /> */}
     </div>
   );
 }

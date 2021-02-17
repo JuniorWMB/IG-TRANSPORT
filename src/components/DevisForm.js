@@ -3,10 +3,8 @@ import ChoiceMeuble from "../components/ChoiceMeuble";
 import Tarif from "./TarifGood";
 import StartAddress from "./startAddress";
 import EndAdressGood from "./EndAdressGood";
-import TotalDevis from "./TotalDevis";
+import Basket from "./Basket";
 
-// import ToastVolume from "./ToastVolume";
-// import choiceMeuble from "../components/ChoiceMeuble";
 let timeline = [
   { choice: "1", text: "calculateur" },
   { choice: "2", text: "Volume total éstimé" },
@@ -94,7 +92,7 @@ function DevisForm() {
           <EndAdressGood count={count} setCount={setCount} />
         ) : null}
         <div>{count === 5 ? <Tarif /> : null}</div>
-        <TotalDevis count={count} setCount={setCount} />
+        {/* <TotalDevis count={count} setCount={setCount} /> */}
       </div>
     </>
   );
