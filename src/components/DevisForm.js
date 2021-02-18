@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ChoiceMeuble from "../components/ChoiceMeuble";
 import Tarif from "./TarifGood";
 import StartAddress from "./startAddress";
@@ -25,11 +25,15 @@ function DevisForm() {
       setCount(count - 1);
     }
   };
+  useEffect(() => {
+    if (volumeCalcul.length > 0) {
+      setShow(true);
+      console.log("1");
+    } else {
+      console.log("2");
+    }
+  }, [volumeCalcul.length]);
 
-  if (volumeCalcul.charAt("1") === 1) {
-    setShow(true);
-    console.log("volume ok");
-  }
   return (
     <>
       <div className="devis__contain">

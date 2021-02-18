@@ -1030,7 +1030,7 @@ function ChoiceMeuble({ count, setCount }) {
           showSide={showSide}
         />
       </div>
-      {/* <div className={showSide ? "panier__contain" : "panier__none"}>
+      <div className={showSide ? "panier__contain" : "panier__none"}>
         <div className="panier__meuble">
           <h1>Panier</h1>
           {products.map((product, idx) => {
@@ -1038,9 +1038,7 @@ function ChoiceMeuble({ count, setCount }) {
               <div className="panier__liste">
                 <button
                   onClick={() => {
-
                     const newProduct = [...products];
-
 
                     if (newProduct[idx].quantity === 1) {
                       newProduct.splice(idx, 1);
@@ -1069,7 +1067,7 @@ function ChoiceMeuble({ count, setCount }) {
           <div></div>
           <p className="panier__volume">Volume: {total.toFixed(2)} m3</p>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
