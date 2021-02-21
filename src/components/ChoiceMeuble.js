@@ -1033,39 +1033,43 @@ function ChoiceMeuble({ count, setCount }) {
       <div className={showSide ? "panier__contain" : "panier__none"}>
         <div className="panier__meuble">
           <h1>Panier</h1>
-          {products.map((product, idx) => {
-            return (
-              <div className="panier__liste">
-                <button
-                  onClick={() => {
-                    const newProduct = [...products];
 
-                    if (newProduct[idx].quantity === 1) {
-                      newProduct.splice(idx, 1);
-                    } else {
-                      newProduct[idx].quantity--;
-                    }
-                    setProducts(newProduct);
-                  }}
-                >
-                  -
-                </button>
-                {product.quantity}
-                <button
-                  onClick={() => {
-                    const newProduct = [...products];
-                    newProduct[idx].quantity++;
-                    setProducts(newProduct);
-                  }}
-                >
-                  +
-                </button>
-                {product.name}
-              </div>
-            );
-          })}
-          <div></div>
-          <p className="panier__volume">Volume: {total.toFixed(2)} m3</p>
+          <div className="panier__listeblock">
+            {products.map((product, idx) => {
+              return (
+                <div className="panier__liste">
+                  <button
+                    onClick={() => {
+                      const newProduct = [...products];
+
+                      if (newProduct[idx].quantity === 1) {
+                        newProduct.splice(idx, 1);
+                      } else {
+                        newProduct[idx].quantity--;
+                      }
+                      setProducts(newProduct);
+                    }}
+                  >
+                    -
+                  </button>
+                  {product.quantity}
+                  <button
+                    onClick={() => {
+                      const newProduct = [...products];
+                      newProduct[idx].quantity++;
+                      setProducts(newProduct);
+                    }}
+                  >
+                    +
+                  </button>
+                  {product.name}
+                </div>
+              );
+            })}
+          </div>
+          <div className="panier__volumeblock">
+            <p className="panier__volume">Volume: {total.toFixed(2)} m3</p>
+          </div>
         </div>
       </div>
     </div>

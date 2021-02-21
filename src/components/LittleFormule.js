@@ -15,7 +15,7 @@ const LittleFormule = () => {
 
   return (
     <div className="littleformule__contain ">
-      <button
+      {/* <button
         class="snipcart-add-item"
         data-item-id="starry-night"
         data-item-price="79.99"
@@ -25,7 +25,7 @@ const LittleFormule = () => {
         data-item-name="The Starry Night"
       >
         Add to cart
-      </button>
+      </button> */}
 
       <div
         className={

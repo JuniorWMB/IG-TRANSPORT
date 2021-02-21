@@ -14,6 +14,12 @@ function TarifGood() {
   const [date, setDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [showDate, setShowDate] = useState(false);
+  let options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
 
   const onChange = (date) => {
     setDate(date);
@@ -25,9 +31,9 @@ function TarifGood() {
   const validation = () => {
     setShowDate(true);
   };
+  console.log(">>>>date", date.date);
 
   const { product, setProduct } = useContext(ProductContextbis);
-  console.log("product", product);
   return (
     <div className="calend__contain">
       <div className="calendar__textanddate">
@@ -38,7 +44,7 @@ function TarifGood() {
               <p>Date de Chargement</p>
               <Calendar
                 onChange={onChange}
-                // selectRange={true}
+                selectRange={true}
                 value={date}
                 className="calendar"
               />
@@ -53,7 +59,7 @@ function TarifGood() {
               <p>Date de Livraison</p>
               <Calendar
                 onChange={onChangeTwo}
-                // selectRange={true}
+                selectRange={true}
                 value={endDate}
                 className="calendar"
               />
@@ -64,17 +70,39 @@ function TarifGood() {
               <div className="calendar__text">
                 <p> Vous avez réservé la date </p>
                 <div className="calendar__blockdate">
-                  <span className="date__span">du :</span>
+                  <span className="date__span">Chargement </span>
+                  <br />
                   <span className="date__spantext">
-                    {date.toLocaleDateString()}
+                    du :{/* {date.toLocaleDateString("fr-FR", options)} */}
+                    {date[0].toLocaleDateString("fr-FR", options)}
+                  </span>
+                  <br />
+                  <span className="date__spantext">
+                    au:
+                    {/* {date.toLocaleDateString("fr-FR", options)} */}
+                    {date[1].toLocaleDateString("fr-FR", options)}
                   </span>
                 </div>
-                <div className="calendar__blockdatemargin">
+                <div className="calendar__blockdate">
+                  <span className="date__span">Livraison </span>
+                  <br />
+                  <span className="date__spantext">
+                    du :{/* {date.toLocaleDateString("fr-FR", options)} */}
+                    {endDate[0].toLocaleDateString("fr-FR", options)}
+                  </span>
+                  <br />
+                  <span className="date__spantext">
+                    au:
+                    {/* {date.toLocaleDateString("fr-FR", options)} */}
+                    {endDate[1].toLocaleDateString("fr-FR", options)}
+                  </span>
+                </div>
+                {/* <div className="calendar__blockdatemargin">
                   <span className="date__span">au : </span>
                   <span className="date__spantext">
-                    {endDate.toLocaleDateString()}
+                    {endDate.toLocaleDateString("fr-FR", options)}
                   </span>
-                </div>
+                </div> */}
               </div>
             ) : null}
           </div>

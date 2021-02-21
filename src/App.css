@@ -1197,7 +1197,7 @@ a {
   font-size: 1.5em;
 }
 .panier__meuble {
-  width: 20%;
+  width: 17%;
   height: 70%;
   border-radius: 10px;
   border: #2c436d 1px solid;
@@ -1205,7 +1205,10 @@ a {
   position: fixed;
   right: 10px;
   bottom: 200px;
-  overflow: scroll;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .panier__meuble button {
   border: 1px solid #94c935;
@@ -1232,7 +1235,7 @@ a {
 }
 .panier__volume {
   width: 100%;
-  height: 50px;
+  height: 60px;
   position: sticky;
   display: flex;
   align-items: center;
@@ -1240,11 +1243,16 @@ a {
   background: #94c935;
   padding-left: 10px;
 }
-.panier__liste {
-  position: relative;
-}
+
 .panier__none {
   background: red;
+}
+.panier__liste {
+}
+.panier__listeblock {
+  height: 100%;
+  overflow: scroll;
+  margin-bottom: -18px;
 }
 /*********************************************** heavy objet **********************************************************/
 .heavy__block__contain {
@@ -1578,7 +1586,7 @@ button {
 }
 .date__spantext {
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.4em;
   font-family: "Oswald", sans-serif;
   color: #2670bd;
 }
@@ -1928,80 +1936,76 @@ button {
   height: 500px;
   width: 95%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-.boxmobiletext__left,
-.boxmobiletext__right {
-  width: 45%;
-  height: 600px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-.boxmobiletextblock__left,
-.boxmobiletextblock__right {
-  width: 95%;
+.boxmobiletext__block {
+  border: springgreen 1px solid;
+  width: 30%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: #262725 1px solid;
-  padding: 20px;
-  background: whitesmoke;
 }
-
-.portage__input {
-  height: 50px;
+.boxmobiletext__block h4 {
+  border: 1px solid red;
+  height: 10%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-.portage__input select {
+.boxmobiletext__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.boxmobiletext__manutention {
+  display: flex;
+  border: steelblue 1px solid;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+}
+.boxmobiletext__manutention p {
+  font-size: 1.3em;
+}
+.boxmobiletext__button button {
+  height: 1.9rem;
+}
+.boxmobiletext__livraison p {
+  font-size: 1.3em;
+}
+.boxmobile__portage {
+  display: flex;
+  justify-content: space-between;
+}
+.boxmobile__portage p {
+  font-size: 1.3em;
+}
+.boxmobile__portage select {
   width: 60%;
-  height: 80%;
-  font-size: 1.4rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #2670bd;
-  border: #2670bd 1px solid;
-  border-radius: 5px;
-  margin-left: 10px;
-  border: none;
-  outline: none;
 }
-.portage__input label {
-  font-size: 1.7rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #2c436d;
+.boxmobile__etage {
+  display: flex;
+  justify-content: space-between;
 }
-.boxmobiletextblock__left h2 {
-  font-weight: 700;
-  font-size: 2.8rem;
-  font-family: "Oswald", sans-serif;
+.boxmobile__etage p {
+  font-size: 1.3em;
+  text-transform: capitalize;
 }
-.boxmobiletextblock__left p {
-  /* font-weight: 700; */
-  font-size: 1.7rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #2c436d;
+.boxmobile__etage select {
+  width: 20%;
 }
 .boxmobile__total {
-  /* width: 60%;
-  height: 80%;
-  font-size: 1.4rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #2670bd;
-  border: #2670bd 1px solid;
-  border-radius: 5px;
-  margin-left: 10px;
-  border: none;
-  outline: none; */
   display: flex;
+  align-items: center;
 }
-.boxmobile__total label {
-  font-size: 1.7rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #2c436d;
-  margin-right: 5px;
+.boxmobile__total p {
+  font-size: 1.3em;
+}
+.boxmobile__total span {
+  font-size: 1.3em;
+}
+.boxmobile__show {
+  border: 1px solid purple;
+  height: 400px;
 }
 
 /*************************** page fail ******************************/
