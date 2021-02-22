@@ -1940,8 +1940,12 @@ button {
 }
 .boxmobiletext__block {
   border: springgreen 1px solid;
-  width: 30%;
+  width: 32%;
   height: 100%;
+  padding: 10px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
 }
 .boxmobiletext__block h4 {
   border: 1px solid red;
@@ -1949,63 +1953,98 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
+  font-size: 1.7rem;
+  font-family: "Oswald", sans-serif;
 }
 .boxmobiletext__text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .boxmobiletext__manutention {
   display: flex;
-  border: steelblue 1px solid;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 30px;
+  height: 60px;
 }
 .boxmobiletext__manutention p {
-  font-size: 1.3em;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2c436d;
+  font-family: "Oswald", sans-serif;
 }
 .boxmobiletext__button button {
-  height: 1.9rem;
+  height: 3.7rem;
+  width: 3.7rem;
+}
+.boxmobiletext__button {
+  display: flex;
 }
 .boxmobiletext__livraison p {
-  font-size: 1.3em;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #2c436d;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 }
 .boxmobile__portage {
   display: flex;
   justify-content: space-between;
 }
 .boxmobile__portage p {
-  font-size: 1.3em;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2c436d;
+  font-family: "Oswald", sans-serif;
 }
 .boxmobile__portage select {
   width: 60%;
+  height: 2.5rem;
 }
 .boxmobile__etage {
   display: flex;
   justify-content: space-between;
 }
 .boxmobile__etage p {
-  font-size: 1.3em;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2c436d;
+  font-family: "Oswald", sans-serif;
   text-transform: capitalize;
 }
 .boxmobile__etage select {
   width: 20%;
+  height: 2.5rem;
 }
 .boxmobile__total {
   display: flex;
   align-items: center;
+  border: #2c436d 1px solid;
+  height: 50px;
+  justify-content: center;
 }
 .boxmobile__total p {
-  font-size: 1.3em;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2c436d;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 .boxmobile__total span {
-  font-size: 1.3em;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2c436d;
+  font-family: "Oswald", sans-serif;
 }
 .boxmobile__show {
-  border: 1px solid purple;
-  height: 400px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 /*************************** page fail ******************************/
