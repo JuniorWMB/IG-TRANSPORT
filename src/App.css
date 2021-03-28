@@ -1204,6 +1204,7 @@ a {
   background: whitesmoke;
   position: fixed;
   right: 10px;
+  top: 150px;
   bottom: 200px;
   overflow: hidden;
   display: flex;
@@ -1801,6 +1802,21 @@ button {
   font-size: 2rem;
   font-family: "Oswald", sans-serif;
 }
+
+.btn__gray {
+  background: #2670bd;
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: "Oswald", sans-serif;
+  outline: none;
+}
+.btn__green {
+  background: #afafaf;
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: "Oswald", sans-serif;
+  outline: none;
+}
 /* .box__contain {
   width: 90%;
   height: 500px;
@@ -1940,7 +1956,7 @@ button {
 }
 .boxmobiletext__block {
   border: springgreen 1px solid;
-  width: 32%;
+  width: 30%;
   height: 100%;
   padding: 10px;
   /* display: flex;
@@ -1948,7 +1964,7 @@ button {
   justify-content: space-around; */
 }
 .boxmobiletext__block h4 {
-  border: 1px solid red;
+  border: 1px solid #2c436d;
   height: 10%;
   display: flex;
   justify-content: center;
@@ -1968,6 +1984,7 @@ button {
   justify-content: space-between;
   width: 100%;
   height: 60px;
+  margin-top: 20px;
 }
 .boxmobiletext__manutention p {
   font-weight: 700;
@@ -2045,8 +2062,41 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0.13s, opacity 0.13s linear;
+  transition-delay: 0s;
+}
+.boxmobile__hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.13s, opacity 0.13s linear;
 }
 
+.boxmobile__valider {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: center;
+  margin-top: 5px;
+  border: 1px solid #2c436d;
+}
+.boxmobile__valider button {
+  height: 100%;
+  width: 100%;
+  background: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2c436d;
+  font-family: "Oswald", sans-serif;
+}
+.boxmobile__valider button:hover {
+  background: #94c935;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: ease-in 1.5ms;
+}
 /*************************** page fail ******************************/
 .page__fail {
   height: 90vh;

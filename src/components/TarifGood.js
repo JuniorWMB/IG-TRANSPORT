@@ -9,8 +9,10 @@ import { ProductContextbis } from "../context/ProductContext";
 import PackEmballageTarif from "./PackEmballageTarif";
 import Payment from "./Payment";
 import LittleFormule from "./LittleFormule";
+import Maps from "./Maps";
+import ButtonNav from "./ButtonNav";
 
-function TarifGood() {
+function TarifGood({ count, setCount }) {
   const [date, setDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [showDate, setShowDate] = useState(false);
@@ -97,12 +99,6 @@ function TarifGood() {
                     {endDate[1].toLocaleDateString("fr-FR", options)}
                   </span>
                 </div>
-                {/* <div className="calendar__blockdatemargin">
-                  <span className="date__span">au : </span>
-                  <span className="date__spantext">
-                    {endDate.toLocaleDateString("fr-FR", options)}
-                  </span>
-                </div> */}
               </div>
             ) : null}
           </div>
@@ -115,7 +111,7 @@ function TarifGood() {
           <Trait />
           <PackEmballageTarif product={product} />
           <Trait />
-          <Payment />
+          <ButtonNav count={count} setCount={setCount} />
         </div>
       ) : null}
     </div>

@@ -1,24 +1,34 @@
 import React, { useState } from "react";
 import BoxMobileBlock from "./BoxMobileBlock";
+import BoxMobilePromo from "./BoxMobilePromo";
+import BoxMobileFourCube from "./BoxMobileFourCube";
 
 const BoxmobileText = () => {
-  const [cityStart, setCityStart] = useState("");
-  const [stair, setStair] = useState("");
-  const [lift, setLift] = useState("");
   const [distPortage, setDistPortage] = useState("");
   const [distPortageLarge, setDistPortageLarge] = useState("");
-  const [accessTruck, setAccessTruck] = useState("");
 
   let totalBoxMobile = Number(distPortage) + 50;
   let totalBoxMobileLarge = Number(distPortageLarge) + 100;
+
+  const handlePortageLarge = (e) => {
+    setDistPortageLarge(e.target.value);
+    setDistPortage(e.target.value);
+  };
+  const handlePortage = (e) => {
+    setDistPortage(e.target.value);
+  };
+
   return (
     <div className="boxmobiletext__contain">
-      <BoxMobileBlock
+      <BoxMobileFourCube
         titleQuatre="Volume 4m3"
         livraison="Livraison à votre domicile: 50€"
         portage="Portage:"
         etage="étage:"
         total="Total:"
+        valider="Valider"
+        handlePortage={handlePortage}
+        totalBoxMobile={totalBoxMobile}
       />
       <BoxMobileBlock
         titleHuit="Volume 8m3"
@@ -26,8 +36,11 @@ const BoxmobileText = () => {
         portage="Portage:"
         etage="étage:"
         total="Total:"
+        valider="Valider"
+        handlePortageLarge={handlePortageLarge}
+        totalBoxMobileLarge={totalBoxMobileLarge}
       />
-      <BoxMobileBlock titlePromo="Offre Promotionnel" />
+      <BoxMobilePromo titlePromo="Offre Promotionnel" />
     </div>
   );
 };

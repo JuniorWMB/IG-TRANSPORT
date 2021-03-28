@@ -3,8 +3,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
 const MySwal = withReactContent(Swal);
-
-const BoxMobileBlock = ({
+const BoxMobileFourCube = ({
   titleQuatre,
   titleHuit,
   titlePromo,
@@ -17,7 +16,7 @@ const BoxMobileBlock = ({
   const [show, setShow] = useState(false);
   const [port, setPort] = useState("");
 
-  let totalBoxMobile = Number(port) + 100;
+  let totalBoxMobile = Number(port) + 50;
 
   const onClickModal = () => {
     MySwal.fire({
@@ -61,6 +60,7 @@ const BoxMobileBlock = ({
   const handlePortChange = (e) => {
     setPort(e.target.value);
   };
+
   return (
     <div className="boxmobiletext__block">
       <h4>
@@ -128,4 +128,4 @@ const BoxMobileBlock = ({
   );
 };
 
-export default BoxMobileBlock;
+export default BoxMobileFourCube;
