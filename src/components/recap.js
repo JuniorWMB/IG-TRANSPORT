@@ -4,9 +4,11 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
-// import { GoogleMap, DistanceMatrixService } from "@react-google-maps/api";
 import { getDistance, getPreciseDistance } from "geolib";
-
+import RecapDemenagement from "./RecapDemenagement";
+import RecapDepart from "./recapDepart";
+import EndRecap from "./EndRecap";
+import FormulaireRecap from "./FormulaireRecap";
 function Recap() {
   const [address, setAdress] = useState("");
   const [distance, setDistance] = useState("0");
@@ -24,12 +26,6 @@ function Recap() {
   };
   console.log("adress", coordinates);
 
-  // let pdis = getPreciseDistance(
-  //   { latitude: 20.0504188, longitude: 64.4139099 },
-  //   { latitude: 51.528308, longitude: -0.3817765 }
-  // );
-  // alert(`Precise Distance\n\n${pdis} Meter\nOR\n${pdis / 1000} KM`);
-  // setDistance(pdis);
   const pdis = getPreciseDistance(
     // { latitude: 20.0504188, longitude: 64.4139099 },
     { latitude: coordinates.lat, longitude: coordinates.lng },
@@ -46,19 +42,25 @@ function Recap() {
   // console.log("distance", distance);
 
   return (
-    <div style={{ display: "flex" }}>
-      <Maps />
-
+    <div style={{ display: "flex", flexDirection: "column", padding: "20px " }}>
+      <h1 className="titleRecapBlock">Votre déménagement</h1>
+      <RecapDemenagement />
+      <h1 className="titleRecapBlock">Départ</h1>
+      <RecapDepart />
+      <h1 className="titleRecapBlock">Arrivée</h1>
+      <EndRecap />
+      <h1 className="titleRecapBlock">Vos coordonnées</h1>
+      <FormulaireRecap />
       <div>
-        <div>
+        {/* <div>
           <p>Lat:{coordinates.lat} </p>
           <br />
           <p>Long:{coordinates.lng} </p>
           <br />
           <p>addresse:{address} </p>
           <p>Distance: {arrondiDist}KM</p>
-        </div>
-        <PlacesAutocomplete
+        </div> */}
+        {/* <PlacesAutocomplete
           value={address}
           onChange={setAdress}
           onSelect={handleSelect}
@@ -93,32 +95,14 @@ function Recap() {
                         style,
                       })}
                     >
-                      <span>{suggestion.description}</span>
+                      <span className="dropdown">{suggestion.description}</span>
                     </div>
                   );
                 })}
               </div>
             </div>
           )}
-        </PlacesAutocomplete>
-        {/* <div className="map-container">
-          <GoogleMap
-            id="map"
-            mapContainerStyle={mapContainerStyle}
-            zoom={14}
-            center={{ lat: 40.7128, lng: -74.006 }}
-            options={options}
-          >
-            <DistanceMatrixService
-              options={{
-                destinations: [{ lat: 1.296788, lng: 103.778961 }],
-                origins: [{ lng: 72.89216, lat: 19.12092 }],
-                travelMode: "DRIVING",
-              }}
-              //  
-            />
-          </GoogleMap>
-        </div> */}
+        </PlacesAutocomplete> */}
       </div>
     </div>
   );

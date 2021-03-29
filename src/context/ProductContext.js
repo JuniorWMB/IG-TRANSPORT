@@ -9,8 +9,6 @@ import housseturq from "../assets/housseturq.jpg";
 import livre from "../assets/livre.jpg";
 import pendrie from "../assets/pendrie.jpg";
 import standard from "../assets/standar.jpg";
-// import tringle from "../assets/tringle.jpg";
-// import vaisselle from "../assets/vaisselle.jpg";
 import verre from "../assets/verre.jpg";
 
 export const ProductContextbis = createContext(null);

@@ -257,11 +257,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
   /* flex-wrap: nowrap; */
   flex-wrap: wrap;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   top: 270px;
   align-content: flex-start;
 }
@@ -273,14 +273,15 @@ a {
   /* flex-wrap: nowrap; */
   flex-wrap: wrap;
   width: 100vw;
-  height: 100vh;
-  top: 270px;
+  top: 100px;
+  border: 1px solid green;
+  margin-bottom: 500px;
   align-content: flex-start;
 }
 
 .pack {
   width: 25vw;
-  height: 28%;
+  height: 50vh;
   padding: 0 10px;
   display: flex;
   flex-direction: column;
@@ -1074,8 +1075,8 @@ a {
 .footer {
   width: 100%;
   height: 60vh;
-  position: absolute;
-  margin-top: 70%;
+  /* position: absolute; */
+  margin-top: 350px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1512,11 +1513,15 @@ button {
   width: 40%;
   border-radius: 5px;
 }
-
-/************************************** calendar *************************/
-.date {
-  /* border: 1px solid red; */
+.textDropdown {
+  font-size: 0.8em;
 }
+.city {
+  /* border: 1px solid red; */
+  z-index: 99;
+}
+/************************************** calendar *************************/
+
 .calendar__title p {
   font-weight: 700;
   font-size: 1em;
@@ -2105,4 +2110,137 @@ button {
 }
 .page__fail img {
   height: 100%;
+}
+/****************************** reacp ***********************************/
+
+.blockDemenagementRecap {
+  background: #266fbd11;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.recapAll {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+}
+.blockBas {
+  margin-top: 10px;
+  height: 250px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.dateRecap {
+  display: flex;
+}
+.espacehelp {
+  margin-right: 0.5em;
+}
+.montantTotal {
+  margin-top: 10px;
+  height: 40px;
+  background: #266fbd71;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.montantCapitalize {
+  text-transform: uppercase;
+  font-size: 2rem;
+  /* color: #2c436d; */
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+}
+.price {
+  font-size: 2rem;
+  /* color: #2c436d; */
+  color: #2c436d;
+  font-family: "Oswald", sans-serif;
+}
+.recapTitle {
+  font-size: 1.4rem;
+  color: #2c436d;
+  font-family: "Oswald", sans-serif;
+}
+.recapInfo {
+  font-size: 1.4rem;
+  color: #2670bd;
+  font-family: "Oswald", sans-serif;
+}
+.titleRecapBlock {
+  padding: 10px;
+  font-size: 1.4rem;
+  color: #2670bd;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.twoBlockDepart {
+  display: flex;
+}
+.blockDepart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.blockLeftRecap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40%;
+  height: 100px;
+}
+.portageRecap,
+.etageRecap,
+.portageRecap,
+.etageRecap {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+.formBlockLeft,
+.formBlockRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%;
+  height: 100%;
+}
+.formRecapMain {
+  display: flex;
+  flex-direction: column;
+}
+.buttonRecap {
+  height: 50px;
+  margin-top: 50px;
+  background: #94c935;
+  border-radius: 5px;
+  /* color: #ffffff; */
+  color: #2c436d;
+  font-size: 1.4rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.formRecapMain label {
+  color: #2c436d;
+  font-size: 1.4rem;
+  font-family: "Oswald", sans-serif;
+}
+.formRecapMain input {
+  height: 40px;
+  width: 300px;
+}
+.blockFormRecap {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+}
+.blockInputForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

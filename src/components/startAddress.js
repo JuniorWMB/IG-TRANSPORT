@@ -1,11 +1,30 @@
 import React, { useState } from "react";
+import PlacesAutocomplete, {
+  geocodeByAddress,
+  getLatLng,
+} from "react-places-autocomplete";
+// import { getDistance, getPreciseDistance } from "geolib";
 
 function StartAddress({ setCount, count }) {
-  const [city, setCity] = useState("");
+  // const [city, setCity] = useState("");
   const [stair, setStair] = useState("");
   const [lift, setLift] = useState("");
   const [portage, setPortage] = useState("");
   const [accessTruck, setAccesTruck] = useState("");
+  const [address, setAdress] = useState("");
+  const [coordinates, setCoordinates] = useState({
+    lat: "",
+    lng: "",
+  });
+
+  const handleSelect = async (value) => {
+    const results = await geocodeByAddress(value);
+    const latLong = await getLatLng(results[0]);
+    console.log("testcoor", latLong);
+    setAdress(value);
+    setCoordinates(latLong);
+  };
+
   return (
     <div className="contain__startadress">
       <div>{/* <h2>Votre adresse de départ</h2> */}</div>
@@ -14,14 +33,54 @@ function StartAddress({ setCount, count }) {
 
         <div className="city start">
           <p>Adresse :</p>
-          <input
-            type="text"
-            onChange={(e) => {
-              setCity(e.target.value);
-              console.log("city", city);
-            }}
-            placeholder="13 square gotham 91200 Athis Mons"
-          />
+
+          {/* test */}
+          <PlacesAutocomplete
+            value={address}
+            onChange={setAdress}
+            onSelect={handleSelect}
+          >
+            {({
+              getInputProps,
+              suggestions,
+              getSuggestionItemProps,
+              loading,
+            }) => (
+              <div key={suggestions.description}>
+                <input
+                  style={{ width: "520px" }}
+                  {...getInputProps({
+                    placeholder: "13 square gotham 91200 Athis Mons",
+                    className: "location-search-input",
+                  })}
+                />
+                <div className="autocomplete-dropdown-container">
+                  {loading && <div>Loading...</div>}
+                  {suggestions.map((suggestion) => {
+                    const className = suggestion.active
+                      ? "suggestion-item--active"
+                      : "suggestion-item";
+                    // inline style for demonstration purpose
+                    const style = suggestion.active
+                      ? { backgroundColor: "#fafafa", cursor: "pointer" }
+                      : { backgroundColor: "#ffffff", cursor: "pointer" };
+                    return (
+                      <div
+                        {...getSuggestionItemProps(suggestion, {
+                          className,
+                          style,
+                        })}
+                      >
+                        <span className="textDropdown">
+                          {suggestion.description}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </PlacesAutocomplete>
         </div>
         <div className="stage start">
           <p>etage : </p>
