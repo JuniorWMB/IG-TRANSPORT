@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BoxMobileExplain from "./BoxMobileExplain";
+import Constructionvtwo from "../assets/construction1.svg";
 
 const Box = () => {
   return (
     <div className="pack__contain">
-      <BoxMobileExplain />
+      <div className="page__fail">
+        <img src={Constructionvtwo} alt="homme sur un chantier" />
+      </div>
+      {/* <BoxMobileExplain /> */}
       {/* <div>
         <Link to="/demenagement" className="pack">
           <div className="pack__logo">

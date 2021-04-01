@@ -27,8 +27,8 @@ function Recap() {
   console.log("adress", coordinates);
 
   const pdis = getPreciseDistance(
-    // { latitude: 20.0504188, longitude: 64.4139099 },
-    { latitude: coordinates.lat, longitude: coordinates.lng },
+    { latitude: 48.7104542, longitude: 2.5174296 },
+    // { latitude: coordinates.lat, longitude: coordinates.lng },
     { latitude: 43.280555, longitude: 5.2404128 }
   );
 
@@ -44,7 +44,7 @@ function Recap() {
   return (
     <div style={{ display: "flex", flexDirection: "column", padding: "20px " }}>
       <h1 className="titleRecapBlock">Votre déménagement</h1>
-      <RecapDemenagement />
+      <RecapDemenagement arrondiDist={arrondiDist} />
       <h1 className="titleRecapBlock">Départ</h1>
       <RecapDepart />
       <h1 className="titleRecapBlock">Arrivée</h1>

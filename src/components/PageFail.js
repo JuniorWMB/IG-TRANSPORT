@@ -5,12 +5,12 @@ import Maps from "./Maps";
 
 const PageFail = () => {
   return (
-    // <div className="page__fail">
-    //   <img src={Constructionvtwo} alt="homme sur un chantier" />
-    // </div>
-    <div>
-      <Maps />
+    <div className="page__fail">
+      <img src={Constructionvtwo} alt="homme sur un chantier" />
     </div>
+    // <div>
+    //   <Maps />
+    // </div>
   );
 };
 

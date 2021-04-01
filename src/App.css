@@ -274,7 +274,6 @@ a {
   flex-wrap: wrap;
   width: 100vw;
   top: 100px;
-  border: 1px solid green;
   margin-bottom: 500px;
   align-content: flex-start;
 }
@@ -321,8 +320,11 @@ a {
 .pack__textprof > p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 1em;
-  text-align: justify;
+  font-size: 1.5em;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .pack__logo {
   margin: 10px 0 40px 0;
@@ -1681,21 +1683,18 @@ button {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  /* border: 1px solid red; */
 }
 
 .little__productcontain {
   border: 1px solid #94c935;
   width: 400px;
-  height: 30vh;
+  height: 200px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 10px 10px;
   padding: 10px;
-  /* border: 1px solid blueviolet; */
-
-  /* overflow: scroll; */
-  /* overflow: hidden; */
 }
 .little__productpicturecontain {
   width: 100px;

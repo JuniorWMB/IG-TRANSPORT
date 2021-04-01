@@ -4,7 +4,6 @@ import Tarif from "./TarifGood";
 import StartAddress from "./startAddress";
 import EndAdressGood from "./EndAdressGood";
 import Recap from "./recap";
-import Basket from "./Basket";
 
 let timeline = [
   { choice: "1", text: "calculateur" },

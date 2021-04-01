@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Basket from "./Basket";
 import HeavyObjet from "./HeavyObjet";
 import aspirateur from "../assets/1-7_Buanderie/1-Aspirateur.svg";
@@ -63,11 +63,15 @@ import tableBasse from "../assets/51-64_Salon/60-table basse (petite).svg";
 import tableSalleAManger from "../assets/51-64_Salon/61-table salle a manger.svg";
 import tv from "../assets/51-64_Salon/62-TV 32.svg";
 import tvGrand from "../assets/51-64_Salon/63-TV GRAND ECRAN.svg";
+// import { KilometreContext } from "../context/RecapContext";
+// export const TotalVolumeGoodContext = createContext(null);
+import { KilometreProvider } from "../context/RecapContext";
 
-function ChoiceMeuble({ count, setCount }) {
+function ChoiceMeuble({ count, setCount, children }) {
   const [toggleTabs, setToggleTabs] = useState(1);
   const [products, setProducts] = useState([]);
   const [showSide, setShowSide] = useState(false);
+  const [test, setTest] = useState({ name: "Junior" });
 
   console.log("produit >>>>", products);
   let total = 0;
@@ -814,622 +818,127 @@ function ChoiceMeuble({ count, setCount }) {
   // const showBlock = () => setShowSide(true);
 
   return (
-    <div className="App">
-      <div className="container">
-        <div className="bloc__onglets">
-          <div
-            className={toggleTabs === 1 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(1)}
-          >
-            Buanderie
-          </div>
-          <div
-            className={toggleTabs === 2 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(2)}
-          >
-            Bureau
-          </div>
-          <div
-            className={toggleTabs === 3 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(3)}
-          >
-            Cartons
-          </div>
-          <div
-            className={toggleTabs === 4 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(4)}
-          >
-            Chambre
-          </div>
-          <div
-            className={toggleTabs === 5 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(5)}
-          >
-            Cuisine
-          </div>
-          <div
-            className={toggleTabs === 6 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(6)}
-          >
-            Entrée
-          </div>
-          <div
-            className={toggleTabs === 7 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(7)}
-          >
-            Garage
-          </div>
-          <div
-            className={toggleTabs === 8 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(8)}
-          >
-            Jardin
-          </div>
-          <div
-            className={toggleTabs === 9 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(9)}
-          >
-            Salle de Bain
-          </div>
-          <div
-            className={toggleTabs === 10 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(10)}
-          >
-            Salon
-          </div>
-        </div>
-
-        <div className="contenu__onglets">
-          <div
-            className={toggleTabs === 1 ? "contenu active-contenu" : "contenu"}
-          >
+    <KilometreProvider value={{ test, setTest }}>
+      <div className="App">
+        <div className="container">
+          <div className="bloc__onglets">
             <div
-              style={{
-                // border: "1px solid blue",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-              }}
+              className={toggleTabs === 1 ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab(1)}
             >
-              {buanderie.map((meuble, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => {
-                      //créer une copie
-                      setShowSide(true);
-                      const newProduct = [...products];
-                      let isFound = false;
-                      for (let i = 0; i < products.length; i++) {
-                        if (products[i].id === meuble.id) {
-                          newProduct[i].quantity++;
-                          isFound = true;
-                          break;
-                        }
-                      }
-                      if (isFound === false) {
-                        //modifier la copie
-                        newProduct.push({
-                          name: meuble.name,
-                          volume: meuble.volume,
-                          quantity: "1",
-                          id: meuble.id,
-                        });
-                      }
-
-                      //mettre à jour le state
-
-                      setProducts(newProduct);
-                    }}
-                    style={{
-                      border: "1px solid #94c935",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "225px",
-                      width: "225px",
-                      margin: "10px",
-                      justifyContent: "space-around",
-                      alignItems: "center",
-                    }}
-                  >
-                    <p
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: "50px",
-                      }}
-                    >
-                      {meuble.name}
-                    </p>
-                    <img src={meuble.image} alt="" width="130" height="130" />
-                  </div>
-                );
-              })}
+              Buanderie
+            </div>
+            <div
+              className={toggleTabs === 2 ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab(2)}
+            >
+              Bureau
+            </div>
+            <div
+              className={toggleTabs === 3 ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab(3)}
+            >
+              Cartons
+            </div>
+            <div
+              className={toggleTabs === 4 ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab(4)}
+            >
+              Chambre
+            </div>
+            <div
+              className={toggleTabs === 5 ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab(5)}
+            >
+              Cuisine
+            </div>
+            <div
+              className={toggleTabs === 6 ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab(6)}
+            >
+              Entrée
+            </div>
+            <div
+              className={toggleTabs === 7 ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab(7)}
+            >
+              Garage
+            </div>
+            <div
+              className={toggleTabs === 8 ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab(8)}
+            >
+              Jardin
+            </div>
+            <div
+              className={toggleTabs === 9 ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab(9)}
+            >
+              Salle de Bain
+            </div>
+            <div
+              className={toggleTabs === 10 ? "tabs active-tabs" : "tabs"}
+              onClick={() => toggleTab(10)}
+            >
+              Salon
             </div>
           </div>
-        </div>
 
-        <div className="contenu__onglets">
-          <div
-            className={toggleTabs === 2 ? "contenu active-contenu" : "contenu"}
-          >
+          <div className="contenu__onglets">
             <div
-              style={{
-                // border: "1px solid blue",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-              }}
+              className={
+                toggleTabs === 1 ? "contenu active-contenu" : "contenu"
+              }
             >
-              {bureau.map((meuble, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => {
-                      //créer une copie
-
-                      const newProduct = [...products];
-                      let isFound = false;
-                      for (let i = 0; i < products.length; i++) {
-                        if (products[i].id === meuble.id) {
-                          newProduct[i].quantity++;
-                          isFound = true;
-                          break;
+              <div
+                style={{
+                  // border: "1px solid blue",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
+                {buanderie.map((meuble, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        //créer une copie
+                        setShowSide(true);
+                        const newProduct = [...products];
+                        let isFound = false;
+                        for (let i = 0; i < products.length; i++) {
+                          if (products[i].id === meuble.id) {
+                            newProduct[i].quantity++;
+                            isFound = true;
+                            break;
+                          }
                         }
-                      }
-                      if (isFound === false) {
-                        //modifier la copie
-                        newProduct.push({
-                          name: meuble.name,
-                          volume: meuble.volume,
-                          quantity: "1",
-                          id: meuble.id,
-                        });
-                      }
+                        if (isFound === false) {
+                          //modifier la copie
+                          newProduct.push({
+                            name: meuble.name,
+                            volume: meuble.volume,
+                            quantity: "1",
+                            id: meuble.id,
+                          });
+                        }
 
-                      //mettre à jour le state
+                        //mettre à jour le state
 
-                      setProducts(newProduct);
-                    }}
-                    style={{
-                      border: "1px solid #94c935",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "225px",
-                      width: "225px",
-                      margin: "10px",
-                      justifyContent: "space-around",
-                      alignItems: "center",
-                    }}
-                  >
-                    <p
+                        setProducts(newProduct);
+                      }}
                       style={{
+                        border: "1px solid #94c935",
                         display: "flex",
-                        justifyContent: "center",
+                        flexDirection: "column",
+                        height: "225px",
+                        width: "225px",
+                        margin: "10px",
+                        justifyContent: "space-around",
                         alignItems: "center",
-                        height: "50px",
                       }}
                     >
-                      {meuble.name}
-                    </p>
-                    <img src={meuble.image} alt="" width="130" height="130" />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-        <div className="contenu__onglets">
-          <div
-            className={toggleTabs === 3 ? "contenu active-contenu" : "contenu"}
-          >
-            <div
-              style={{
-                // border: "1px solid blue",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-              }}
-            >
-              {cartons.map((meuble, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => {
-                      //créer une copie
-
-                      const newProduct = [...products];
-                      let isFound = false;
-                      for (let i = 0; i < products.length; i++) {
-                        if (products[i].id === meuble.id) {
-                          newProduct[i].quantity++;
-                          isFound = true;
-                          break;
-                        }
-                      }
-                      if (isFound === false) {
-                        //modifier la copie
-                        newProduct.push({
-                          name: meuble.name,
-                          volume: meuble.volume,
-                          quantity: "1",
-                          id: meuble.id,
-                        });
-                      }
-
-                      //mettre à jour le state
-
-                      setProducts(newProduct);
-                    }}
-                    style={{
-                      border: "1px solid #94c935",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "225px",
-                      width: "225px",
-                      margin: "10px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <p
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: "50px",
-                      }}
-                    >
-                      {meuble.name}
-                    </p>
-                    <img src={meuble.image} alt="" width="130" height="130" />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-        <div className="contenu__onglets">
-          <div
-            className={toggleTabs === 4 ? "contenu active-contenu" : "contenu"}
-          >
-            <div
-              style={{
-                // border: "1px solid blue",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-              }}
-            >
-              {chambre.map((meuble, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => {
-                      //créer une copie
-
-                      const newProduct = [...products];
-                      let isFound = false;
-                      for (let i = 0; i < products.length; i++) {
-                        if (products[i].id === meuble.id) {
-                          newProduct[i].quantity++;
-                          isFound = true;
-                          break;
-                        }
-                      }
-                      if (isFound === false) {
-                        //modifier la copie
-                        newProduct.push({
-                          name: meuble.name,
-                          volume: meuble.volume,
-                          quantity: "1",
-                          id: meuble.id,
-                        });
-                      }
-
-                      //mettre à jour le state
-
-                      setProducts(newProduct);
-                    }}
-                    style={{
-                      border: "1px solid #94c935",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "225px",
-                      width: "225px",
-                      margin: "10px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <p
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: "50px",
-                      }}
-                    >
-                      {meuble.name}
-                    </p>
-                    <img src={meuble.image} alt="" width="130" height="130" />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-        <div className="contenu__onglets">
-          <div
-            className={toggleTabs === 5 ? "contenu active-contenu" : "contenu"}
-          >
-            <div
-              style={{
-                // border: "1px solid blue",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-              }}
-            >
-              {cuisine.map((meuble, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => {
-                      //créer une copie
-
-                      const newProduct = [...products];
-                      let isFound = false;
-                      for (let i = 0; i < products.length; i++) {
-                        if (products[i].id === meuble.id) {
-                          newProduct[i].quantity++;
-                          isFound = true;
-                          break;
-                        }
-                      }
-                      if (isFound === false) {
-                        //modifier la copie
-                        newProduct.push({
-                          name: meuble.name,
-                          volume: meuble.volume,
-                          quantity: "1",
-                          id: meuble.id,
-                        });
-                      }
-
-                      //mettre à jour le state
-
-                      setProducts(newProduct);
-                    }}
-                    style={{
-                      border: "1px solid #94c935",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "225px",
-                      width: "225px",
-                      margin: "10px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <p
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: "50px",
-                      }}
-                    >
-                      {meuble.name}
-                    </p>
-                    <img src={meuble.image} alt="" width="130" height="130" />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        <div className="contenu__onglets">
-          <div
-            className={toggleTabs === 6 ? "contenu active-contenu" : "contenu"}
-          >
-            <div
-              style={{
-                // border: "1px solid blue",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              {entree.map((meuble, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => {
-                      //créer une copie
-
-                      const newProduct = [...products];
-                      let isFound = false;
-                      for (let i = 0; i < products.length; i++) {
-                        if (products[i].id === meuble.id) {
-                          newProduct[i].quantity++;
-                          isFound = true;
-                          break;
-                        }
-                      }
-                      if (isFound === false) {
-                        //modifier la copie
-                        newProduct.push({
-                          name: meuble.name,
-                          volume: meuble.volume,
-                          quantity: "1",
-                          id: meuble.id,
-                        });
-                      }
-
-                      //mettre à jour le state
-
-                      setProducts(newProduct);
-                    }}
-                    style={{
-                      border: "1px solid #94c935",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "225px",
-                      width: "225px",
-                      margin: "10px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <p
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: "50px",
-                      }}
-                    >
-                      {meuble.name}
-                    </p>
-                    <img src={meuble.image} alt="" width="130" height="130" />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        <div className="contenu__onglets">
-          <div
-            className={toggleTabs === 7 ? "contenu active-contenu" : "contenu"}
-          >
-            <div
-              style={{
-                // border: "1px solid blue",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              {garage.map((meuble, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => {
-                      //créer une copie
-
-                      const newProduct = [...products];
-                      let isFound = false;
-                      for (let i = 0; i < products.length; i++) {
-                        if (products[i].id === meuble.id) {
-                          newProduct[i].quantity++;
-                          isFound = true;
-                          break;
-                        }
-                      }
-                      if (isFound === false) {
-                        //modifier la copie
-                        newProduct.push({
-                          name: meuble.name,
-                          volume: meuble.volume,
-                          quantity: "1",
-                          id: meuble.id,
-                        });
-                      }
-
-                      //mettre à jour le state
-
-                      setProducts(newProduct);
-                    }}
-                    style={{
-                      border: "1px solid #94c935",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "225px",
-                      width: "225px",
-                      margin: "10px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <p
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: "50px",
-                      }}
-                    >
-                      {meuble.name}
-                    </p>
-                    <img src={meuble.image} alt="" width="130" height="130" />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        <div className="contenu__onglets">
-          <div
-            className={toggleTabs === 8 ? "contenu active-contenu" : "contenu"}
-          >
-            <div
-              style={{
-                // border: "1px solid blue",
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              {jardin.map((meuble, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => {
-                      //créer une copie
-
-                      const newProduct = [...products];
-                      let isFound = false;
-                      for (let i = 0; i < products.length; i++) {
-                        if (products[i].id === meuble.id) {
-                          newProduct[i].quantity++;
-                          isFound = true;
-                          break;
-                        }
-                      }
-                      if (isFound === false) {
-                        //modifier la copie
-                        newProduct.push({
-                          name: meuble.name,
-                          volume: meuble.volume,
-                          quantity: "1",
-                          id: meuble.id,
-                        });
-                      }
-
-                      //mettre à jour le state
-
-                      setProducts(newProduct);
-                    }}
-                    style={{
-                      border: "1px solid #94c935",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "225px",
-                      width: "225px",
-                      margin: "10px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <div>
                       <p
                         style={{
                           display: "flex",
@@ -1442,205 +951,726 @@ function ChoiceMeuble({ count, setCount }) {
                       </p>
                       <img src={meuble.image} alt="" width="130" height="130" />
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="contenu__onglets">
-          <div
-            className={toggleTabs === 9 ? "contenu active-contenu" : "contenu"}
-          >
+          <div className="contenu__onglets">
             <div
-              style={{
-                // border: "1px solid blue",
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className={
+                toggleTabs === 2 ? "contenu active-contenu" : "contenu"
+              }
             >
-              {salleDeBain.map((meuble, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => {
-                      //créer une copie
+              <div
+                style={{
+                  // border: "1px solid blue",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
+                {bureau.map((meuble, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        //créer une copie
 
-                      const newProduct = [...products];
-                      let isFound = false;
-                      for (let i = 0; i < products.length; i++) {
-                        if (products[i].id === meuble.id) {
-                          newProduct[i].quantity++;
-                          isFound = true;
-                          break;
+                        const newProduct = [...products];
+                        let isFound = false;
+                        for (let i = 0; i < products.length; i++) {
+                          if (products[i].id === meuble.id) {
+                            newProduct[i].quantity++;
+                            isFound = true;
+                            break;
+                          }
                         }
-                      }
-                      if (isFound === false) {
-                        //modifier la copie
-                        newProduct.push({
-                          name: meuble.name,
-                          volume: meuble.volume,
-                          quantity: "1",
-                          id: meuble.id,
-                        });
-                      }
-
-                      //mettre à jour le state
-
-                      setProducts(newProduct);
-                    }}
-                    style={{
-                      border: "1px solid #94c935",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "225px",
-                      width: "225px",
-                      margin: "10px",
-                    }}
-                  >
-                    <p>{meuble.name}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        <div className="contenu__onglets">
-          <div
-            className={toggleTabs === 10 ? "contenu active-contenu" : "contenu"}
-          >
-            <div
-              style={{
-                // border: "1px solid blue",
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              {salon.map((meuble, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => {
-                      //créer une copie
-
-                      const newProduct = [...products];
-                      let isFound = false;
-                      for (let i = 0; i < products.length; i++) {
-                        if (products[i].id === meuble.id) {
-                          newProduct[i].quantity++;
-                          isFound = true;
-                          break;
+                        if (isFound === false) {
+                          //modifier la copie
+                          newProduct.push({
+                            name: meuble.name,
+                            volume: meuble.volume,
+                            quantity: "1",
+                            id: meuble.id,
+                          });
                         }
-                      }
-                      if (isFound === false) {
-                        //modifier la copie
-                        newProduct.push({
-                          name: meuble.name,
-                          volume: meuble.volume,
-                          quantity: "1",
-                          id: meuble.id,
-                        });
-                      }
 
-                      //mettre à jour le state
+                        //mettre à jour le state
 
-                      setProducts(newProduct);
-                    }}
-                    style={{
-                      border: "1px solid #94c935",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "225px",
-                      width: "225px",
-                      margin: "10px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <p
+                        setProducts(newProduct);
+                      }}
                       style={{
+                        border: "1px solid #94c935",
                         display: "flex",
-                        justifyContent: "center",
+                        flexDirection: "column",
+                        height: "225px",
+                        width: "225px",
+                        margin: "10px",
+                        justifyContent: "space-around",
                         alignItems: "center",
-                        height: "50px",
                       }}
                     >
-                      {meuble.name}
-                    </p>
-                    <img src={meuble.image} alt="" width="130" height="130" />
+                      <p
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: "50px",
+                        }}
+                      >
+                        {meuble.name}
+                      </p>
+                      <img src={meuble.image} alt="" width="130" height="130" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="contenu__onglets">
+            <div
+              className={
+                toggleTabs === 3 ? "contenu active-contenu" : "contenu"
+              }
+            >
+              <div
+                style={{
+                  // border: "1px solid blue",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
+                {cartons.map((meuble, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        //créer une copie
+
+                        const newProduct = [...products];
+                        let isFound = false;
+                        for (let i = 0; i < products.length; i++) {
+                          if (products[i].id === meuble.id) {
+                            newProduct[i].quantity++;
+                            isFound = true;
+                            break;
+                          }
+                        }
+                        if (isFound === false) {
+                          //modifier la copie
+                          newProduct.push({
+                            name: meuble.name,
+                            volume: meuble.volume,
+                            quantity: "1",
+                            id: meuble.id,
+                          });
+                        }
+
+                        //mettre à jour le state
+
+                        setProducts(newProduct);
+                      }}
+                      style={{
+                        border: "1px solid #94c935",
+                        display: "flex",
+                        flexDirection: "column",
+                        height: "225px",
+                        width: "225px",
+                        margin: "10px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: "50px",
+                        }}
+                      >
+                        {meuble.name}
+                      </p>
+                      <img src={meuble.image} alt="" width="130" height="130" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="contenu__onglets">
+            <div
+              className={
+                toggleTabs === 4 ? "contenu active-contenu" : "contenu"
+              }
+            >
+              <div
+                style={{
+                  // border: "1px solid blue",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
+                {chambre.map((meuble, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        //créer une copie
+
+                        const newProduct = [...products];
+                        let isFound = false;
+                        for (let i = 0; i < products.length; i++) {
+                          if (products[i].id === meuble.id) {
+                            newProduct[i].quantity++;
+                            isFound = true;
+                            break;
+                          }
+                        }
+                        if (isFound === false) {
+                          //modifier la copie
+                          newProduct.push({
+                            name: meuble.name,
+                            volume: meuble.volume,
+                            quantity: "1",
+                            id: meuble.id,
+                          });
+                        }
+
+                        //mettre à jour le state
+
+                        setProducts(newProduct);
+                      }}
+                      style={{
+                        border: "1px solid #94c935",
+                        display: "flex",
+                        flexDirection: "column",
+                        height: "225px",
+                        width: "225px",
+                        margin: "10px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: "50px",
+                        }}
+                      >
+                        {meuble.name}
+                      </p>
+                      <img src={meuble.image} alt="" width="130" height="130" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="contenu__onglets">
+            <div
+              className={
+                toggleTabs === 5 ? "contenu active-contenu" : "contenu"
+              }
+            >
+              <div
+                style={{
+                  // border: "1px solid blue",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
+                {cuisine.map((meuble, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        //créer une copie
+
+                        const newProduct = [...products];
+                        let isFound = false;
+                        for (let i = 0; i < products.length; i++) {
+                          if (products[i].id === meuble.id) {
+                            newProduct[i].quantity++;
+                            isFound = true;
+                            break;
+                          }
+                        }
+                        if (isFound === false) {
+                          //modifier la copie
+                          newProduct.push({
+                            name: meuble.name,
+                            volume: meuble.volume,
+                            quantity: "1",
+                            id: meuble.id,
+                          });
+                        }
+
+                        //mettre à jour le state
+
+                        setProducts(newProduct);
+                      }}
+                      style={{
+                        border: "1px solid #94c935",
+                        display: "flex",
+                        flexDirection: "column",
+                        height: "225px",
+                        width: "225px",
+                        margin: "10px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: "50px",
+                        }}
+                      >
+                        {meuble.name}
+                      </p>
+                      <img src={meuble.image} alt="" width="130" height="130" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className="contenu__onglets">
+            <div
+              className={
+                toggleTabs === 6 ? "contenu active-contenu" : "contenu"
+              }
+            >
+              <div
+                style={{
+                  // border: "1px solid blue",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                {entree.map((meuble, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        //créer une copie
+
+                        const newProduct = [...products];
+                        let isFound = false;
+                        for (let i = 0; i < products.length; i++) {
+                          if (products[i].id === meuble.id) {
+                            newProduct[i].quantity++;
+                            isFound = true;
+                            break;
+                          }
+                        }
+                        if (isFound === false) {
+                          //modifier la copie
+                          newProduct.push({
+                            name: meuble.name,
+                            volume: meuble.volume,
+                            quantity: "1",
+                            id: meuble.id,
+                          });
+                        }
+
+                        //mettre à jour le state
+
+                        setProducts(newProduct);
+                      }}
+                      style={{
+                        border: "1px solid #94c935",
+                        display: "flex",
+                        flexDirection: "column",
+                        height: "225px",
+                        width: "225px",
+                        margin: "10px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: "50px",
+                        }}
+                      >
+                        {meuble.name}
+                      </p>
+                      <img src={meuble.image} alt="" width="130" height="130" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className="contenu__onglets">
+            <div
+              className={
+                toggleTabs === 7 ? "contenu active-contenu" : "contenu"
+              }
+            >
+              <div
+                style={{
+                  // border: "1px solid blue",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                {garage.map((meuble, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        //créer une copie
+
+                        const newProduct = [...products];
+                        let isFound = false;
+                        for (let i = 0; i < products.length; i++) {
+                          if (products[i].id === meuble.id) {
+                            newProduct[i].quantity++;
+                            isFound = true;
+                            break;
+                          }
+                        }
+                        if (isFound === false) {
+                          //modifier la copie
+                          newProduct.push({
+                            name: meuble.name,
+                            volume: meuble.volume,
+                            quantity: "1",
+                            id: meuble.id,
+                          });
+                        }
+
+                        //mettre à jour le state
+
+                        setProducts(newProduct);
+                      }}
+                      style={{
+                        border: "1px solid #94c935",
+                        display: "flex",
+                        flexDirection: "column",
+                        height: "225px",
+                        width: "225px",
+                        margin: "10px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: "50px",
+                        }}
+                      >
+                        {meuble.name}
+                      </p>
+                      <img src={meuble.image} alt="" width="130" height="130" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className="contenu__onglets">
+            <div
+              className={
+                toggleTabs === 8 ? "contenu active-contenu" : "contenu"
+              }
+            >
+              <div
+                style={{
+                  // border: "1px solid blue",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                {jardin.map((meuble, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        //créer une copie
+
+                        const newProduct = [...products];
+                        let isFound = false;
+                        for (let i = 0; i < products.length; i++) {
+                          if (products[i].id === meuble.id) {
+                            newProduct[i].quantity++;
+                            isFound = true;
+                            break;
+                          }
+                        }
+                        if (isFound === false) {
+                          //modifier la copie
+                          newProduct.push({
+                            name: meuble.name,
+                            volume: meuble.volume,
+                            quantity: "1",
+                            id: meuble.id,
+                          });
+                        }
+
+                        //mettre à jour le state
+
+                        setProducts(newProduct);
+                      }}
+                      style={{
+                        border: "1px solid #94c935",
+                        display: "flex",
+                        flexDirection: "column",
+                        height: "225px",
+                        width: "225px",
+                        margin: "10px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <div>
+                        <p
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            height: "50px",
+                          }}
+                        >
+                          {meuble.name}
+                        </p>
+                        <img
+                          src={meuble.image}
+                          alt=""
+                          width="130"
+                          height="130"
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className="contenu__onglets">
+            <div
+              className={
+                toggleTabs === 9 ? "contenu active-contenu" : "contenu"
+              }
+            >
+              <div
+                style={{
+                  // border: "1px solid blue",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                {salleDeBain.map((meuble, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        //créer une copie
+
+                        const newProduct = [...products];
+                        let isFound = false;
+                        for (let i = 0; i < products.length; i++) {
+                          if (products[i].id === meuble.id) {
+                            newProduct[i].quantity++;
+                            isFound = true;
+                            break;
+                          }
+                        }
+                        if (isFound === false) {
+                          //modifier la copie
+                          newProduct.push({
+                            name: meuble.name,
+                            volume: meuble.volume,
+                            quantity: "1",
+                            id: meuble.id,
+                          });
+                        }
+
+                        //mettre à jour le state
+
+                        setProducts(newProduct);
+                      }}
+                      style={{
+                        border: "1px solid #94c935",
+                        display: "flex",
+                        flexDirection: "column",
+                        height: "225px",
+                        width: "225px",
+                        margin: "10px",
+                      }}
+                    >
+                      <p>{meuble.name}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className="contenu__onglets">
+            <div
+              className={
+                toggleTabs === 10 ? "contenu active-contenu" : "contenu"
+              }
+            >
+              <div
+                style={{
+                  // border: "1px solid blue",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                {salon.map((meuble, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        //créer une copie
+
+                        const newProduct = [...products];
+                        let isFound = false;
+                        for (let i = 0; i < products.length; i++) {
+                          if (products[i].id === meuble.id) {
+                            newProduct[i].quantity++;
+                            isFound = true;
+                            break;
+                          }
+                        }
+                        if (isFound === false) {
+                          //modifier la copie
+                          newProduct.push({
+                            name: meuble.name,
+                            volume: meuble.volume,
+                            quantity: "1",
+                            id: meuble.id,
+                          });
+                        }
+
+                        //mettre à jour le state
+
+                        setProducts(newProduct);
+                      }}
+                      style={{
+                        border: "1px solid #94c935",
+                        display: "flex",
+                        flexDirection: "column",
+                        height: "225px",
+                        width: "225px",
+                        margin: "10px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: "50px",
+                        }}
+                      >
+                        {meuble.name}
+                      </p>
+                      <img src={meuble.image} alt="" width="130" height="130" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+        <HeavyObjet />
+        <div className="btn2">
+          <button style={{ height: "" }} onClick={() => setCount(count - 1)}>
+            PREVIOUS
+          </button>
+
+          <button onClick={() => setCount(count + 1)}>NEXT</button>
+        </div>
+        <div style={{ display: "none" }}>
+          <Basket
+            products={products}
+            setProducts={setProducts}
+            total={total}
+            showSide={showSide}
+          />
+        </div>
+        <div className={showSide ? "panier__contain" : "panier__none"}>
+          <div className="panier__meuble">
+            <h1>Panier</h1>
+
+            <div className="panier__listeblock">
+              {products.map((product, idx) => {
+                return (
+                  <div className="panier__liste">
+                    <button
+                      onClick={() => {
+                        const newProduct = [...products];
+
+                        if (newProduct[idx].quantity === 1) {
+                          newProduct.splice(idx, 1);
+                        } else {
+                          newProduct[idx].quantity--;
+                        }
+                        setProducts(newProduct);
+                      }}
+                    >
+                      -
+                    </button>
+                    {product.quantity}
+                    <button
+                      onClick={() => {
+                        const newProduct = [...products];
+                        newProduct[idx].quantity++;
+                        setProducts(newProduct);
+                      }}
+                    >
+                      +
+                    </button>
+                    {product.name}
                   </div>
                 );
               })}
             </div>
+            <div className="panier__volumeblock">
+              <p className="panier__volume">Volume: {total.toFixed(2)} m3</p>
+            </div>
           </div>
         </div>
       </div>
-      <HeavyObjet />
-      <div className="btn2">
-        <button style={{ height: "" }} onClick={() => setCount(count - 1)}>
-          PREVIOUS
-        </button>
-
-        <button onClick={() => setCount(count + 1)}>NEXT</button>
-      </div>
-      <div style={{ display: "none" }}>
-        <Basket
-          products={products}
-          setProducts={setProducts}
-          total={total}
-          showSide={showSide}
-        />
-      </div>
-      <div className={showSide ? "panier__contain" : "panier__none"}>
-        <div className="panier__meuble">
-          <h1>Panier</h1>
-
-          <div className="panier__listeblock">
-            {products.map((product, idx) => {
-              return (
-                <div className="panier__liste">
-                  <button
-                    onClick={() => {
-                      const newProduct = [...products];
-
-                      if (newProduct[idx].quantity === 1) {
-                        newProduct.splice(idx, 1);
-                      } else {
-                        newProduct[idx].quantity--;
-                      }
-                      setProducts(newProduct);
-                    }}
-                  >
-                    -
-                  </button>
-                  {product.quantity}
-                  <button
-                    onClick={() => {
-                      const newProduct = [...products];
-                      newProduct[idx].quantity++;
-                      setProducts(newProduct);
-                    }}
-                  >
-                    +
-                  </button>
-                  {product.name}
-                </div>
-              );
-            })}
-          </div>
-          <div className="panier__volumeblock">
-            <p className="panier__volume">Volume: {total.toFixed(2)} m3</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </KilometreProvider>
   );
 }
-
 export default ChoiceMeuble;

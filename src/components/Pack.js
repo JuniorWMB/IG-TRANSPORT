@@ -82,7 +82,7 @@ function Pack() {
           </p>
         </div>
       </Link>
-      <Link to="/box-mobile" className="pack">
+      {/* <Link to="/box-mobile" className="pack">
         <div className="pack__logo">
           <Briefcase size={40} color="#94c935" />
           <p> Box Mobile</p>
@@ -94,7 +94,7 @@ function Pack() {
             professionnels.
           </p>
         </div>
-      </Link>
+      </Link> */}
     </div>
   );
 }

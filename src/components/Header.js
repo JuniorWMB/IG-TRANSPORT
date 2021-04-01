@@ -18,7 +18,7 @@ function Header() {
         </div>
         <div className="header__textnav">
           <Link to="/">
-            <p>Home</p>
+            <p>Accueil</p>
           </Link>
           <Link to="/all-products">
             <p>Shop</p>

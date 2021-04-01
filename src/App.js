@@ -14,7 +14,6 @@ import DevisChoice from "./Pages/DevisChoice";
 import Header from "./components/Header";
 import BoxMobile from "./Pages/BoxMobile";
 import Transport from "./Pages/Transport";
-
 function App() {
   useEffect(() => {
     document.title = "Iguane Transport";

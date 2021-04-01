@@ -19,7 +19,7 @@ function SousHeader() {
             </h3>
           </div>
 
-          <Link to="/vos-devis" className="sousHeader__button">
+          <Link to="/devis" className="sousHeader__button">
             <p>Votre devis</p>
           </Link>
         </div>

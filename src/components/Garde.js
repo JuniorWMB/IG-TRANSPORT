@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GrCheckbox } from "react-icons/gr";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 
 function Garde() {
@@ -28,7 +29,10 @@ function Garde() {
     <div style={{ position: "relative" }}>
       <div className="devis">
         {devis ? (
-          <div className="devis__hidden"> SIMULER MON DEVIS </div>
+          <Link to="/devis" className="devis__hidden">
+            {" "}
+            SIMULER MON DEVIS{" "}
+          </Link>
         ) : null}
       </div>
       <div className="meuble__contain">

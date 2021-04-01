@@ -1,6 +1,8 @@
 import React from "react";
 
-function RecapDemenagement() {
+function RecapDemenagement({ arrondiDist }) {
+  // const { test } = useContext(KilometreContext);
+
   return (
     <div className="blockDemenagementRecap">
       <div className="blockHaut">
@@ -20,7 +22,7 @@ function RecapDemenagement() {
 
         <div className="yourVolume recapAll">
           <p className="espacehelp recapTitle">Votre volume</p>
-          <p className="recapInfo">1m3</p>
+          <p className="recapInfo">{arrondiDist} KM</p>
         </div>
         <div className="yourFormule recapAll">
           <p className="espacehelp recapTitle">Formule choisie</p>
@@ -38,7 +40,7 @@ function RecapDemenagement() {
         </div>
         <div className="dateRecap">
           <p className="espacehelp recapTitle">Emballage :</p>
-          <p className="recapInfo">0produit</p>
+          <p className="recapInfo">0 produit</p>
         </div>
         <div className="dateRecap">
           <p className="espacehelp recapTitle">Valeur à assurer :</p>
