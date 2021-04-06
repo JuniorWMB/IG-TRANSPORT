@@ -14,7 +14,38 @@ let timeline = [
   { choice: "6", text: "récapitulatif" },
 ];
 
-function DevisForm() {
+function DevisForm({
+  stair,
+  setStair,
+  lift,
+  setLift,
+  portage,
+  setPortage,
+  accessTruck,
+  setAccesTruck,
+  address,
+  setAdress,
+  coordinates,
+  setCoordinates,
+  handleSelect,
+  cityEnd,
+  setCityEnd,
+  stairEnd,
+  setStairEnd,
+  liftEnd,
+  setLiftEnd,
+  portageEnd,
+  setPortageEnd,
+  accessTruckEnd,
+  setAccesTruckEnd,
+  handleSelectEnd,
+  coordinatesEnd,
+  setCoordinatesEnd,
+  coorLngEnd,
+  coorLatEnd,
+  coorLat,
+  coorLng,
+}) {
   const [count, setCount] = useState(1);
   const [volumeCalcul, setVolumeCalcul] = useState("");
   const [show, setShow] = useState(false);
@@ -109,16 +140,64 @@ function DevisForm() {
           <ChoiceMeuble count={count} setCount={setCount} />
         ) : null}
         {count === 3 ? (
-          <StartAddress count={count} setCount={setCount} />
+          <StartAddress
+            count={count}
+            setCount={setCount}
+            stair={stair}
+            setStair={setStair}
+            lift={lift}
+            setLift={setLift}
+            portage={portage}
+            setPortage={setPortage}
+            accessTruck={accessTruck}
+            setAccesTruck={setAccesTruck}
+            address={address}
+            setAdress={setAdress}
+            coordinates={coordinates}
+            setCoordinates={setCoordinates}
+            handleSelect={handleSelect}
+          />
         ) : null}
         {count === 4 ? (
-          <EndAdressGood count={count} setCount={setCount} />
+          <EndAdressGood
+            count={count}
+            setCount={setCount}
+            handleSelect={handleSelect}
+            cityEnd={cityEnd}
+            setCityEnd={setCityEnd}
+            stairEnd={stairEnd}
+            setStairEnd={setStairEnd}
+            liftEnd={liftEnd}
+            setLiftEnd={setLiftEnd}
+            portageEnd={portageEnd}
+            setPortageEnd={setPortageEnd}
+            accessTruckEnd={accessTruckEnd}
+            setAccesTruckEnd={setAccesTruckEnd}
+            handleSelectEnd={handleSelectEnd}
+            coordinatesEnd={coordinatesEnd}
+            setCoordinatesEnd={setCoordinatesEnd}
+          />
         ) : null}
         <div>
           {count === 5 ? <Tarif count={count} setCount={setCount} /> : null}
         </div>
         <div>
-          {count === 6 ? <Recap count={count} setCount={setCount} /> : null}
+          {count === 6 ? (
+            <Recap
+              count={count}
+              setCount={setCount}
+              addressGO={address}
+              stair={stair}
+              lift={lift}
+              portage={portage}
+              accessTruck={accessTruck}
+              cityEnd={cityEnd}
+              stairEnd={stairEnd}
+              liftEnd={liftEnd}
+              portageEnd={portageEnd}
+              accessTruckEnd={accessTruckEnd}
+            />
+          ) : null}
         </div>
 
         {/* <TotalDevis count={count} setCount={setCount} /> */}

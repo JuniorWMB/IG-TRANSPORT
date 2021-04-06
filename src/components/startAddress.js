@@ -6,25 +6,41 @@ import PlacesAutocomplete, {
 // import { getDistance, getPreciseDistance } from "geolib";
 import { AdressContext } from "../context/AdressContext";
 
-function StartAddress({ setCount, count }) {
+function StartAddress({
+  setCount,
+  count,
+  stair,
+  setStair,
+  lift,
+  setLift,
+  portage,
+  setPortage,
+  accessTruck,
+  setAccesTruck,
+  address,
+  setAdress,
+  coordinates,
+  setCoordinates,
+  handleSelect,
+}) {
   // const [city, setCity] = useState("");
-  const [stair, setStair] = useState("");
-  const [lift, setLift] = useState("");
-  const [portage, setPortage] = useState("");
-  const [accessTruck, setAccesTruck] = useState("");
-  const [address, setAdress] = useState("");
-  const [coordinates, setCoordinates] = useState({
-    lat: "",
-    lng: "",
-  });
+  // const [stair, setStair] = useState("");
+  // const [lift, setLift] = useState("");
+  // const [portage, setPortage] = useState("");
+  // const [accessTruck, setAccesTruck] = useState("");
+  // const [address, setAdress] = useState("");
+  // const [coordinates, setCoordinates] = useState({
+  //   lat: "",
+  //   lng: "",
+  // });
 
-  const handleSelect = async (value) => {
-    const results = await geocodeByAddress(value);
-    const latLong = await getLatLng(results[0]);
-    console.log("testcoor", latLong);
-    setAdress(value);
-    setCoordinates(latLong);
-  };
+  // const handleSelect = async (value) => {
+  //   const results = await geocodeByAddress(value);
+  //   const latLong = await getLatLng(results[0]);
+  //   console.log("testcoor", latLong);
+  //   setAdress(value);
+  //   setCoordinates(latLong);
+  // };
 
   return (
     <div className="contain__startadress">

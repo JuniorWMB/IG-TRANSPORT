@@ -5,24 +5,41 @@ import PlacesAutocomplete, {
 } from "react-places-autocomplete";
 import { getDistance, getPreciseDistance } from "geolib";
 
-function EndAdressGood({ setCount, count }) {
-  const [cityEnd, setCityEnd] = useState("");
-  const [stairEnd, setStairEnd] = useState("");
-  const [liftEnd, setLiftEnd] = useState("");
-  const [portageEnd, setPortageEnd] = useState("");
-  const [accessTruckEnd, setAccesTruckEnd] = useState("");
-  const [coordinates, setCoordinates] = useState({
-    lat: "",
-    lng: "",
-  });
+function EndAdressGood({
+  setCount,
+  count,
+  cityEnd,
+  setCityEnd,
+  stairEnd,
+  setStairEnd,
+  liftEnd,
+  setLiftEnd,
+  portageEnd,
+  setPortageEnd,
+  accessTruckEnd,
+  setAccesTruckEnd,
+  handleSelectEnd,
+  coordinatesEnd,
+  setCoordinatesEnd,
+}) {
+  // const [cityEnd, setCityEnd] = useState("");
+  // const [stairEnd, setStairEnd] = useState("");
+  // const [liftEnd, setLiftEnd] = useState("");
+  // const [portageEnd, setPortageEnd] = useState("");
+  // const [accessTruckEnd, setAccesTruckEnd] = useState("");
+  // const [coordinates, setCoordinates] = useState({
+  //   lat: "",
+  //   lng: "",
+  // });
 
-  const handleSelect = async (value) => {
-    const results = await geocodeByAddress(value);
-    const latLong = await getLatLng(results[0]);
-    console.log("testcoor", latLong);
-    setCityEnd(value);
-    setCoordinates(latLong);
-  };
+  // const handleSelect = async (value) => {
+  //   const results = await geocodeByAddress(value);
+  //   const latLong = await getLatLng(results[0]);
+  //   console.log("testcoor", latLong);
+  //   setCityEnd(value);
+  //   setCoordinates(latLong);
+  // };
+
   return (
     <div className="contain__startadress">
       <form action="" className="contain__formadressstart">
@@ -33,7 +50,7 @@ function EndAdressGood({ setCount, count }) {
           <PlacesAutocomplete
             value={cityEnd}
             onChange={setCityEnd}
-            onSelect={handleSelect}
+            onSelect={handleSelectEnd}
           >
             {({
               getInputProps,

@@ -1,6 +1,6 @@
 import React from "react";
 
-function RecapDemenagement({ arrondiDist }) {
+function RecapDemenagement({ arrondiDist, addressGO, cityEnd }) {
   // const { test } = useContext(KilometreContext);
 
   return (
@@ -8,21 +8,26 @@ function RecapDemenagement({ arrondiDist }) {
       <div className="blockHaut">
         <div className="destination recapAll">
           <p className="espacehelp recapTitle">Votre trajet</p>
-          <p className="recapInfo">
+          <p className="recapInfo recapInfoInText">
             de
-            <span>1</span>à<span>5</span>
+            <span style={{ marginLeft: ".4rem", marginRight: ".4rem" }}>
+              {addressGO}
+            </span>
+            à
+            <span style={{ marginLeft: ".4rem", marginRight: ".4rem" }}>
+              {cityEnd}
+            </span>
           </p>
           <div>
             <p className="recapInfo" style={{ marginLeft: "30px" }}>
-              {" "}
-              100km
+              {arrondiDist} Km
             </p>
           </div>
         </div>
 
         <div className="yourVolume recapAll">
           <p className="espacehelp recapTitle">Votre volume</p>
-          <p className="recapInfo">{arrondiDist} KM</p>
+          <p className="recapInfo"> metre cube</p>
         </div>
         <div className="yourFormule recapAll">
           <p className="espacehelp recapTitle">Formule choisie</p>

@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.css";
 // import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import logo from "../assets/logo.webp";

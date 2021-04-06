@@ -2124,6 +2124,10 @@ button {
   width: 50%;
   height: 50px;
 }
+.destination {
+  width: 100%;
+  justify-content: space-between;
+}
 .blockBas {
   margin-top: 10px;
   height: 250px;
@@ -2168,6 +2172,9 @@ button {
   font-size: 1.4rem;
   color: #2670bd;
   font-family: "Oswald", sans-serif;
+}
+.recapInfoInText {
+  width: 70%;
 }
 .titleRecapBlock {
   padding: 10px;

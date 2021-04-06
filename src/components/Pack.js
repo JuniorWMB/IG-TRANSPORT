@@ -1,25 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Truck, Briefcase, Archive, Package } from "react-feather";
 
-import Footer from "./Footer";
-
 function Pack() {
-  // useEffect(() => {
-  //   const tl = gsap.timeline();
-
-  //   tl.from(".pack", {
-  //     duration: 1.7,
-  //     y: 100,
-  //     ease: "power4.Out",
-  //     delay: 3,
-  //     opacity: 0,
-  //     stagger: {
-  //       amount: 2,
-  //     },
-  //   });
-  // }, []);
-
   return (
     <div className="pack__contain">
       <Link to="/demenagement" className="pack">
@@ -82,19 +65,6 @@ function Pack() {
           </p>
         </div>
       </Link>
-      {/* <Link to="/box-mobile" className="pack">
-        <div className="pack__logo">
-          <Briefcase size={40} color="#94c935" />
-          <p> Box Mobile</p>
-        </div>
-        <div className="pack__textprof">
-          <p>
-            Livraison de votre gardes meubles ,de 4m3 ou 8 m3 ,en bas de chez
-            vous avec l'option de chargement par notre équipe de demenageur
-            professionnels.
-          </p>
-        </div>
-      </Link> */}
     </div>
   );
 }
