@@ -1,6 +1,15 @@
 import React from "react";
 
-const Basket = ({ products, total, showSide, setProducts }) => {
+const Basket = ({
+  products,
+  total,
+  showSide,
+  setProducts,
+  setTotalBasket,
+  totalBasket,
+}) => {
+  setTotalBasket(total.toFixed(2));
+  console.log("test total", totalBasket);
   return (
     <div className={showSide ? "panier__contain" : "panier__none"}>
       <div className="panier__meuble">

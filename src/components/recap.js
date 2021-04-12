@@ -11,6 +11,12 @@ import EndRecap from "./EndRecap";
 import FormulaireRecap from "./FormulaireRecap";
 
 function Recap({
+  setToggleBloks,
+  toggleBlocks,
+  coordianateLongEnd,
+  coordianateLatEnd,
+  coordianateLat,
+  coordianateLong,
   addressGO,
   cityEnd,
   stair,
@@ -25,12 +31,16 @@ function Recap({
   liftEnd,
   portageEnd,
   accessTruckEnd,
-  coordinatesEnd,
-  coordinates,
-  coorLat,
-  coorLng,
-  coorLatEnd,
-  coorLngEnd,
+  setTotalBasket,
+  totalBasket,
+  volumeCalcul,
+  date,
+  setDate,
+  endDate,
+  setEndDate,
+  totalQuantity,
+  setTotalQuantity,
+  totalTest,
 }) {
   // const [address, setAdress] = useState("");
   // const [distance, setDistance] = useState("0");
@@ -50,8 +60,8 @@ function Recap({
 
   const pdis = getPreciseDistance(
     // { latitude: 48.7104542, longitude: 2.5174296 },
-    { latitude: coorLat, longitude: coorLng },
-    { latitude: coorLatEnd, longitude: coorLngEnd }
+    { latitude: coordianateLat, longitude: coordianateLong },
+    { latitude: coordianateLatEnd, longitude: coordianateLongEnd }
     // { latitude: 43.280555, longitude: 5.2404128 }
   );
 
@@ -62,15 +72,26 @@ function Recap({
   // };
   // setDistance(distanceKm);
 
-  // console.log("distance", distance);
+  console.log("quantity", totalQuantity);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", padding: "20px " }}>
       <h1 className="titleRecapBlock">Votre déménagement</h1>
       <RecapDemenagement
+        totalTest={totalTest}
+        totalQuantity={totalQuantity}
+        setToggleBloks={setToggleBloks}
+        toggleBlocks={toggleBlocks}
         arrondiDist={arrondiDist}
         addressGO={addressGO}
         cityEnd={cityEnd}
+        totalBasket={totalBasket}
+        setTotalBasket={setTotalBasket}
+        volumeCalcul={volumeCalcul}
+        date={date}
+        setDate={setDate}
+        endDate={endDate}
+        setEndDate={setEndDate}
       />
       <h1 className="titleRecapBlock">Départ</h1>
       <RecapDepart

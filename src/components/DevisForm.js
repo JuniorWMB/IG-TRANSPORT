@@ -13,8 +13,21 @@ let timeline = [
   { choice: "5", text: "tarif" },
   { choice: "6", text: "récapitulatif" },
 ];
+let totalTest = 0;
 
 function DevisForm({
+  totalQuantity,
+  setTotalQuantity,
+  coordianateLongEnd,
+  coordianateLatEnd,
+  coordianateLat,
+  coordianateLong,
+  date,
+  setDate,
+  endDate,
+  setEndDate,
+  setTotalBasket,
+  totalBasket,
   stair,
   setStair,
   lift,
@@ -49,6 +62,11 @@ function DevisForm({
   const [count, setCount] = useState(1);
   const [volumeCalcul, setVolumeCalcul] = useState("");
   const [show, setShow] = useState(false);
+  const [toggleBlocks, setToggleBloks] = useState(0);
+  const [totalHeavy, setTotalHeavy] = useState(0);
+
+  let volumeHeavy = 0;
+
   const countBack = () => {
     if (count === 1) {
       return null;
@@ -64,6 +82,9 @@ function DevisForm({
       console.log("2");
     }
   }, [volumeCalcul.length]);
+
+  let testCalcul = 0;
+  let testCalcul2 = 0;
 
   return (
     <>
@@ -104,7 +125,7 @@ function DevisForm({
                 </p>
                 <div className="contain__devisinput">
                   <input
-                    type="text"
+                    type="number"
                     onChange={(e) => {
                       setVolumeCalcul(e.target.value);
                     }}
@@ -116,7 +137,7 @@ function DevisForm({
                     className={
                       show ? "choice__buttonleft" : "choice__buttonnone"
                     }
-                    onClick={() => setCount(count + 2)}
+                    onClick={() => setCount(count + 1)}
                   >
                     Valider
                   </button>
@@ -137,7 +158,18 @@ function DevisForm({
           </div>
         ) : null}
         {count === 2 ? (
-          <ChoiceMeuble count={count} setCount={setCount} />
+          <ChoiceMeuble
+            count={count}
+            setCount={setCount}
+            totalBasket={totalBasket}
+            setTotalBasket={setTotalBasket}
+            volumeCalcul={volumeCalcul}
+            testCalcul={testCalcul}
+            testCalcul2={testCalcul2}
+            volumeHeavy={volumeHeavy}
+            totalHeavy={totalHeavy}
+            setTotalHeavy={setTotalHeavy}
+          />
         ) : null}
         {count === 3 ? (
           <StartAddress
@@ -179,11 +211,32 @@ function DevisForm({
           />
         ) : null}
         <div>
-          {count === 5 ? <Tarif count={count} setCount={setCount} /> : null}
+          {count === 5 ? (
+            <Tarif
+              date={date}
+              setDate={setDate}
+              endDate={endDate}
+              setEndDate={setEndDate}
+              count={count}
+              setCount={setCount}
+              setToggleBloks={setToggleBloks}
+              toggleBlocks={toggleBlocks}
+              totalQuantity={totalQuantity}
+              setTotalQuantity={setTotalQuantity}
+              totalTest={totalTest}
+            />
+          ) : null}
         </div>
         <div>
           {count === 6 ? (
             <Recap
+              estCalcul={testCalcul}
+              testCalcul2={testCalcul2}
+              totalTest={totalTest}
+              setTotalQuantity={setTotalQuantity}
+              totalQuantity={totalQuantity}
+              setToggleBloks={setToggleBloks}
+              toggleBlocks={toggleBlocks}
               count={count}
               setCount={setCount}
               addressGO={address}
@@ -196,6 +249,21 @@ function DevisForm({
               liftEnd={liftEnd}
               portageEnd={portageEnd}
               accessTruckEnd={accessTruckEnd}
+              coorLat={coorLat}
+              coorLng={coorLng}
+              coorLatEnd={coorLatEnd}
+              coorLngEnd={coorLngEnd}
+              totalBasket={totalBasket}
+              setTotalBasket={setTotalBasket}
+              volumeCalcul={volumeCalcul}
+              date={date}
+              setDate={setDate}
+              endDate={endDate}
+              setEndDate={setEndDate}
+              coordianateLat={coordianateLat}
+              coordianateLong={coordianateLong}
+              coordianateLatEnd={coordianateLatEnd}
+              coordianateLongEnd={coordianateLongEnd}
             />
           ) : null}
         </div>

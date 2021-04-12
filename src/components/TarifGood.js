@@ -1,20 +1,28 @@
 import React, { useState, useContext } from "react";
 import Calendar from "react-calendar";
 import "../Calendar.css";
-
-import Form from "./Form";
-
 import Trait from "./Trait";
 import { ProductContextbis } from "../context/ProductContext";
 import PackEmballageTarif from "./PackEmballageTarif";
-import Payment from "./Payment";
 import LittleFormule from "./LittleFormule";
 import Maps from "./Maps";
 import ButtonNav from "./ButtonNav";
 
-function TarifGood({ count, setCount }) {
-  const [date, setDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+function TarifGood({
+  count,
+  setCount,
+  date,
+  setDate,
+  endDate,
+  setEndDate,
+  setToggleBloks,
+  toggleBlocks,
+  setTotalQuantity,
+  totalQuantity,
+  totalTest,
+}) {
+  // const [date, setDate] = useState(new Date());
+  // const [endDate, setEndDate] = useState(new Date());
   const [showDate, setShowDate] = useState(false);
   let options = {
     weekday: "long",
@@ -107,9 +115,17 @@ function TarifGood({ count, setCount }) {
       </div>
       {showDate ? (
         <div>
-          <LittleFormule />
+          <LittleFormule
+            setToggleBloks={setToggleBloks}
+            toggleBlocks={toggleBlocks}
+          />
           <Trait />
-          <PackEmballageTarif product={product} />
+          <PackEmballageTarif
+            product={product}
+            setTotalQuantity={setTotalQuantity}
+            totalQuantity={totalQuantity}
+            totalTest={totalTest}
+          />
           <Trait />
           <ButtonNav count={count} setCount={setCount} />
         </div>

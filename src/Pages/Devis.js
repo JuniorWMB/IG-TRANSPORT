@@ -16,28 +16,39 @@ function Devis() {
     lat: "",
     lng: "",
   });
+  const [coordianateLat, setCoordinateLat] = useState();
+  const [coordianateLong, setCoordinateLong] = useState();
 
   const handleSelect = async (value) => {
     const results = await geocodeByAddress(value);
     const latLong = await getLatLng(results[0]);
-    console.log("testcoor", latLong);
+    console.log("testcoor", latLong.lat);
     setAdress(value);
     setCoordinates(latLong);
+    // test
+    setCoordinateLat(latLong.lat);
+    setCoordinateLong(latLong.lng);
   };
   const coorLat = coordinates.lat;
   const coorLng = coordinates.lng;
+
+  console.log("Lat only", coordianateLat);
+  console.log("Long only", coordianateLong);
   // start adress
 
   //end adress
   const [cityEnd, setCityEnd] = useState("");
-  const [stairEnd, setStairEnd] = useState("");
-  const [liftEnd, setLiftEnd] = useState("");
-  const [portageEnd, setPortageEnd] = useState("");
-  const [accessTruckEnd, setAccesTruckEnd] = useState("");
+  const [stairEnd, setStairEnd] = useState("1");
+  const [liftEnd, setLiftEnd] = useState("Oui");
+  const [portageEnd, setPortageEnd] = useState("Moins de 15m");
+  const [accessTruckEnd, setAccesTruckEnd] = useState("Possible");
   const [coordinatesEnd, setCoordinatesEnd] = useState({
     lat: "",
     lng: "",
   });
+
+  const [coordianateLatEnd, setCoordinateLatEnd] = useState();
+  const [coordianateLongEnd, setCoordinateLongEnd] = useState();
 
   const handleSelectEnd = async (value) => {
     const results = await geocodeByAddress(value);
@@ -45,18 +56,43 @@ function Devis() {
     console.log("testcoor", latLong);
     setCityEnd(value);
     setCoordinatesEnd(latLong);
+    setCoordinateLatEnd(latLong.lat);
+    setCoordinateLongEnd(latLong.lng);
   };
 
   const coorLatEnd = coordinates.lat;
   const coorLngEnd = coordinates.lng;
   //end adress
 
-  console.log("states", coordinates.lng);
+  const [totalBasket, setTotalBasket] = useState();
+  // let total = 0;
+
+  console.log("states long", coordinates.lng);
+  console.log("states lat", coordinates.lat);
+
+  const [date, setDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
   return (
     <div>
       <div className="header__sousHeader"></div>
       <DevisForm
+        totalQuantity={totalQuantity}
+        setTotalQuantity={setTotalQuantity}
+        coordianateLatEnd={coordianateLatEnd}
+        coordianateLongEnd={coordianateLongEnd}
+        coordianateLat={coordianateLat}
+        coordianateLong={coordianateLong}
+        setCoordinateLat={setCoordinateLat}
+        setCoordinateLong={setCoordinateLong}
+        date={date}
+        setDate={setDate}
+        endDate={endDate}
+        setEndDate={setEndDate}
+        totalBasket={totalBasket}
+        setTotalBasket={setTotalBasket}
         stair={stair}
         setStair={setStair}
         lift={lift}

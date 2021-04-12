@@ -110,6 +110,7 @@ function StartAddress({
                 setStair(e.target.value);
               }}
             >
+              <option value=""></option>
               <option value="étage 1">1</option>
               <option value="étage 2">2</option>
               <option value="étage 3">3</option>
@@ -127,6 +128,7 @@ function StartAddress({
                 setLift(e.target.value);
               }}
             >
+              <option value=""></option>
               <option value="Oui">Oui</option>
               <option value="Non">Non</option>
             </select>
@@ -141,6 +143,7 @@ function StartAddress({
                 setPortage(e.target.value);
               }}
             >
+              <option value=""></option>
               <option value="Moins de 15m">Moins de 15m</option>
               <option value="De 15m à 29m">De 15m à 29m</option>
               <option value="De 30m à 39m">De 30m à 39m</option>
@@ -162,13 +165,17 @@ function StartAddress({
                 setAccesTruck(e.target.value);
               }}
             >
+              <option value=""></option>
               <option value="Possible">Possible</option>
               <option value="Difficile">Difficile</option>
+              <option value="Impossible">Impossible</option>
             </select>
           </div>
           <div className="btn btn2">
             <button onClick={() => setCount(count - 1)}>PREVIOUS</button>
-            <button onClick={() => setCount(count + 1)}>NEXT</button>
+            <button disabled={!address} onClick={() => setCount(count + 1)}>
+              NEXT
+            </button>
           </div>
         </form>
       </AdressContext.Provider>

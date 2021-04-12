@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   faPiggyBank,
   faUserShield,
@@ -6,27 +6,42 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const LittleFormule = () => {
-  const [toggleBlocks, setToggleBloks] = useState(3);
+const LittleFormule = ({ packName, setToggleBloks, toggleBlocks }) => {
+  // const [toggleBlocks, setToggleBloks] = useState(0);
+  // const [, ] = useState("");
 
   const toggleBlock = (index) => {
     setToggleBloks(index);
+    // if (toggleBlocks === 1) {
+    //   setPackName("Basic");
+    //   console.log("Basic");
+    // } else if (toggleBlocks === 2) {
+    //   setPackName("Eco +");
+    //   console.log("Eco +");
+    // } else if (toggleBlocks === 3) {
+    //   setPackName("Securité");
+    //   console.log("Securité");
+    // } else if (toggleBlocks === 4) {
+    //   setPackName("Premium");
+    //   console.log("Premium");
+    // }
   };
 
+  // let packs = () => {
+  //   if (toggleBlocks === 1) {
+  //     setPackName("Basic");
+  //   } else if (toggleBlocks === 2) {
+  //     setPackName("Eco +");
+  //   } else if (toggleBlocks === 1) {
+  //     setPackName("Securité");
+  //   } else {
+  //     setPackName("Premium");
+  //   }
+  // };
+
+  console.log("packName", packName);
   return (
     <div className="littleformule__contain ">
-      {/* <button
-        class="snipcart-add-item"
-        data-item-id="starry-night"
-        data-item-price="79.99"
-        data-item-url="/paintings/starry-night"
-        data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
-        data-item-image="/assets/images/starry-night.jpg"
-        data-item-name="The Starry Night"
-      >
-        Add to cart
-      </button> */}
-
       <div
         className={
           toggleBlocks === 1
@@ -34,6 +49,7 @@ const LittleFormule = () => {
             : "littleformule__contain__block"
         }
         onClick={() => toggleBlock(1)}
+        // onClick={toggleBlock()}
       >
         <div className="titleAndLogo">
           <div className="pack__logogreen">
