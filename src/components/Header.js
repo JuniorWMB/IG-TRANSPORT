@@ -2,11 +2,12 @@ import React from "react";
 import "../App.css";
 // import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { MdDehaze } from "react-icons/md";
 
 import logo from "../assets/logo.webp";
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ show, setShow }) {
   return (
     <div className="header__contain">
       <div className="header">
@@ -27,29 +28,18 @@ function Header() {
           </Link>
         </div>
         <div className="header__icon">
-          {/* <Link
-            to="/signup"
-            className="header__iconAccount"
-            style={{
-              background: "#94c935",
-              fontSize: "20px",
-              color: "white",
-              border: "none",
-            }}
-          >
-            <FontAwesomeIcon icon={faUser} />
-          </Link> */}
           <div className="header__iconCart">
             <button
               class="snipcart-checkout"
+              className="basket__checkout"
               style={{
                 background: "none",
                 backgroundColor: "none",
                 height: "100%",
-                width: "40%",
+                width: "65px",
               }}
             >
-              <AiOutlineShoppingCart size="35" color="#2670bd" />
+              <AiOutlineShoppingCart size="30" color="#2670bd" />
               <span
                 class="snipcart-items-count"
                 style={{
@@ -74,6 +64,9 @@ function Header() {
               ></span>
             </button>
           </div>
+          {/* <div className="menuicon__menuhidden">
+        <MdDehaze size={30} color="#2670bd"onClick={()=>setShow(!show)}/>
+          </div> */}
         </div>
       </div>
     </div>

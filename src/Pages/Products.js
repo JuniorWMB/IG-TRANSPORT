@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import ByProducts from "../components/ByProducts";
-import Header from "../components/Header";
-
 import adhesif from "../assets/adhesif.jpg";
 import assiette from "../assets/assiette.jpg";
 import bouteille from "../assets/bouteille.jpg";
@@ -121,12 +119,13 @@ function Products() {
         }}
       >
         <input
+          className="input__searchproduct"
           type="text"
           value={searchProduct}
           onChange={handleChange}
           placeholder="Search"
           style={{
-            width: "50%",
+            width: "70%",
             height: "20%",
             borderRadius: "5px",
             border: "none",
@@ -137,6 +136,7 @@ function Products() {
           }}
         />
       </div>
+
       <ByProducts dataPrice={dataPrice} results={results} />
     </div>
   );

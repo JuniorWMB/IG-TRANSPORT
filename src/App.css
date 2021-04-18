@@ -1262,10 +1262,10 @@ a {
 }
 /*********************************************** heavy objet **********************************************************/
 .heavy__block__contain {
-  border: 1px solid #94c935 ;
+  border: 1px solid #94c935;
   height: 150px;
   display: flex;
-  margin:0 2rem
+  margin: 0 2rem;
   /* justify-content: space-around;
   align-items: center; */
 }
@@ -2257,8 +2257,195 @@ button {
   justify-content: space-between;
 }
 
+@media screen and (min-width: 276px) and (max-width: 576px) {
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  body {
+    display: flex;
+    box-sizing: content-box;
+  }
+  .header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+  }
+  .header__contain {
+    max-width: 100%;
+  }
+  .header__logo {
+    height: 2rem;
+    object-fit: contain;
+  }
+  /* .header__textnav {
+    display: none;
+  } */
+  .header__iconCart {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .header__sousHeader {
+    height: 400px;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .basket__checkout {
+    /* width: 70px; */
+  }
+  .header__textnav p {
+    margin-left: 0.5rem;
+  }
+  .sousHeader__text {
+    height: 100%;
+  }
+  .anim1,
+  .anim2 {
+    margin-bottom: 1.5rem;
+  }
+  .sousHeader__button {
+    width: 80%;
+    border-radius: 0px;
+    margin-top: 8rem;
+  }
+  .pack__contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: content-box;
+    margin-left: 1rem;
+  }
+  .pack {
+    width: 80%;
+    height: 30vh;
+  }
+  .pack__textprof > p {
+    font-size: 1.2em;
+  }
+  .footer {
+    width: 100%;
+    height: 50vh;
+  }
+  .link,
+  .info__address {
+    font-size: 0.8em;
+  }
+  .footer__icon {
+    height: 80%;
+    width: 25%;
+  }
+  .footer__icon p {
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 10px 0 0 0px;
+  }
+  .foot {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* justify-content: space-around; */
+    margin-top: 10px;
+  }
+  .footer__icon p {
+    display: flex;
+    justify-content: center;
+  }
+  .menuicon__menuhidden {
+    display: flex;
+    align-items: center;
+  }
+  .menuhide__show {
+    background: red;
+    width: 100%;
+    height: 600%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.5s 0s ease-in-out;
+  }
+  .menuhide__hide {
+    background: red;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
 
-@media screen and (min-width: 276px) and (max-width: 576px){}
-@media screen and (min-width: 576px) and (max-width: 768px){}
-@media screen (min-width:768px)and (max-width:992px){}
-@media screen and (min-width: 992px) and (max-width: 1740px){}
+    top: 0;
+    right: -100%;
+    z-index: 99;
+    transition: all 0.5s 0s ease-in-out;
+  }
+  .header__menutextnav {
+    font-size: 4rem;
+    height: 600px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  /***********************Shop***************/
+  .product {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product__container {
+    width: 100%;
+  }
+  /***********************Démenagement***************/
+  .sousheaderResponsive {
+    height: 350px;
+  }
+  .textvTwo {
+    width: 100%;
+  }
+
+  .textvTwo h4 {
+    font-weight: 700;
+    font-size: 3rem;
+    font-family: "Oswald", sans-serif;
+    text-transform: capitalize;
+    width: 80vw;
+  }
+
+  .pack__contain2 {
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    /* padding: 1rem 0; */
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+    border: 1px solid blueviolet;
+    /* flex-wrap: wrap;
+    overflow: scroll; */
+    /* margin-bottom: 700px; */
+  }
+  .view__info,
+  .text__pack {
+    display: none;
+  }
+  .pack__height {
+    border: 1px solid red;
+    height: 90%;
+    width: 90%;
+    /* flex: 1 1 160px; */
+  }
+}
+/* @media screen and (min-width: 576px) and (max-width: 768px) {
+}
+@media screen (min-width: 768px) and (max-width: 992px) {
+} */
+@media screen and (min-width: 992px) and (max-width: 1740px) {
+  .menuicon__menuhidden,
+  .menuhide__hide {
+    display: none;
+  }
+}

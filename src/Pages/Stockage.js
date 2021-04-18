@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import StockageText from "../components/StockageText";
 import { StockProPart } from "../components/StockProPart";
 

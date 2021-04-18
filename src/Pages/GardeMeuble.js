@@ -1,7 +1,6 @@
 import React from "react";
 import Garde from "../components/Garde";
 import GardeText from "../components/GardeText";
-import Header from "../components/Header";
 
 function GardeMeuble() {
   return (

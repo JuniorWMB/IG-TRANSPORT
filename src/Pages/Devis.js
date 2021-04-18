@@ -4,6 +4,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
+
 // import TotalVolumeGoodContext from "../components/ChoiceMeuble"
 function Devis() {
   // start adress
