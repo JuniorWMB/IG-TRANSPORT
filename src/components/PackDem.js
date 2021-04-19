@@ -31,7 +31,7 @@ export const PackDem = () => {
               </p>
             </div>
             <div>
-              <Link className="pack__button">
+              <Link to="/devis" className="pack__button">
                 <button className="pack__buttongreen">Réservation</button>
               </Link>
             </div>
