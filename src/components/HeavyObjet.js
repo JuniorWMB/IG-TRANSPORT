@@ -7,7 +7,7 @@ const HeavyObjet = ({
   volumeHeavy,
   totalHeavy,
   setTotalHeavy,
-  setDisable
+  setDisable,
 }) => {
   const [showHeavy, setShowHeavy] = useState(false);
 
@@ -25,15 +25,17 @@ const HeavyObjet = ({
     <div className="heavy__contain">
       <div className="heavy__check">
         <p>Avez vous des objets extrémement lourd ?</p>
-        <label htmlFor="yes">Oui</label>
-        <input
-          onClick={() => {
-            setShowHeavy(!showHeavy);
-          }}
-          type="checkbox"
-          name="yes"
-          id="yes"
-        />
+        <div className="checkBox">
+          <label htmlFor="yes">Oui</label>
+          <input
+            onClick={() => {
+              setShowHeavy(!showHeavy);
+            }}
+            type="checkbox"
+            name="yes"
+            id="yes"
+          />
+        </div>
       </div>
       {showHeavy ? (
         <div className="heavy__block__contain">

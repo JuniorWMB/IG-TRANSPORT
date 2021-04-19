@@ -23,25 +23,6 @@ function StartAddress({
   setCoordinates,
   handleSelect,
 }) {
-  // const [city, setCity] = useState("");
-  // const [stair, setStair] = useState("");
-  // const [lift, setLift] = useState("");
-  // const [portage, setPortage] = useState("");
-  // const [accessTruck, setAccesTruck] = useState("");
-  // const [address, setAdress] = useState("");
-  // const [coordinates, setCoordinates] = useState({
-  //   lat: "",
-  //   lng: "",
-  // });
-
-  // const handleSelect = async (value) => {
-  //   const results = await geocodeByAddress(value);
-  //   const latLong = await getLatLng(results[0]);
-  //   console.log("testcoor", latLong);
-  //   setAdress(value);
-  //   setCoordinates(latLong);
-  // };
-
   return (
     <div className="contain__startadress">
       <AdressContext.Provider value={(coordinates, setCoordinates)}>
@@ -64,7 +45,7 @@ function StartAddress({
                 getSuggestionItemProps,
                 loading,
               }) => (
-                <div key={suggestions.description}>
+                <div key={suggestions.description} className="inputStart">
                   <input
                     style={{ width: "520px" }}
                     {...getInputProps({

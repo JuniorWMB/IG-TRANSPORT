@@ -12,32 +12,7 @@ const LittleFormule = ({ packName, setToggleBloks, toggleBlocks }) => {
 
   const toggleBlock = (index) => {
     setToggleBloks(index);
-    // if (toggleBlocks === 1) {
-    //   setPackName("Basic");
-    //   console.log("Basic");
-    // } else if (toggleBlocks === 2) {
-    //   setPackName("Eco +");
-    //   console.log("Eco +");
-    // } else if (toggleBlocks === 3) {
-    //   setPackName("Securité");
-    //   console.log("Securité");
-    // } else if (toggleBlocks === 4) {
-    //   setPackName("Premium");
-    //   console.log("Premium");
-    // }
   };
-
-  // let packs = () => {
-  //   if (toggleBlocks === 1) {
-  //     setPackName("Basic");
-  //   } else if (toggleBlocks === 2) {
-  //     setPackName("Eco +");
-  //   } else if (toggleBlocks === 1) {
-  //     setPackName("Securité");
-  //   } else {
-  //     setPackName("Premium");
-  //   }
-  // };
 
   console.log("packName", packName);
   return (

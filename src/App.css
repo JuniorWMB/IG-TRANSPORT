@@ -2440,9 +2440,18 @@ button {
     /* flex: 1 1 160px; */
     cursor: none;
   }
-  .stockage {
-    border: 1px solid red;
-    position: inherit;
+
+  /****************** stockage ********************************/
+
+  .sousHeaderStockage {
+    height: 350px;
+  }
+  .pack__height2 {
+    height: 50%;
+    width: 90%;
+  }
+  .pack__height2 h3 {
+    font-size: 2rem;
   }
 
   /* .view__info {
@@ -2460,6 +2469,206 @@ button {
     right: 0;
     display: none;
   } */
+
+  /***************************** Garde **************************/
+  .sousHeaderGarde {
+    height: 350px;
+  }
+  .sousHeaderGardeText {
+    margin-top: 1.8rem;
+  }
+  .sousHeaderGardeText h4 {
+    font-size: 2.7rem;
+  }
+  .devis__hidden {
+    width: 100%;
+    padding-left: 1rem;
+  }
+  .meuble__contain {
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .meuble__box {
+    width: 90%;
+    height: 300px;
+    margin-top: 1.5rem;
+  }
+
+  /******************************Devis*******************/
+  .devis__timeline {
+    display: none;
+  }
+  .devis__contain {
+    height: auto;
+  }
+
+  .choice__contain {
+    flex-direction: column;
+  }
+  .choice__box {
+    width: 90%;
+    padding-left: 0.5rem;
+    cursor: pointer;
+  }
+  .devis__textvolume {
+    font-size: 0.75rem;
+  }
+  /******************************ChoiceMeuble*******************/
+  .container {
+  }
+  .bloc__onglets {
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .tabs {
+    width: 90%;
+  }
+  .panier__meuble {
+    width: 35%;
+    height: auto;
+  }
+
+  /************************ heavy objet**************/
+  .heavy__check {
+    width: 80%;
+    height: 60px;
+  }
+
+  /************************Start Adress********************/
+  .contain__formadressstart {
+    width: 100%;
+    height: 100%;
+    font-size: 0.4rem;
+  }
+  .contain__formadressstart h1 {
+    font-size: 1.5rem;
+  }
+  .inputStart {
+    width: 49%;
+  }
+  .contain__formadressstart select {
+    height: 100%;
+    width: 50px;
+  }
+  .start {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  /**************************Calendar********************/
+  .date__contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .calendar__title {
+    width: 80%;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .littleformule__contain {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .littleformule__contain__block {
+    width: 90%;
+    margin-top: 1rem;
+  }
+  .date__button {
+    display: none;
+  }
+  .date__buttonV2 {
+    height: 30px;
+    margin-top: 30px;
+    width: 100px;
+    background: #94c935;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+
+  /********************* Form Block *************************/
+  .blockBas {
+    width: 100%;
+  }
+  .recapAll {
+    width: 100%;
+  }
+  .recapAll span {
+    font-size: 0.4rem;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .kiloresponsive {
+    font-size: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40px;
+  }
+  .recapInfoInText {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .kiloblock {
+    height: 100%;
+  }
+  .datestyle {
+    width: 100%;
+  }
+  .montantCapitalize {
+    font-size: 1rem;
+  }
+  .blockDepart {
+    display: flex;
+    flex-direction: column;
+  }
+  .blockLeftRecap {
+    width: 100%;
+  }
+  .blockFormRecap {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+  }
+  .formRecapMain {
+    display: flex;
+  }
+  .blockInputForm {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .blockInputForm input {
+    width: 60%;
+  }
+  .formBlockLeft,
+  .formBlockRight {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+  .buttonRecap {
+    font-size: 1rem;
+  }
 }
 /* @media screen and (min-width: 576px) and (max-width: 768px) {
 }

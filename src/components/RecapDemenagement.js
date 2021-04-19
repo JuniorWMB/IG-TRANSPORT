@@ -35,8 +35,11 @@ function RecapDemenagement({
               {cityEnd}
             </span>
           </p>
-          <div>
-            <p className="recapInfo" style={{ marginLeft: "30px" }}>
+          <div className="kiloblock">
+            <p
+              className="recapInfo kiloresponsive"
+              style={{ marginLeft: "30px" }}
+            >
               {arrondiDist} Km
             </p>
           </div>
@@ -44,7 +47,7 @@ function RecapDemenagement({
 
         <div className="yourVolume recapAll">
           <p className="espacehelp recapTitle">Votre volume</p>
-          <p className="recapInfo">
+          <p className="recapInfo ">
             {" "}
             {totalBasket ? totalBasket : volumeCalcul} m3
           </p>
@@ -60,13 +63,13 @@ function RecapDemenagement({
         </div>
       </div>
       <div className="blockBas">
-        <div className="dateRecap">
+        <div className="dateRecap datestyle">
           <p className="espacehelp recapTitle">Dates Chargement:</p>
           <p className="recapInfo">
             {date[0].toLocaleDateString("fr-FR", options)}
           </p>
         </div>
-        <div className="dateRecap">
+        <div className="dateRecap datestyle">
           <p className="espacehelp recapTitle">Dates de Livraison :</p>
           <p className="recapInfo">
             {endDate[1].toLocaleDateString("fr-FR", options)}

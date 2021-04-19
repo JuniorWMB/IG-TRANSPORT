@@ -1705,17 +1705,16 @@ function ChoiceMeuble({
                   })}
                 </div>
               </div>
-           </div>
+            </div>
             <HeavyObjet
-            heavyObject={heavyObject}
-            setProducts={setProducts}
-            products={products}
-            volumeHeavy={volumeHeavy}
-            totalHeavy={totalHeavy}
-            setTotalHeavy={setTotalHeavy}
-          />
+              heavyObject={heavyObject}
+              setProducts={setProducts}
+              products={products}
+              volumeHeavy={volumeHeavy}
+              totalHeavy={totalHeavy}
+              setTotalHeavy={setTotalHeavy}
+            />
           </div>
-          
         ) : (
           <HeavyObjet
             heavyObject={heavyObject}
@@ -1790,9 +1789,7 @@ function ChoiceMeuble({
                   Volume : {Number(volumeCalcul) + volumeHeavy} m3
                 </p>
               ) : (
-                <p className="panier__volume">
-                  Volume 2: {total.toFixed(2)} m3
-                </p>
+                <p className="panier__volume">Volume : {total.toFixed(2)} m3</p>
               )}
             </div>
           </div>

@@ -74,6 +74,9 @@ function TarifGood({
                 className="calendar"
               />
             </div>
+            <button className="date__buttonV2" onClick={validation}>
+              Valider
+            </button>
           </div>
           <div>
             {showDate === true ? (

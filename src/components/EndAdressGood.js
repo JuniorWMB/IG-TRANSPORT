@@ -70,7 +70,7 @@ function EndAdressGood({
               getSuggestionItemProps,
               loading,
             }) => (
-              <div key={suggestions.description}>
+              <div key={suggestions.description} className="inputStart">
                 <input
                   style={{ width: "520px" }}
                   {...getInputProps({
