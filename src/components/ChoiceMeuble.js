@@ -1728,11 +1728,11 @@ function ChoiceMeuble({
         )}
         <div className="btn2">
           <button style={{ height: "" }} onClick={() => setCount(count - 1)}>
-            PREVIOUS
+            précedent
           </button>
 
           <button disabled={!disable} onClick={() => setCount(count + 1)}>
-            NEXT
+            suivant
           </button>
         </div>
         <div style={{ display: "none" }}>

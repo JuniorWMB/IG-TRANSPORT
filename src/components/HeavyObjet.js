@@ -44,10 +44,11 @@ const HeavyObjet = ({
               return (
                 <div
                   // style={{ display: "flex" }}
+                  className="heavyDiv"
                   key={idx}
                   onClick={() => {
                     //créer une copie
-                    setDisable(true);
+                    // setDisable(true);
                     const newProduct = [...products];
                     let isFound = false;
                     for (let i = 0; i < products.length; i++) {

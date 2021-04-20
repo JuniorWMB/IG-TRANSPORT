@@ -153,9 +153,9 @@ function StartAddress({
             </select>
           </div>
           <div className="btn btn2">
-            <button onClick={() => setCount(count - 1)}>PREVIOUS</button>
+            <button onClick={() => setCount(count - 1)}>Précedent</button>
             <button disabled={!address} onClick={() => setCount(count + 1)}>
-              NEXT
+              Suivant
             </button>
           </div>
         </form>

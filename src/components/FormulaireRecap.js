@@ -65,7 +65,6 @@ const FormulaireRecap = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
-              {console.log("phone", phone)}
             </div>
           </div>
         </div>

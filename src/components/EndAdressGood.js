@@ -184,9 +184,9 @@ function EndAdressGood({
           </select>
         </div>
         <div className="btn btn2">
-          <button onClick={() => setCount(count - 1)}>PREVIOUS</button>
+          <button onClick={() => setCount(count - 1)}>précedent</button>
           <button disabled={!cityEnd} onClick={() => setCount(count + 1)}>
-            NEXT
+            suivant
           </button>
         </div>
       </form>
