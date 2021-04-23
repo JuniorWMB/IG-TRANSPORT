@@ -78,7 +78,7 @@ function Devis() {
 
   return (
     <div>
-      <div className="header__sousHeader"></div>
+      <div className="header__sousHeader sshDevis">DEVIS</div>
       <DevisForm
         totalQuantity={totalQuantity}
         setTotalQuantity={setTotalQuantity}
