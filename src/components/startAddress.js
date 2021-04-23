@@ -22,18 +22,47 @@ function StartAddress({
   coordinates,
   setCoordinates,
   handleSelect,
+  volumeCalcul,
+  totalBasket,
+  setPortageTotalStart,
+  portageTotalStart,
 }) {
+  console.log("toto", totalBasket);
+  let totalStart = 0;
+
+  if (portage === "De 15m à 29m") {
+    totalStart = totalStart + 30 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalStart(totalStart);
+  } else if (portage === "Moins de 15m") {
+    totalStart = totalStart + 15 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalStart(totalStart);
+  } else if (portage === "De 30m à 39m") {
+    totalStart = totalStart + 39 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalStart(totalStart);
+  } else if (portage === "De 40m à 49m") {
+    totalStart = totalStart + 49 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalStart(totalStart);
+  } else if (portage === "De 50m à 59m") {
+    totalStart = totalStart + 59 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalStart(totalStart);
+  } else if (portage === "De 60m à 79m") {
+    totalStart = totalStart + 79 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalStart(totalStart);
+  } else if (portage === "De 80m à 100m") {
+    totalStart =
+      totalStart + 100 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalStart(totalStart);
+  }
+
   return (
     <div className="contain__startadress">
       <AdressContext.Provider value={(coordinates, setCoordinates)}>
-        <div>{/* <h2>Votre adresse de départ</h2> */}</div>
         <form action="" className="contain__formadressstart">
           <h1>Adresse de départ</h1>
 
           <div className="city start">
             <p>Adresse :</p>
 
-            {/* test */}
             <PlacesAutocomplete
               value={address}
               onChange={setAdress}
@@ -59,7 +88,6 @@ function StartAddress({
                       const className = suggestion.active
                         ? "suggestion-item--active"
                         : "suggestion-item";
-                      // inline style for demonstration purpose
                       const style = suggestion.active
                         ? { backgroundColor: "#fafafa", cursor: "pointer" }
                         : { backgroundColor: "#ffffff", cursor: "pointer" };

@@ -210,11 +210,6 @@ a {
   font-family: "Roboto", sans-serif;
 }
 
-.text__display h3 {
-  font-weight: 300;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-}
 .text__display h4 {
   font-weight: 700;
   font-size: 3.4rem;
@@ -233,9 +228,10 @@ a {
   align-items: center;
   justify-content: center;
   border: none;
-  width: 25%;
-  height: 20%;
-  border-radius: 15px;
+  width: 50%;
+  height: 30%;
+  /* border-radius: 15px; */
+
   background-color: #94c935;
 }
 .sousHeader__button > p {
@@ -322,7 +318,7 @@ a {
 .pack__textprof > p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
   height: 100%;
   display: flex;
@@ -546,13 +542,23 @@ a {
   margin-bottom: 20px;
   margin-top: 5px;
 }
+.totalPack {
+  display: flex;
+  width: 60%;
+  height: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #2670bd;
+  font-weight: bold;
+}
 
 .pack__price {
   /* font-family: "Oswald", sans-serif;
   font-weight: 700; */
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 4rem;
+  font-size: 3rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -877,6 +883,23 @@ a {
 }
 
 /**************************************** devis *******************************************/
+
+.block__liste {
+  display: flex;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
+  background: #95c93593;
+  /* overflow: scroll; */
+  margin-top: 0.3rem;
+}
+.block__liste button {
+  border: 1px solid #2c436d;
+  background: none;
+  background-color: none;
+  border-radius: 50%;
+  margin: 0 0.3rem;
+}
 
 .devis__contain {
   padding: 20px 0;
@@ -1508,6 +1531,7 @@ button {
   width: 20%;
   height: 75%;
   border-radius: 5px;
+  text-transform: uppercase;
 }
 
 .btn2 {
@@ -1520,6 +1544,7 @@ button {
   height: 80%;
   width: 40%;
   border-radius: 5px;
+  text-transform: uppercase;
 }
 .textDropdown {
   font-size: 0.8em;
@@ -2260,7 +2285,7 @@ button {
   display: none;
 } */
 
-@media screen and (min-width: 276px) and (max-width: 576px) {
+@media screen and (min-width: 276px) and (max-width: 992px) {
   * {
     box-sizing: border-box;
     max-width: 100%;
@@ -2774,7 +2799,7 @@ button {
 }
 @media screen (min-width: 768px) and (max-width: 992px) {
 } */
-@media screen and (min-width: 992px) and (max-width: 1740px) {
+@media screen and (min-width: 992px) and (max-width: 2740px) {
   .menuicon__menuhidden,
   .menuhide__hide {
     display: none;

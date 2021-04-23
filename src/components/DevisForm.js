@@ -13,7 +13,9 @@ let timeline = [
   { choice: "5", text: "tarif" },
   { choice: "6", text: "récapitulatif" },
 ];
+
 let totalTest = 0;
+let totalQuantityRecap = 0;
 
 function DevisForm({
   totalQuantity,
@@ -64,6 +66,13 @@ function DevisForm({
   const [show, setShow] = useState(false);
   const [toggleBlocks, setToggleBloks] = useState(0);
   const [totalHeavy, setTotalHeavy] = useState(0);
+  const [portageTotalStart, setPortageTotalStart] = useState(0);
+  const [portageTotalEnd, setPortageTotalEnd] = useState(0);
+  const [totalFormule, setTotalFormule] = useState(0);
+  const [kiloDistance, setKiloDistance] = useState(0);
+  const [quantityRecapTotal, setQuantityRecapTotal] = useState(0);
+
+  let portageGeneraleTotal = portageTotalStart + portageTotalEnd;
 
   let volumeHeavy = 0;
 
@@ -77,14 +86,13 @@ function DevisForm({
   useEffect(() => {
     if (volumeCalcul.length > 0) {
       setShow(true);
-      console.log("1");
     } else {
-      console.log("2");
     }
   }, [volumeCalcul.length]);
 
   let testCalcul = 0;
   let testCalcul2 = 0;
+  const [totalQuantityV2, setTotalQuantityV2] = useState(0);
 
   return (
     <>
@@ -173,6 +181,8 @@ function DevisForm({
         ) : null}
         {count === 3 ? (
           <StartAddress
+            totalBasket={totalBasket}
+            volumeCalcul={volumeCalcul}
             count={count}
             setCount={setCount}
             stair={stair}
@@ -188,10 +198,16 @@ function DevisForm({
             coordinates={coordinates}
             setCoordinates={setCoordinates}
             handleSelect={handleSelect}
+            portageTotalStart={portageTotalStart}
+            setPortageTotalStart={setPortageTotalStart}
           />
         ) : null}
         {count === 4 ? (
           <EndAdressGood
+            totalBasket={totalBasket}
+            volumeCalcul={volumeCalcul}
+            portageTotalEnd={portageTotalEnd}
+            setPortageTotalEnd={setPortageTotalEnd}
             count={count}
             setCount={setCount}
             handleSelect={handleSelect}
@@ -213,6 +229,15 @@ function DevisForm({
         <div>
           {count === 5 ? (
             <Tarif
+              quantityRecapTotal={quantityRecapTotal}
+              setQuantityRecapTotal={setQuantityRecapTotal}
+              totalQuantityRecap={totalQuantityRecap}
+              kiloDistance={kiloDistance}
+              portageGeneraleTotal={portageGeneraleTotal}
+              totalBasket={totalBasket}
+              volumeCalcul={volumeCalcul}
+              totalFormule={totalFormule}
+              setTotalFormule={setTotalFormule}
               date={date}
               setDate={setDate}
               endDate={endDate}
@@ -224,13 +249,19 @@ function DevisForm({
               totalQuantity={totalQuantity}
               setTotalQuantity={setTotalQuantity}
               totalTest={totalTest}
+              totalQuantityV2={totalQuantityV2}
+              setTotalQuantityV2={setTotalQuantityV2}
             />
           ) : null}
         </div>
         <div>
           {count === 6 ? (
             <Recap
-              estCalcul={testCalcul}
+              quantityRecapTotal={quantityRecapTotal}
+              totalQuantityRecap={totalQuantityRecap}
+              totalFormule={totalFormule}
+              totalQuantityV2={totalQuantityV2}
+              testCalcul={testCalcul}
               testCalcul2={testCalcul2}
               totalTest={totalTest}
               setTotalQuantity={setTotalQuantity}
@@ -264,11 +295,11 @@ function DevisForm({
               coordianateLong={coordianateLong}
               coordianateLatEnd={coordianateLatEnd}
               coordianateLongEnd={coordianateLongEnd}
+              kiloDistance={kiloDistance}
+              setKiloDistance={setKiloDistance}
             />
           ) : null}
         </div>
-
-        {/* <TotalDevis count={count} setCount={setCount} /> */}
       </div>
     </>
   );

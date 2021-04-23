@@ -43,7 +43,6 @@ const HeavyObjet = ({
             {heavyObject.map((meuble, idx) => {
               return (
                 <div
-                  // style={{ display: "flex" }}
                   className="heavyDiv"
                   key={idx}
                   onClick={() => {
@@ -107,8 +106,6 @@ const HeavyObjet = ({
           </div>
         </div>
       ) : null}
-      <p>{volumeHeavy.toFixed(2)} Volume</p>
-      <h1>{totalHeavy}</h1>
     </div>
   );
 };

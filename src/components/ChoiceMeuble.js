@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Basket from "./Basket";
 import HeavyObjet from "./HeavyObjet";
 import aspirateur from "../assets/1-7_Buanderie/1-Aspirateur.svg";

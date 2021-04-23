@@ -5,10 +5,11 @@ import Trait from "./Trait";
 import { ProductContextbis } from "../context/ProductContext";
 import PackEmballageTarif from "./PackEmballageTarif";
 import LittleFormule from "./LittleFormule";
-import Maps from "./Maps";
 import ButtonNav from "./ButtonNav";
 
 function TarifGood({
+  quantityRecapTotal,
+  setQuantityRecapTotal,
   count,
   setCount,
   date,
@@ -20,9 +21,16 @@ function TarifGood({
   setTotalQuantity,
   totalQuantity,
   totalTest,
+  totalQuantityRecap,
+  totalQuantityV2,
+  setTotalQuantityV2,
+  totalFormule,
+  setTotalFormule,
+  kiloDistance,
+  portageGeneraleTotal,
+  totalBasket,
+  volumeCalcul,
 }) {
-  // const [date, setDate] = useState(new Date());
-  // const [endDate, setEndDate] = useState(new Date());
   const [showDate, setShowDate] = useState(false);
   let options = {
     weekday: "long",
@@ -86,13 +94,11 @@ function TarifGood({
                   <span className="date__span">Chargement </span>
                   <br />
                   <span className="date__spantext">
-                    du :{/* {date.toLocaleDateString("fr-FR", options)} */}
-                    {date[0].toLocaleDateString("fr-FR", options)}
+                    du :{date[0].toLocaleDateString("fr-FR", options)}
                   </span>
                   <br />
                   <span className="date__spantext">
                     au:
-                    {/* {date.toLocaleDateString("fr-FR", options)} */}
                     {date[1].toLocaleDateString("fr-FR", options)}
                   </span>
                 </div>
@@ -100,13 +106,11 @@ function TarifGood({
                   <span className="date__span">Livraison </span>
                   <br />
                   <span className="date__spantext">
-                    du :{/* {date.toLocaleDateString("fr-FR", options)} */}
-                    {endDate[0].toLocaleDateString("fr-FR", options)}
+                    du :{endDate[0].toLocaleDateString("fr-FR", options)}
                   </span>
                   <br />
                   <span className="date__spantext">
                     au:
-                    {/* {date.toLocaleDateString("fr-FR", options)} */}
                     {endDate[1].toLocaleDateString("fr-FR", options)}
                   </span>
                 </div>
@@ -121,13 +125,23 @@ function TarifGood({
           <LittleFormule
             setToggleBloks={setToggleBloks}
             toggleBlocks={toggleBlocks}
+            totalFormule={totalFormule}
+            setTotalFormule={setTotalFormule}
+            kiloDistance={kiloDistance}
+            portageGeneraleTotal={portageGeneraleTotal}
+            totalBasket={totalBasket}
+            volumeCalcul={volumeCalcul}
           />
           <Trait />
           <PackEmballageTarif
+            setQuantityRecapTotal={setQuantityRecapTotal}
             product={product}
             setTotalQuantity={setTotalQuantity}
             totalQuantity={totalQuantity}
             totalTest={totalTest}
+            totalQuantityRecap={totalQuantityRecap}
+            totalQuantityV2={totalQuantityV2}
+            setTotalQuantityV2={setTotalQuantityV2}
           />
           <Trait />
           <ButtonNav count={count} setCount={setCount} />

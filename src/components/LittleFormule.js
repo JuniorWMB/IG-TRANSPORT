@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   faPiggyBank,
   faUserShield,
@@ -6,15 +6,58 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const LittleFormule = ({ packName, setToggleBloks, toggleBlocks }) => {
-  // const [toggleBlocks, setToggleBloks] = useState(0);
-  // const [, ] = useState("");
-
+const LittleFormule = ({
+  packName,
+  setToggleBloks,
+  toggleBlocks,
+  setTotalFormule,
+  kiloDistance,
+  portageGeneraleTotal,
+  totalBasket,
+  volumeCalcul,
+}) => {
   const toggleBlock = (index) => {
     setToggleBloks(index);
   };
 
-  console.log("packName", packName);
+  let basic =
+    portageGeneraleTotal +
+    kiloDistance +
+    30 * (Number(totalBasket) + Number(volumeCalcul));
+  console.log("test 0", basic);
+
+  let eco =
+    portageGeneraleTotal +
+    kiloDistance +
+    45 * (Number(totalBasket) + Number(volumeCalcul));
+  console.log("test 1", eco);
+  let security =
+    portageGeneraleTotal +
+    kiloDistance +
+    60 * (Number(totalBasket) + Number(volumeCalcul));
+  console.log("test 2", security);
+  let premium =
+    portageGeneraleTotal +
+    kiloDistance +
+    80 * (Number(totalBasket) + Number(volumeCalcul));
+  console.log("test 3", premium);
+
+  useEffect(() => {
+    if (toggleBlocks === 1) {
+      setTotalFormule(basic);
+      console.log("toggle basic", basic);
+    } else if (toggleBlocks === 2) {
+      setTotalFormule(eco);
+      console.log("toggle eco", eco);
+    } else if (toggleBlocks === 3) {
+      setTotalFormule(security);
+      console.log("toggle security", security);
+    } else if (toggleBlocks === 4) {
+      setTotalFormule(premium);
+      console.log("toggle premium", premium);
+    }
+  }, [basic, eco, security, premium, setTotalFormule, toggleBlocks]);
+
   return (
     <div className="littleformule__contain ">
       <div
@@ -24,7 +67,6 @@ const LittleFormule = ({ packName, setToggleBloks, toggleBlocks }) => {
             : "littleformule__contain__block"
         }
         onClick={() => toggleBlock(1)}
-        // onClick={toggleBlock()}
       >
         <div className="titleAndLogo">
           <div className="pack__logogreen">
@@ -35,13 +77,13 @@ const LittleFormule = ({ packName, setToggleBloks, toggleBlocks }) => {
           </div>
           <div className="pack__titleblue">
             <h3 className="pack__title little__formule__title">
-              basic
+              Basic
               <br />
             </h3>
           </div>
         </div>
         <div className="littleformule__box">
-          <h3 className="pack__price">30€</h3>
+          <h3 className="pack__price">{basic.toFixed(2)}€</h3>
         </div>
       </div>
 
@@ -62,13 +104,13 @@ const LittleFormule = ({ packName, setToggleBloks, toggleBlocks }) => {
           </div>
           <div className="pack__titleblue">
             <h3 className="pack__title little__formule__title">
-              eco +
+              Eco +
               <br />
             </h3>
           </div>
         </div>
         <div className="littleformule__box">
-          <h3 className="pack__price">45€</h3>
+          <h3 className="pack__price">{eco.toFixed(2)}€</h3>
         </div>
       </div>
 
@@ -89,13 +131,13 @@ const LittleFormule = ({ packName, setToggleBloks, toggleBlocks }) => {
           </div>
           <div className="pack__titleblue">
             <h3 className="pack__title little__formule__title">
-              securité
+              Securité
               <br />
             </h3>
           </div>
         </div>
         <div className="littleformule__box">
-          <h3 className="pack__price">60€</h3>
+          <h3 className="pack__price">{security.toFixed(2)}€</h3>
         </div>
       </div>
 
@@ -122,7 +164,7 @@ const LittleFormule = ({ packName, setToggleBloks, toggleBlocks }) => {
           </div>
         </div>
         <div className="littleformule__box">
-          <h3 className="pack__price">80€</h3>
+          <h3 className="pack__price">{premium.toFixed(2)}€</h3>
         </div>
       </div>
     </div>

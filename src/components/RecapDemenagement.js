@@ -9,16 +9,19 @@ function RecapDemenagement({
   volumeCalcul,
   date,
   endDate,
-  totalQuantity,
-  totalTest,
+  totalQuantityV2,
+  totalFormule,
+  quantityRecapTotal,
 }) {
-  // const { test } = useContext(KilometreContext);
   let options = {
     weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric",
   };
+
+  let totalAssurance = 2000;
+  let totalDevis = quantityRecapTotal + totalFormule + totalAssurance;
 
   return (
     <div className="blockDemenagementRecap">
@@ -77,16 +80,16 @@ function RecapDemenagement({
         </div>
         <div className="dateRecap">
           <p className="espacehelp recapTitle">Emballage :</p>
-          <p className="recapInfo">{totalTest} produit</p>
+          <p className="recapInfo">{totalQuantityV2} produit</p>
         </div>
         <div className="dateRecap">
           <p className="espacehelp recapTitle">Valeur à assurer :</p>
-          <p className="recapInfo">5000 €</p>
+          <p className="recapInfo">{totalAssurance} €</p>
         </div>
       </div>
       <div className="montantTotal">
         <p className="espacehelp montantCapitalize">Montant total estime :</p>
-        <p className="price">3000€</p>
+        <p className="price">{totalDevis.toFixed(2)}€</p>
       </div>
     </div>
   );

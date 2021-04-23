@@ -13,11 +13,7 @@ function ByProducts({ results }) {
   return (
     <div className="product">
       {results.map((product) => (
-        <div
-          key={product.id}
-          // onClick={onClickAddProdutcs}
-          className="product__container"
-        >
+        <div key={product.id} className="product__container">
           <div className="product__allblock">
             <div className="product__img">
               <img src={product.image} alt={product.description} />

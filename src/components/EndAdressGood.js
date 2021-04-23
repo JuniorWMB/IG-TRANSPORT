@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
@@ -19,38 +19,47 @@ function EndAdressGood({
   accessTruckEnd,
   setAccesTruckEnd,
   handleSelectEnd,
+  totalBasket,
+  volumeCalcul,
+  setPortageTotalEnd,
+  portageTotalEnd,
 }) {
-  // const [cityEnd, setCityEnd] = useState("");
-  // const [stairEnd, setStairEnd] = useState("");
-  // const [liftEnd, setLiftEnd] = useState("");
-  // const [portageEnd, setPortageEnd] = useState("");
-  // const [accessTruckEnd, setAccesTruckEnd] = useState("");
-  // const [coordinates, setCoordinates] = useState({
-  //   lat: "",
-  //   lng: "",
-  // });
+  let totalStart = 0;
 
-  // const handleSelect = async (value) => {
-  //   const results = await geocodeByAddress(value);
-  //   const latLong = await getLatLng(results[0]);
-  //   console.log("testcoor", latLong);
-  //   setCityEnd(value);
-  //   setCoordinates(latLong);
-  // };
+  if (portageEnd === "De 15m à 29m") {
+    totalStart = totalStart + 30 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+    console.log("portageEnd test 1:", portageTotalEnd);
+  } else if (portageEnd === "Moins de 15m") {
+    totalStart = totalStart + 15 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
 
-  // const [disable, setDisable] = useState(true);
+    console.log("portageEnd test 2:", portageTotalEnd);
+  } else if (portageEnd === "De 30m à 39m") {
+    totalStart = totalStart + 39 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
 
-  // const disableHandle = () => {
-  //   if (
-  //     !cityEnd &&
-  //     stairEnd.length === 0 &&
-  //     liftEnd.length === 0 &&
-  //     portageEnd.length === 0 &&
-  //     accessTruckEnd.length === 0
-  //   ) {
-  //     setDisable(false);
-  //   }
-  // };
+    console.log("portageEnd test ?:", portageTotalEnd);
+  } else if (portageEnd === "De 40m à 49m") {
+    totalStart = totalStart + 49 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+
+    console.log("portageEnd test 3:", portageTotalEnd);
+  } else if (portageEnd === "De 50m à 59m") {
+    totalStart = totalStart + 59 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+
+    console.log("portageEnd test 4:", portageTotalEnd);
+  } else if (portageEnd === "De 60m à 79m") {
+    totalStart = totalStart + 79 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+    console.log("portageEnd test 5:", portageTotalEnd);
+  } else if (portageEnd === "De 80m à 100m") {
+    totalStart =
+      totalStart + 100 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+    console.log("portageEnd test 6:", portageTotalEnd);
+  }
 
   return (
     <div className="contain__startadress">
@@ -105,14 +114,6 @@ function EndAdressGood({
               </div>
             )}
           </PlacesAutocomplete>
-          {/* test */}
-          {/* <input
-            type="text"
-            onChange={(e) => {
-              setCityEnd(e.target.value);
-            }}
-            placeholder="69 rue krypton 14000 Caen"
-          /> */}
         </div>
         <div className="stage start">
           <p>etage :</p>
