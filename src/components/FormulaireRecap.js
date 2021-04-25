@@ -119,25 +119,25 @@ const FormulaireRecap = ({
                   value={arrondiDist}
                 />
               </label>
-              <label htmlFor="Produit">
+              {/* <label htmlFor="Produit">
                 <input
                   type="text"
                   name="Produit"
                   id="Produit"
                   value={volumeCalcul}
                 />
-              </label>
+              </label> */}
               <label htmlFor="Volume en m3">
                 <input
                   type="text"
                   name="Volume en m3"
                   id="Volume en m3"
-                  value={totalBasket}
+                  value={totalBasket && volumeCalcul}
                 />
               </label>
-              <label htmlFor="panier">
+              {/* <label htmlFor="panier">
                 <input type="text" name="panier" id="panier" />
-              </label>
+              </label> */}
               <label htmlFor="date">
                 <input
                   type="text"
