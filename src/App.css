@@ -1365,7 +1365,6 @@ button {
   display: flex;
   flex-direction: column;
   margin-top: 37px;
-  /* justify-content: space-around; */
 }
 .calendar__text p {
   font-weight: 700;
