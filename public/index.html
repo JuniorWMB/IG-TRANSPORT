@@ -42,7 +42,6 @@
           id="Nom"
           type="text"
           value={name}
-          onChange={(e) => setName(e.target.value)}
         />
       </div>
       <div className="blockInputForm">
@@ -51,7 +50,6 @@
           id="Adresse"
           type="text"
           value={adress}
-          onChange={(e) => setAdress(e.target.value)}
         />
       </div>
       <div className="blockInputForm">
@@ -60,7 +58,6 @@
           id="Email"
           type="mail"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
     </div>
@@ -72,7 +69,6 @@
           id="Prénom"
           type="text"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
         />
       </div>
       <div className="blockInputForm">
@@ -81,7 +77,6 @@
           id="Ville"
           type="text"
           value={city}
-          onChange={(e) => setCity(e.target.value)}
         />
       </div>
       <div className="blockInputForm">
@@ -89,8 +84,6 @@
         <input
           id="Phone"
           type="tel"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
         />
       </div>
       <div hidden>
@@ -99,7 +92,6 @@
             type="text"
             name="adresse"
             id="adresse"
-            value={addressGO}
           />
         </label>
         <label htmlFor="adresse final">
@@ -107,7 +99,6 @@
             type="text"
             name="adresse final"
             id="adresse final"
-            value={cityEnd}
           />
         </label>
         <label htmlFor="distance">
@@ -115,7 +106,6 @@
             type="text"
             name="distance"
             id="distance"
-            value={arrondiDist}
           />
         </label>
         <label htmlFor="volume">
@@ -123,7 +113,6 @@
             type="text"
             name="volume"
             id="volume"
-            value={volumeCalcul}
           />
         </label>
         <label htmlFor="panier">
@@ -131,18 +120,16 @@
             type="text"
             name="panier"
             id="panier"
-            value={totalBasket}
           />
         </label>
         <label htmlFor="date">
-          <input type="text" name="date" id="date" value={date} />
+          <input type="text" name="date" id="date" />
         </label>
         <label htmlFor="date final">
           <input
             type="text"
             name="date final"
             id="date final"
-            value={endDate}
           />
         </label>
         <label htmlFor="volume">
@@ -150,7 +137,6 @@
             type="text"
             name="volume"
             id="volume"
-            value={totalQuantityV2}
           />
         </label>
         <label htmlFor="Prix">
@@ -158,7 +144,6 @@
             type="text"
             name="Prix"
             id="Prix"
-            value={totalDevisFinal}
           />
         </label>
       </div>
