@@ -27,7 +27,7 @@ const FormulaireRecap = ({
   return (
     <div className="blockDemenagementRecap ">
       <form
-        action="/success"
+        action="/success/"
         name="contact"
         method="post"
         data-netlify="true"

@@ -52,35 +52,6 @@ class Maps extends React.Component {
       </>
     );
   }
-
-  // const [viewport, setViewPort] = useState({
-  //   width: "50%",
-  //   height: 400,
-  //   latitude: 48.7167,
-  //   longitude: 2.4,
-  //   zoom: 12,
-  //   searchResultLayer: null,
-  //   pitch: 50,
-  // });
-
-  // const _onViewportChange = (viewport) =>
-  //   setViewPort({ ...viewport, transitionDuration: 3000 });
-
-  // const directions = new MapboxDirections({
-  //   unit: "metric",
-  //   profile: "mapbox/driving",
-  //   mapboxApiAccessToken: { TOKEN },
-  // });
-
-  // return (
-  // <ReactMapGL
-  //   mapboxApiAccessToken={TOKEN}
-  //   mapStyle="mapbox://styles/mapbox/dark-v9"
-  //   {...viewport}
-  //   onViewportChange={(newView) => setViewPort(newView)}
-  // ></ReactMapGL>
-
-  // );
 }
 
 export default Maps;

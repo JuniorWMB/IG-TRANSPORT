@@ -1514,7 +1514,7 @@ button {
   align-items: center;
 }
 .hidenoresponsive {
-  display: none;
+  /* display: none; */
 }
 .little__button button {
   width: 50px;
