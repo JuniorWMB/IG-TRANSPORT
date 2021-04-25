@@ -140,7 +140,7 @@ const FormulaireRecap = ({
                   type="text"
                   name="date"
                   id="date"
-                  value={date.toLocaleDateString("fr-FR", options)}
+                  value={date[0].toLocaleDateString("fr-FR", options)}
                 />
               </label>
               <label htmlFor="date final">
@@ -148,7 +148,7 @@ const FormulaireRecap = ({
                   type="text"
                   name="date final"
                   id="date final"
-                  value={endDate.toLocaleDateString("fr-FR", options)}
+                  value={endDate[1].toLocaleDateString("fr-FR", options)}
                 />
               </label>
               <label htmlFor="Nombre de Produit">
