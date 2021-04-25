@@ -60,6 +60,7 @@ const FormulaireRecap = ({
               <input
                 id="Email"
                 type="mail"
+                name="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -72,6 +73,7 @@ const FormulaireRecap = ({
               <input
                 id="Prénom"
                 type="text"
+                name="Prénom"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
@@ -81,6 +83,7 @@ const FormulaireRecap = ({
               <input
                 id="Ville"
                 type="text"
+                name="Ville"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
               />
@@ -89,6 +92,7 @@ const FormulaireRecap = ({
               <label htmlFor="Phone">Téléphone:</label>
               <input
                 id="Phone"
+                name="Phone"
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -119,20 +123,20 @@ const FormulaireRecap = ({
                   value={arrondiDist}
                 />
               </label>
-              {/* <label htmlFor="Produit">
+              <label htmlFor="Produit">
                 <input
                   type="text"
                   name="Produit"
                   id="Produit"
-                  value={volumeCalcul}
+                  value={totalQuantityV2}
                 />
-              </label> */}
+              </label>
               <label htmlFor="Volume en m3">
                 <input
                   type="text"
                   name="Volume en m3"
                   id="Volume en m3"
-                  value={totalBasket && volumeCalcul}
+                  value={totalBasket}
                 />
               </label>
               {/* <label htmlFor="panier">
