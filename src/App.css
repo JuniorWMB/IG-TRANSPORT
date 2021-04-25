@@ -1513,6 +1513,9 @@ button {
   justify-content: center;
   align-items: center;
 }
+.hidenoresponsive {
+  display: none;
+}
 .little__button button {
   width: 50px;
   height: 50px;
