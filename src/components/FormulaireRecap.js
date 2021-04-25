@@ -12,7 +12,7 @@ const FormulaireRecap = () => {
     <div className="blockDemenagementRecap ">
       <form
         action=""
-        name="Contact"
+        name="contact"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
@@ -21,8 +21,6 @@ const FormulaireRecap = () => {
         <div className="blockFormRecap">
           <div className="formBlockLeft">
             <div className="blockInputForm">
-              <input type="hidden" name="form-name" value="Contact" />
-              <input type="hidden" name="bot-field" />
               <label htmlFor="Nom">Nom:</label>
               <input
                 id="Nom"
@@ -50,8 +48,6 @@ const FormulaireRecap = () => {
               />
             </div>
           </div>
-
-          {/* block space */}
 
           <div className="formBlockRight">
             <div className="blockInputForm">
@@ -81,6 +77,8 @@ const FormulaireRecap = () => {
                 onChange={(e) => setPhone(e.target.value)}
               />
             </div>
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
           </div>
         </div>
         <button className="buttonRecap" type="submit">
