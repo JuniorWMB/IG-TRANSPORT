@@ -10,28 +10,40 @@ const FormulaireRecap = () => {
 
   return (
     <div className="blockDemenagementRecap ">
-      <form action="" className="twoBlockDepart formRecapMain">
+      <form
+        action=""
+        name="Contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        className="twoBlockDepart formRecapMain"
+      >
         <div className="blockFormRecap">
           <div className="formBlockLeft">
             <div className="blockInputForm">
-              <label htmlFor="">Nom:</label>
+              <input type="hidden" name="form-name" value="Contact" />
+              <input type="hidden" name="bot-field" />
+              <label htmlFor="Nom">Nom:</label>
               <input
+                id="Nom"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="blockInputForm">
-              <label htmlFor="">Adresse:</label>
+              <label htmlFor="Adresse">Adresse:</label>
               <input
+                id="Adresse"
                 type="text"
                 value={adress}
                 onChange={(e) => setAdress(e.target.value)}
               />
             </div>
             <div className="blockInputForm">
-              <label htmlFor="">Email:</label>
+              <label htmlFor="Email">Email:</label>
               <input
+                id="Email"
                 type="mail"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -43,24 +55,27 @@ const FormulaireRecap = () => {
 
           <div className="formBlockRight">
             <div className="blockInputForm">
-              <label htmlFor="">Prénom:</label>
+              <label htmlFor="Prénom">Prénom:</label>
               <input
+                id="Prénom"
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
             </div>
             <div className="blockInputForm">
-              <label htmlFor="">Ville:</label>
+              <label htmlFor="Ville">Ville:</label>
               <input
+                id="Ville"
                 type="text"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
               />
             </div>
             <div className="blockInputForm">
-              <label htmlFor="">Téléphone:</label>
+              <label htmlFor="Phone">Téléphone:</label>
               <input
+                id="Phone"
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
