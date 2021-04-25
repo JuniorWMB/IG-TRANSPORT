@@ -17,6 +17,12 @@ const FormulaireRecap = ({
   const [username, setUsername] = useState("");
   const [city, setCity] = useState("");
   const [phone, setPhone] = useState("");
+  let options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
 
   return (
     <div className="blockDemenagementRecap ">
@@ -105,55 +111,60 @@ const FormulaireRecap = ({
                   value={cityEnd}
                 />
               </label>
-              <label htmlFor="distance">
+              <label htmlFor="Distance en KM">
                 <input
                   type="text"
-                  name="distance"
-                  id="distance"
+                  name="Distance en KM"
+                  id="Distance en KM"
                   value={arrondiDist}
                 />
               </label>
-              <label htmlFor="volume">
+              <label htmlFor="Produit">
                 <input
                   type="text"
-                  name="volume"
-                  id="volume"
+                  name="Produit"
+                  id="Produit"
                   value={volumeCalcul}
                 />
               </label>
-              <label htmlFor="panier">
+              <label htmlFor="Volume en m3">
                 <input
                   type="text"
-                  name="panier"
-                  id="panier"
+                  name="Volume en m3"
+                  id="Volume en m3"
                   value={totalBasket}
                 />
               </label>
               <label htmlFor="date">
-                <input type="text" name="date" id="date" value={date} />
+                <input
+                  type="text"
+                  name="date"
+                  id="date"
+                  value={date.toLocaleDateString("fr-FR", options)}
+                />
               </label>
               <label htmlFor="date final">
                 <input
                   type="text"
                   name="date final"
                   id="date final"
-                  value={endDate}
+                  value={endDate.toLocaleDateString("fr-FR", options)}
                 />
               </label>
-              <label htmlFor="volume">
+              <label htmlFor="Nombre de Produit">
                 <input
                   type="text"
-                  name="volume"
-                  id="volume"
+                  name="Nombre de Produit"
+                  id="Nombre de Produit"
                   value={totalQuantityV2}
                 />
               </label>
-              <label htmlFor="Prix">
+              <label htmlFor="Prix en euros">
                 <input
                   type="text"
                   name="Prix"
                   id="Prix"
-                  value={totalDevisFinal}
+                  value={totalDevisFinal.toFixed(2)}
                 />
               </label>
             </div>
