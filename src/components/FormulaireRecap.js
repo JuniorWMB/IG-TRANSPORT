@@ -22,12 +22,12 @@ const FormulaireRecap = ({
     <div className="blockDemenagementRecap ">
       <form
         action=""
-        // name="contact"
-        // method="post"
-        // data-netlify="true"
-        // data-netlify-honeypot="bot-field"
-        // className="twoBlockDepart formRecapMain"
-        // onSubmit="submit"
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        className="twoBlockDepart formRecapMain"
+        onSubmit="submit"
       >
         <div className="blockFormRecap">
           <div className="formBlockLeft">
