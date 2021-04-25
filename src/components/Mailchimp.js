@@ -14,6 +14,7 @@ const Mailchimp = () => {
         </label>
       </p>
       <input type="hidden" name="form-name" value="contactV1" />
+      <button type="submit">click bitch</button>
     </form>
   );
 };
