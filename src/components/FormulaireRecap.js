@@ -13,7 +13,7 @@ const FormulaireRecap = () => {
       <form
         action=""
         name="contact"
-        method="POST"
+        method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         className="twoBlockDepart formRecapMain"
