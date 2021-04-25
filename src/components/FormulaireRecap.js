@@ -135,6 +135,9 @@ const FormulaireRecap = ({
                   value={totalBasket}
                 />
               </label>
+              <label htmlFor="panier">
+                <input type="text" name="panier" id="panier" />
+              </label>
               <label htmlFor="date">
                 <input
                   type="text"
@@ -162,8 +165,8 @@ const FormulaireRecap = ({
               <label htmlFor="Prix en euros">
                 <input
                   type="text"
-                  name="Prix"
-                  id="Prix"
+                  name="Prix en euros"
+                  id="Prix en euros"
                   value={totalDevisFinal.toFixed(2)}
                 />
               </label>
