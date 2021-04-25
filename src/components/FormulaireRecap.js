@@ -38,29 +38,31 @@ const FormulaireRecap = ({
         <div className="blockFormRecap">
           <div className="formBlockLeft">
             <div className="blockInputForm">
-              <label htmlFor="Nom">Nom:</label>
+              <label htmlFor="Nom :">Nom:</label>
               <input
-                id="Nom"
+                id="Nom :"
                 type="text"
+                name="Nom :"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="blockInputForm">
-              <label htmlFor="Adresse">Adresse:</label>
+              <label htmlFor="Adresse :">Adresse:</label>
               <input
-                id="Adresse"
+                id="Adresse :"
                 type="text"
+                name="Adresse :"
                 value={adress}
                 onChange={(e) => setAdress(e.target.value)}
               />
             </div>
             <div className="blockInputForm">
-              <label htmlFor="Email">Email:</label>
+              <label htmlFor="Email :">Email:</label>
               <input
-                id="Email"
+                id="Email :"
                 type="mail"
-                name="Email"
+                name="Email :"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -69,108 +71,108 @@ const FormulaireRecap = ({
 
           <div className="formBlockRight">
             <div className="blockInputForm">
-              <label htmlFor="Prénom">Prénom:</label>
+              <label htmlFor="Prénom :">Prénom:</label>
               <input
-                id="Prénom"
+                id="Prénom :"
                 type="text"
-                name="Prénom"
+                name="Prénom :"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
             </div>
             <div className="blockInputForm">
-              <label htmlFor="Ville">Ville:</label>
+              <label htmlFor="Ville :">Ville:</label>
               <input
-                id="Ville"
+                id="Ville :"
                 type="text"
-                name="Ville"
+                name="Ville :"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
               />
             </div>
             <div className="blockInputForm">
-              <label htmlFor="Phone">Téléphone:</label>
+              <label htmlFor="Phone :">Téléphone:</label>
               <input
-                id="Phone"
-                name="Phone"
+                id="Phone :"
+                name="Phone :"
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
             </div>
             <div hidden>
-              <label htmlFor="adresse">
+              <label htmlFor="adresse :">
                 <input
                   type="text"
-                  name="adresse"
-                  id="adresse"
+                  name="adresse :"
+                  id="adresse :"
                   value={addressGO}
                 />
               </label>
-              <label htmlFor="adresse final">
+              <label htmlFor="adresse final :">
                 <input
                   type="text"
-                  name="adresse final"
-                  id="adresse final"
+                  name="adresse final :"
+                  id="adresse final :"
                   value={cityEnd}
                 />
               </label>
-              <label htmlFor="Distance en KM">
+              <label htmlFor="Distance en KM :">
                 <input
                   type="text"
-                  name="Distance en KM"
-                  id="Distance en KM"
+                  name="Distance en KM :"
+                  id="Distance en KM :"
                   value={arrondiDist}
                 />
               </label>
-              <label htmlFor="Produit">
+              <label htmlFor="Produit :">
                 <input
                   type="text"
-                  name="Produit"
-                  id="Produit"
+                  name="Produit :"
+                  id="Produit :"
                   value={totalQuantityV2}
                 />
               </label>
-              <label htmlFor="Volume en m3">
+              <label htmlFor="Volume en m3 :">
                 <input
                   type="text"
-                  name="Volume en m3"
-                  id="Volume en m3"
+                  name="Volume en m3 :"
+                  id="Volume en m3 :"
                   value={totalBasket}
                 />
               </label>
               {/* <label htmlFor="panier">
                 <input type="text" name="panier" id="panier" />
               </label> */}
-              <label htmlFor="date">
+              <label htmlFor="date :">
                 <input
                   type="text"
-                  name="date"
-                  id="date"
+                  name="date :"
+                  id="date :"
                   value={date[0].toLocaleDateString("fr-FR", options)}
                 />
               </label>
-              <label htmlFor="date final">
+              <label htmlFor="date final :">
                 <input
-                  type="text"
-                  name="date final"
-                  id="date final"
+                  type="text :"
+                  name="date final :"
+                  id="date final :"
                   value={endDate[1].toLocaleDateString("fr-FR", options)}
                 />
               </label>
-              <label htmlFor="Nombre de Produit">
+              <label htmlFor="Nombre de Produit :">
                 <input
                   type="text"
-                  name="Nombre de Produit"
-                  id="Nombre de Produit"
+                  name="Nombre de Produit :"
+                  id="Nombre de Produit :"
                   value={totalQuantityV2}
                 />
               </label>
-              <label htmlFor="Prix en euros">
+              <label htmlFor="Prix en euros :">
                 <input
                   type="text"
-                  name="Prix en euros"
-                  id="Prix en euros"
+                  name="Prix en euros :"
+                  id="Prix en euros :"
                   value={totalDevisFinal.toFixed(2)}
                 />
               </label>

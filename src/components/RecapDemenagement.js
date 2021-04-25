@@ -85,7 +85,7 @@ function RecapDemenagement({
         </div>
         <div className="dateRecap">
           <p className="espacehelp recapTitle">Emballage :</p>
-          <p className="recapInfo">{totalQuantityV2} produit</p>
+          <p className="recapInfo">{totalQuantityV2} produits</p>
         </div>
         <div className="dateRecap">
           <p className="espacehelp recapTitle">Valeur à assurer :</p>
