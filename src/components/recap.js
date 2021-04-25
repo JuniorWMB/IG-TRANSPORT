@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { getPreciseDistance } from "geolib";
 import RecapDemenagement from "./RecapDemenagement";
@@ -50,6 +50,8 @@ function Recap({
   const distanceKm = pdis / 1000;
   let arrondiDist = Math.round(distanceKm * 100) / 100;
 
+  const [totalDevisFinal, setTotalDevisFinal] = useState(0);
+
   useEffect(() => {
     let distanceFormuleTotal = arrondiDist * 1.3;
     setKiloDistance(distanceFormuleTotal);
@@ -59,6 +61,7 @@ function Recap({
     <div style={{ display: "flex", flexDirection: "column", padding: "20px " }}>
       <h1 className="titleRecapBlock">Votre déménagement</h1>
       <RecapDemenagement
+        setTotalDevisFinal={setTotalDevisFinal}
         quantityRecapTotal={quantityRecapTotal}
         totalQuantityRecap={totalQuantityRecap}
         totalFormule={totalFormule}
@@ -69,9 +72,9 @@ function Recap({
         arrondiDist={arrondiDist}
         addressGO={addressGO}
         cityEnd={cityEnd}
+        volumeCalcul={volumeCalcul}
         totalBasket={totalBasket}
         setTotalBasket={setTotalBasket}
-        volumeCalcul={volumeCalcul}
         date={date}
         setDate={setDate}
         endDate={endDate}
@@ -98,7 +101,17 @@ function Recap({
         accessTruckEnd={accessTruckEnd}
       />
       <h1 className="titleRecapBlock">Vos coordonnées</h1>
-      <FormulaireRecap />
+      <FormulaireRecap
+        addressGO={addressGO}
+        cityEnd={cityEnd}
+        arrondiDist={arrondiDist}
+        volumeCalcul={volumeCalcul}
+        totalBasket={totalBasket}
+        date={date}
+        endDate={endDate}
+        totalQuantityV2={totalQuantityV2}
+        totalDevisFinal={totalDevisFinal}
+      />
     </div>
   );
 }

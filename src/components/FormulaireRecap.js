@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 
-const FormulaireRecap = () => {
+const FormulaireRecap = ({
+  addressGO,
+  cityEnd,
+  arrondiDist,
+  volumeCalcul,
+  totalBasket,
+  date,
+  endDate,
+  totalQuantityV2,
+  totalDevisFinal,
+}) => {
   const [name, setName] = useState("");
   const [adress, setAdress] = useState("");
   const [email, setEmail] = useState("");
@@ -78,8 +88,77 @@ const FormulaireRecap = () => {
                 onChange={(e) => setPhone(e.target.value)}
               />
             </div>
-            {/* <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="bot-field" /> */}
+            <div hidden>
+              <label htmlFor="adresse">
+                <input
+                  type="text"
+                  name="adresse"
+                  id="adresse"
+                  value={addressGO}
+                />
+              </label>
+              <label htmlFor="adresse final">
+                <input
+                  type="text"
+                  name="adresse final"
+                  id="adresse final"
+                  value={cityEnd}
+                />
+              </label>
+              <label htmlFor="distance">
+                <input
+                  type="text"
+                  name="distance"
+                  id="distance"
+                  value={arrondiDist}
+                />
+              </label>
+              <label htmlFor="volume">
+                <input
+                  type="text"
+                  name="volume"
+                  id="volume"
+                  value={volumeCalcul}
+                />
+              </label>
+              <label htmlFor="panier">
+                <input
+                  type="text"
+                  name="panier"
+                  id="panier"
+                  value={totalBasket}
+                />
+              </label>
+              <label htmlFor="date">
+                <input type="text" name="date" id="date" value={date} />
+              </label>
+              <label htmlFor="date final">
+                <input
+                  type="text"
+                  name="date final"
+                  id="date final"
+                  value={endDate}
+                />
+              </label>
+              <label htmlFor="volume">
+                <input
+                  type="text"
+                  name="volume"
+                  id="volume"
+                  value={totalQuantityV2}
+                />
+              </label>
+              <label htmlFor="Prix">
+                <input
+                  type="text"
+                  name="Prix"
+                  id="Prix"
+                  value={totalDevisFinal}
+                />
+              </label>
+            </div>
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
           </div>
         </div>
         <button className="buttonRecap" type="submit">

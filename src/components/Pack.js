@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Truck, Briefcase, Archive, Package } from "react-feather";
-import Mailchimp from "./Mailchimp";
 
 function Pack() {
   return (
     <div className="pack__contain">
-      <Mailchimp />
       <Link to="/demenagement" className="pack">
         <div className="pack__logo">
           <Package size={40} color="#94c935" />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function RecapDemenagement({
   toggleBlocks,
@@ -12,6 +12,7 @@ function RecapDemenagement({
   totalQuantityV2,
   totalFormule,
   quantityRecapTotal,
+  setTotalDevisFinal,
 }) {
   let options = {
     weekday: "long",
@@ -22,6 +23,10 @@ function RecapDemenagement({
 
   let totalAssurance = 2000;
   let totalDevis = quantityRecapTotal + totalFormule + totalAssurance;
+
+  useEffect(() => {
+    setTotalDevisFinal(totalDevis);
+  }, [setTotalDevisFinal, totalDevis]);
 
   return (
     <div className="blockDemenagementRecap">
