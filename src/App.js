@@ -14,7 +14,7 @@ import DevisChoice from "./Pages/DevisChoice";
 import Header from "./components/Header";
 import BoxMobile from "./Pages/BoxMobile";
 import Transport from "./Pages/Transport";
-import Success from "./Pages/Success";
+// import Success from "./Pages/Success";
 function App() {
   useEffect(() => {
     document.title = "Iguane Transport";
@@ -35,7 +35,7 @@ function App() {
           <Route path="/devis" component={Devis} />
           <Route path="/vos-devis" component={DevisChoice} />
           <Route path="/transport" component={Transport} />
-          <Route path="/success" component={Success} />
+          {/* <Route path="/success" component={Success} /> */}
         </Switch>
       </Router>
       <Footer />

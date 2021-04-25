@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
-import { useHistory } from "react-router-dom";
+// import React, { useEffect } from "react";
+// import { useHistory } from "react-router-dom";
 
-const Success = () => {
-  let history = useHistory();
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      history.push("/");
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, [history]);
-  return (
-    <div>
-      <p>Merci, nous vous recontacterons au plus vite.</p>
-    </div>
-  );
-};
+// const Success = () => {
+//   let history = useHistory();
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       history.push("/");
+//     }, 5000);
+//     return () => clearTimeout(timer);
+//   }, [history]);
+//   return (
+//     <div>
+//       <p>Merci, nous vous recontacterons au plus vite.</p>
+//     </div>
+//   );
+// };
 
-export default Success;
+// export default Success;
