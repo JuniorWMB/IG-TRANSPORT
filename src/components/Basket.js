@@ -9,7 +9,7 @@ const Basket = ({
   totalBasket,
 }) => {
   setTotalBasket(total.toFixed(2));
-  console.log("test total", totalBasket);
+
   return (
     <div className={showSide ? "panier__contain" : "panier__none"}>
       <div className="panier__meuble">
@@ -48,6 +48,7 @@ const Basket = ({
               >
                 +
               </button>
+
               {product.name}
             </div>
           );

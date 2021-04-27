@@ -21,7 +21,7 @@ function Garde() {
   const timerDevis = () => {
     let interval = setTimeout(() => {
       setDevis(true);
-    }, 5000);
+    }, 1000);
     return () => clearInterval(interval);
   };
 

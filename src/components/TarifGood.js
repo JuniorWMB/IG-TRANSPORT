@@ -49,7 +49,6 @@ function TarifGood({
   const validation = () => {
     setShowDate(true);
   };
-  console.log(">>>>date", date.date);
 
   const { product, setProduct } = useContext(ProductContextbis);
   return (

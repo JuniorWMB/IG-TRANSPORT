@@ -993,6 +993,7 @@ function ChoiceMeuble({
                           margin: "10px",
                           justifyContent: "space-around",
                           alignItems: "center",
+                          cursor: "pointer",
                         }}
                       >
                         <p
@@ -1071,6 +1072,7 @@ function ChoiceMeuble({
                           margin: "10px",
                           justifyContent: "space-around",
                           alignItems: "center",
+                          cursor: "pointer",
                         }}
                       >
                         <p
@@ -1148,6 +1150,7 @@ function ChoiceMeuble({
                           margin: "10px",
                           justifyContent: "center",
                           alignItems: "center",
+                          cursor: "pointer",
                         }}
                       >
                         <p
@@ -1225,6 +1228,7 @@ function ChoiceMeuble({
                           margin: "10px",
                           justifyContent: "center",
                           alignItems: "center",
+                          cursor: "pointer",
                         }}
                       >
                         <p
@@ -1302,6 +1306,7 @@ function ChoiceMeuble({
                           margin: "10px",
                           justifyContent: "center",
                           alignItems: "center",
+                          cursor: "pointer",
                         }}
                       >
                         <p
@@ -1381,6 +1386,7 @@ function ChoiceMeuble({
                           margin: "10px",
                           justifyContent: "center",
                           alignItems: "center",
+                          cursor: "pointer",
                         }}
                       >
                         <p
@@ -1460,6 +1466,7 @@ function ChoiceMeuble({
                           margin: "10px",
                           justifyContent: "center",
                           alignItems: "center",
+                          cursor: "pointer",
                         }}
                       >
                         <p
@@ -1539,6 +1546,7 @@ function ChoiceMeuble({
                           margin: "10px",
                           justifyContent: "center",
                           alignItems: "center",
+                          cursor: "pointer",
                         }}
                       >
                         <div>
@@ -1618,6 +1626,7 @@ function ChoiceMeuble({
                           height: "225px",
                           width: "225px",
                           margin: "10px",
+                          cursor: "pointer",
                         }}
                       >
                         <p>{meuble.name}</p>
@@ -1682,6 +1691,7 @@ function ChoiceMeuble({
                           margin: "10px",
                           justifyContent: "center",
                           alignItems: "center",
+                          cursor: "pointer",
                         }}
                       >
                         <p

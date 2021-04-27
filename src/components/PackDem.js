@@ -14,94 +14,95 @@ export const PackDem = () => {
   const [viewPremium, setViewPremium] = useState(false);
 
   return (
-    <>
-      <div className="hidenoresponsive ">
-        <div
-          className="titleAndLogo titleAndLogos"
-          onClick={() => !setViewBasic}
-        >
-          <div className="pack__logogreen">
-            <FontAwesomeIcon
-              icon={faPiggyBank}
-              style={{ color: "#94c935", fontSize: "50px" }}
-            />
-          </div>
-          <div className="pack__titleblue">
-            <h3 className="pack__title">
-              basic
-              <br />
-            </h3>
-            <h3 className="pack__price">30€/m3</h3>
-          </div>
-        </div>
-      </div>
-
+    <div className="hiddenGood">
       <div className="hidenoresponsive">
-        {" "}
-        <div className="titleAndLogo titleAndLogos ">
-          <div className="pack__logogreen">
-            <FontAwesomeIcon
-              icon={faGem}
-              style={{ color: "#94c935", fontSize: "50px" }}
-            />
-          </div>
-          <div className="pack__titleblue">
-            <h3 className="pack__title">
-              eco +
-              <br />
-            </h3>
-            <h3 className="pack__price">45€/m3</h3>
-          </div>
-        </div>
-      </div>
-      <div className="hidenoresponsive">
-        {" "}
-        <div className="titleAndLogo titleAndLogos">
-          <div className="pack__logogreen">
-            <FontAwesomeIcon
-              icon={faUserShield}
-              style={{ color: "#94c935", fontSize: "50px" }}
-            />
-          </div>
-          <div className="pack__titleblue">
-            <h3 className="pack__title">
-              securité
-              <br />
-            </h3>
-            <h3 className="pack__price">60€/m3</h3>
+        <div className="hiddenmaster">
+          <div
+            className="titleAndLogo titleAndLogos"
+            onClick={() => !setViewBasic}
+          >
+            <div className="pack__logogreen">
+              <FontAwesomeIcon
+                icon={faPiggyBank}
+                style={{ color: "#94c935", fontSize: "50px" }}
+              />
+            </div>
+            <div className="pack__titleblue hiddentextform">
+              <h3 className="pack__title">
+                basic
+                <br />
+              </h3>
+              <h3 className="pack__price">30€/m3</h3>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="hidenoresponsive">
-        {" "}
-        <div className="titleAndLogo titleAndLogos">
-          <div className="pack__logogreen">
-            <FontAwesomeIcon
-              icon={faGem}
-              style={{ color: "#94c935", fontSize: "50px" }}
-            />
+        <div className="hidenoresponsive">
+          {" "}
+          <div className="titleAndLogo titleAndLogos ">
+            <div className="pack__logogreen">
+              <FontAwesomeIcon
+                icon={faGem}
+                style={{ color: "#94c935", fontSize: "50px" }}
+              />
+            </div>
+            <div className="pack__titleblue hiddentextform">
+              <h3 className="pack__title">
+                eco +
+                <br />
+              </h3>
+              <h3 className="pack__price">45€/m3</h3>
+            </div>
           </div>
-          <div className="pack__titleblue">
-            <h3 className="pack__title">
-              Premium
-              <br />
-            </h3>
-            <h3 className="pack__price">80€/m3</h3>
+        </div>
+        <div className="hidenoresponsive">
+          {" "}
+          <div className="titleAndLogo titleAndLogos">
+            <div className="pack__logogreen">
+              <FontAwesomeIcon
+                icon={faUserShield}
+                style={{ color: "#94c935", fontSize: "50px" }}
+              />
+            </div>
+            <div className="pack__titleblue hiddentextform">
+              <h3 className="pack__title">
+                securité
+                <br />
+              </h3>
+              <h3 className="pack__price">60€/m3</h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="hidenoresponsive">
+          {" "}
+          <div className="titleAndLogo titleAndLogos">
+            <div className="pack__logogreen">
+              <FontAwesomeIcon
+                icon={faGem}
+                style={{ color: "#94c935", fontSize: "50px" }}
+              />
+            </div>
+            <div className="pack__titleblue hiddentextform">
+              <h3 className="pack__title">
+                Premium
+                <br />
+              </h3>
+              <h3 className="pack__price">80€/m3</h3>
+            </div>
           </div>
         </div>
       </div>
-
       {/* hide */}
       <div className="pack__contain2 packDemHide">
         <div
-          className="pack pack__height"
+          className="pack pack__height packDemHide"
           onMouseEnter={() => setViewBasic(true)}
           onMouseLeave={() => setViewBasic(false)}
         >
           {viewBasic ? (
-            <div className="view__info">
-              <div className="text__pack">
+            <div className="view__info packDemHide">
+              <div className="text__pack packDemHide">
                 <h1>Cette formule comprend :</h1>
                 <p>
                   <br /> ● La manutention de vos meubles depuis votre
@@ -116,7 +117,7 @@ export const PackDem = () => {
               </div>
             </div>
           ) : (
-            <div>
+            <div className="hidemobile">
               {" "}
               <div className="titleAndLogo titleAndLogos">
                 <div className="pack__logogreen">
@@ -138,12 +139,12 @@ export const PackDem = () => {
         </div>
 
         <div
-          className="pack pack__height"
+          className="pack pack__height packDemHide"
           onMouseEnter={() => setViewEco(true)}
           onMouseLeave={() => setViewEco(false)}
         >
           {viewEco ? (
-            <div className="view__info">
+            <div className="view__info packDemHide">
               <div className="text__pack">
                 <h1> Avec cette formule les déménageurs s'occupe de tout :</h1>
                 <p>
@@ -161,7 +162,7 @@ export const PackDem = () => {
               </div>
             </div>
           ) : (
-            <div>
+            <div className="hidemobile">
               {" "}
               <div className="titleAndLogo titleAndLogos">
                 <div className="pack__logogreen">
@@ -183,12 +184,12 @@ export const PackDem = () => {
         </div>
 
         <div
-          className="pack pack__height"
+          className="pack pack__height packDemHide"
           onMouseEnter={() => setViewSecurite(true)}
           onMouseLeave={() => setViewSecurite(false)}
         >
           {viewSecurite ? (
-            <div className="view__info">
+            <div className="view__info packDemHide">
               <div className="text__pack">
                 <h1> Avec cette formule les déménageurs s'occupe de tout :</h1>
                 <p>
@@ -206,7 +207,7 @@ export const PackDem = () => {
               </div>
             </div>
           ) : (
-            <div>
+            <div className="hidemobile">
               {" "}
               <div className="titleAndLogo titleAndLogos">
                 <div className="pack__logogreen">
@@ -228,12 +229,12 @@ export const PackDem = () => {
         </div>
 
         <div
-          className="pack pack__height"
+          className="pack pack__height packDemHide"
           onMouseEnter={() => setViewPremium(true)}
           onMouseLeave={() => setViewPremium(false)}
         >
           {viewPremium ? (
-            <div className="view__info">
+            <div className="view__info packDemHide">
               <div className="text__pack">
                 <h1> Avec cette formule les déménageurs s'occupe de tout :</h1>
                 <p>
@@ -251,7 +252,7 @@ export const PackDem = () => {
               </div>
             </div>
           ) : (
-            <div>
+            <div className="hidemobile">
               {" "}
               <div className="titleAndLogo titleAndLogos">
                 <div className="pack__logogreen">
@@ -272,6 +273,6 @@ export const PackDem = () => {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
