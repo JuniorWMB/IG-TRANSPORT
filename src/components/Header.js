@@ -2,7 +2,6 @@ import React from "react";
 import "../App.css";
 // import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { MdDehaze } from "react-icons/md";
 
 import logo from "../assets/logo.webp";
 import { Link } from "react-router-dom";

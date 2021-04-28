@@ -39,10 +39,10 @@ function Devis() {
 
   //end adress
   const [cityEnd, setCityEnd] = useState("");
-  const [stairEnd, setStairEnd] = useState("1");
-  const [liftEnd, setLiftEnd] = useState("Oui");
-  const [portageEnd, setPortageEnd] = useState("Moins de 15m");
-  const [accessTruckEnd, setAccesTruckEnd] = useState("Possible");
+  const [stairEnd, setStairEnd] = useState("");
+  const [liftEnd, setLiftEnd] = useState("");
+  const [portageEnd, setPortageEnd] = useState("");
+  const [accessTruckEnd, setAccesTruckEnd] = useState("");
   const [coordinatesEnd, setCoordinatesEnd] = useState({
     lat: "",
     lng: "",

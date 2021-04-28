@@ -3,7 +3,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
-import { getDistance, getPreciseDistance } from "geolib";
+// import { getDistance, getPreciseDistance } from "geolib";
 
 function EndAdressGood({
   setCount,

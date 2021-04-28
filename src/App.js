@@ -1,9 +1,8 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import Home from "./Pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import SignUp from "./Pages/SignUp";
 import { Demenagement } from "./Pages/Demenagement";
 import Stockage from "./Pages/Stockage";
 import Products from "./Pages/Products";
@@ -26,7 +25,6 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/signup" component={SignUp} />
           <Route path="/demenagement" component={Demenagement} />
           <Route path="/stockage" component={Stockage} />
           <Route path="/all-products" component={Products} />

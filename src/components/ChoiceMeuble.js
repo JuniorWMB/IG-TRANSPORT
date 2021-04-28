@@ -1753,7 +1753,6 @@ function ChoiceMeuble({
             showSide={showSide}
             totalBasket={totalBasket}
             setTotalBasket={setTotalBasket}
-            total={total}
           />
         </div>
         <div className={showSide ? "panier__contain" : "panier__none"}>

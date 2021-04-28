@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 // import MapGL, { GeolocateControl } from "react-map-gl";
 // import DeckGL, { GeoJsonLayer } from "deck.gl";
 // import Geocoder from "react-map-gl-geocoder";
 
-import PlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng,
-} from "react-places-autocomplete";
+// import PlacesAutocomplete, {
+//   geocodeByAddress,
+//   getLatLng,
+// } from "react-places-autocomplete";
 import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
 import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css";
 // import ReactMapGL from "react-map-gl";
