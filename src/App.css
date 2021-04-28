@@ -1294,15 +1294,14 @@ a {
 
   /***************************************** adress started ******************************/
   .contain__startadress {
-    height: 60vh;
+    height: 110vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px 20px;
+    align-items: center;
   }
   .contain__formadressstart {
-    width: 70%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -1312,17 +1311,19 @@ a {
   .contain__startadress h1 {
     font-size: larger;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1.8rem;
     font-family: "Oswald", sans-serif;
     color: #2670bd;
   }
   .start {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
   }
   .start p {
     font-weight: 700;
-    font-size: 3em;
+    font-size: 1.5em;
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     margin-right: 40px;
@@ -1341,24 +1342,29 @@ a {
     font-size: 1em;
   }
   .start select {
-    width: 20%;
+    width: 60%;
+    height: 40%;
     border-radius: 5px;
     outline: none;
     border: none;
   }
   .btn {
     display: flex;
-    justify-content: space-between;
-    height: 15%;
+    justify-content: space-around;
+    height: 200px;
     align-items: center;
+    /* flex-direction: column; */
   }
   .btn button {
-    width: 20%;
-    height: 75%;
+    width: 100%;
+    height: 85%;
     border-radius: 5px;
     text-transform: uppercase;
     background-color: #266fbdab;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .btn2 {
@@ -1449,8 +1455,12 @@ a {
     width: 80vw;
     margin: 50px 0;
   }
+  .date {
+    width: 100%;
+  }
   .date__contain {
     display: flex;
+    flex-direction: column-reverse;
     width: 100%;
     justify-content: space-around;
   }
@@ -1703,16 +1713,21 @@ a {
   /**************************** Little formule  *************************/
   .littleformule__contain {
     display: flex;
-    justify-content: space-around;
-    justify-items: center;
-    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
   }
-
+  .pack__logogreen {
+    height: 100px;
+    width: 100%;
+  }
   .littleformule__contain__block {
-    /* box-shadow: 5px 5px 6px -2px rgba(0, 0, 0, 0.75); */
-    /* box-shadow: 2px 1px 17px 0px rgba(0, 0, 0, 0.75); */
-    width: 200px;
+    width: 90%;
+    height: 400px;
     padding: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     transition: 0.6s ease-in-out;
@@ -1738,6 +1753,9 @@ a {
     background: #2670bd;
     width: 200px;
     padding: 10px;
+  }
+  .little h3 {
+    margin-left: 1rem;
   }
 
   /****************************** Total devis ********************************/
@@ -1989,7 +2007,7 @@ a {
     background: #266fbd11;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    /* padding: 10px; */
   }
   .recapAll {
     display: flex;
@@ -1999,8 +2017,17 @@ a {
   }
   .destination {
     width: 100%;
-    justify-content: space-between;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #2670bd;
   }
+
+  .destination p {
+    font-size: 1rem;
+  }
+
   .blockBas {
     margin-top: 10px;
     height: 250px;
@@ -2025,7 +2052,7 @@ a {
   }
   .montantCapitalize {
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1rem;
     /* color: #2c436d; */
     color: #ffffff;
     font-family: "Oswald", sans-serif;
@@ -2037,17 +2064,36 @@ a {
     font-family: "Oswald", sans-serif;
   }
   .recapTitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #2c436d;
     font-family: "Oswald", sans-serif;
+    width: 200px;
+  }
+  .blockwidth {
+    width: 100%;
+  }
+  .police {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .blockwidmaster {
+    width: 100%;
   }
   .recapInfo {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: #2670bd;
     font-family: "Oswald", sans-serif;
   }
   .recapInfoInText {
-    width: 70%;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1rem;
   }
   .titleRecapBlock {
     padding: 10px;
@@ -2061,15 +2107,20 @@ a {
   }
   .blockDepart {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
   }
   .blockLeftRecap {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 40%;
+    width: 100%;
     height: 100px;
+  }
+  .portageresp {
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
   }
   .portageRecap,
   .etageRecap,
@@ -2077,6 +2128,7 @@ a {
   .etageRecap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 10px 0;
     text-transform: capitalize;
   }
@@ -2087,6 +2139,9 @@ a {
     justify-content: space-between;
     width: 45%;
     height: 100%;
+  }
+  .blockDemenagementRecap {
+    /* border: 1px solid red; */
   }
   .formRecapMain {
     display: flex;
@@ -2099,7 +2154,7 @@ a {
     border-radius: 5px;
     /* color: #ffffff; */
     color: #2c436d;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     cursor: pointer;
@@ -2116,12 +2171,27 @@ a {
   .blockFormRecap {
     display: flex;
     justify-content: space-between;
-    height: 200px;
+    flex-direction: column;
+    height: 500px;
   }
+
   .blockInputForm {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
+  }
+  .blockInputForm label {
+    width: 100%;
+    margin: 0 1rem;
+  }
+
+  .formBlockLeft,
+  .formBlockRight {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {

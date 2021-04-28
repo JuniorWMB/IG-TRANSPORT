@@ -61,7 +61,7 @@ function StartAddress({
           <h1>Adresse de départ</h1>
 
           <div className="city start">
-            <p>Adresse :</p>
+            <p>Adresse:</p>
 
             <PlacesAutocomplete
               value={address}
@@ -110,7 +110,7 @@ function StartAddress({
             </PlacesAutocomplete>
           </div>
           <div className="stage start">
-            <p>etage : </p>
+            <p>étage: </p>
             <select
               name=""
               id=""
@@ -128,7 +128,7 @@ function StartAddress({
             </select>
           </div>
           <div className="lift start">
-            <p>Ascenseur : </p>
+            <p>Ascenseur: </p>
             <select
               name=""
               id=""
@@ -143,7 +143,7 @@ function StartAddress({
             </select>
           </div>
           <div className="distance__portage start">
-            <p>Distance de portage : </p>
+            <p>Distance de portage: </p>
             <select
               name=""
               id=""
@@ -165,7 +165,7 @@ function StartAddress({
             </select>
           </div>
           <div className="start">
-            <p>Accessibilité camion 19T</p>
+            <p>Accessibilité camion 19T:</p>
             <select
               name=""
               id=""

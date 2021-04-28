@@ -6,7 +6,7 @@ function EndRecap({ stairEnd, liftEnd, portageEnd, accessTruckEnd }) {
       <div className="blockLeftRecap">
         <div className="portageRecap dateRecap">
           <p className="espacehelp recapTitle">Portage :</p>
-          <p className="recapInfo">{portageEnd}</p>
+          <p className="recapInfo portageresp">{portageEnd}</p>
         </div>
         <div className="etageRecap dateRecap">
           <p className="espacehelp recapTitle">étage :</p>

@@ -6,7 +6,7 @@ const recapDepart = ({ stair, lift, portage, accessTruck }) => {
       <div className="blockLeftRecap">
         <div className="portageRecap dateRecap">
           <p className="espacehelp recapTitle">Portage : </p>
-          <p className="recapInfo">{portage}</p>
+          <p className="recapInfo portageresp">{portage}</p>
         </div>
         <div className="etageRecap dateRecap">
           <p className="espacehelp recapTitle">étage :</p>
